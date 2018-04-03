@@ -4,25 +4,24 @@ namespace Coffee.UIExtensions
 {
 	public class UIEffectDialogDemo : MonoBehaviour
 	{
+		[SerializeField] Animator animator; 
+		[SerializeField] UIEffectCapturedImage background; 
+
 		public void Open()
 		{
 			gameObject.SetActive(true);
-			GetComponent<Animator>().SetTrigger("Open");
+			animator.SetTrigger("Open");
+			background.Capture();
 		}
 
 		public void Close()
 		{
-			GetComponent<Animator>().SetTrigger("Close");
+			animator.SetTrigger("Close");
 		}
 
 		public void Closed()
 		{
 			gameObject.SetActive(false);
-		}
-
-		public void CaptureBackground()
-		{
-			GetComponentInChildren<UIEffectCapturedImage>().Capture();
 		}
 	}
 }
