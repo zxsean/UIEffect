@@ -57,7 +57,7 @@ namespace Coffee.UIExtensions
 			if (spColorMode.intValue != (int)UIEffect.ColorMode.None)
 			{
 				EditorGUI.indentLevel++;
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_EffectColor"));
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_ColorFactor"));
 				EditorGUI.indentLevel--;
 			}
 

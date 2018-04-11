@@ -69,6 +69,7 @@ namespace Coffee.UIExtensions
 		// Serialize Members.
 		//################################
 		[SerializeField][Range(0, 1)] float m_ToneLevel = 1;
+		[SerializeField][Range(0, 1)] float m_ColorFactor = 1;
 		[SerializeField][Range(0, 1)] float m_Blur = 0.25f;
 		[SerializeField] ToneMode m_ToneMode;
 		[SerializeField] ColorMode m_ColorMode;
@@ -92,6 +93,12 @@ namespace Coffee.UIExtensions
 		/// Tone effect level between 0(no effect) and 1(complete effect).
 		/// </summary>
 		public float toneLevel{ get { return m_ToneLevel; } set { m_ToneLevel = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
+
+		/// <summary>
+		/// Color effect factor, between 0(no effect) and 1(complete effect).
+		/// </summary>
+		public float colorFactor { get { return m_ColorFactor; } set { m_ColorFactor = Mathf.Clamp(value, 0, 1); _SetDirty(); } }
+
 
 		/// <summary>
 		/// How far is the blurring from the graphic.
@@ -165,7 +172,7 @@ namespace Coffee.UIExtensions
 			{
 				// Pack some effect factors to 1 float.
 				Vector2 factor = new Vector2(
-									m_CustomEffect ? _PackToFloat(m_CustomFactor) : _PackToFloat(toneLevel, 0, blur, 0),
+									m_CustomEffect ? _PackToFloat(m_CustomFactor) : _PackToFloat(toneLevel, colorFactor, blur, 0),
 									_PackToFloat(effectColor.r, effectColor.g, effectColor.b, effectColor.a)
 								 );
 
