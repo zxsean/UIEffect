@@ -36,6 +36,7 @@ namespace Coffee.UIExtensions
 		// Serialize Members.
 		//################################
 		[SerializeField][Range(0, 1)] float m_ToneLevel = 1;
+		[SerializeField][Range(0, 1)] float m_ColorFactor = 1;
 		[SerializeField][Range(0, 1)] float m_Blur = 0;
 		[SerializeField] ToneMode m_ToneMode;
 		[SerializeField] ColorMode m_ColorMode;
@@ -56,6 +57,11 @@ namespace Coffee.UIExtensions
 		/// Tone effect level between 0(no effect) and 1(complete effect).
 		/// </summary>
 		public float toneLevel { get { return m_ToneLevel; } set { m_ToneLevel = Mathf.Clamp(value, 0, 1); } }
+
+		/// <summary>
+		/// Color effect factor between 0(no effect) and 1(complete effect).
+		/// </summary>
+		public float colorFactor { get { return m_ColorFactor; } set { m_ColorFactor = Mathf.Clamp(value, 0, 1); } }
 
 		/// <summary>
 		/// How far is the blurring from the graphic.
@@ -133,9 +139,22 @@ namespace Coffee.UIExtensions
 		{
 			// When not displaying, clear vertex.
 			if (texture == null || effectColor.a < 1 / 255f || canvasRenderer.GetAlpha() < 1 / 255f)
+			{
 				vh.Clear();
+			}
 			else
+			{
 				base.OnPopulateMesh(vh);
+				int count = vh.currentVertCount;
+				UIVertex vt = default(UIVertex);
+				Color c = new Color(1, 1, 1, color.a);
+				for (int i = 0; i < count; i++)
+				{
+					vh.PopulateUIVertex(ref vt, i);
+					vt.color = c;
+					vh.SetUIVertex(vt, i);
+				}
+			}
 		}
 
 		/// <summary>
@@ -206,8 +225,8 @@ namespace Coffee.UIExtensions
 				_buffer.Blit(BuiltinRenderTextureType.CurrentActive, s_CopyId);
 
 				// Set properties.
-				_buffer.SetGlobalVector("_EffectFactor", new Vector4(toneLevel, 0, blur, 1));
-				_buffer.SetGlobalVector("_ColorFactor", new Vector4(effectColor.r, effectColor.g, effectColor.b, effectColor.a));
+				_buffer.SetGlobalVector("_EffectFactor", new Vector4(m_ToneLevel, m_ColorFactor, m_Blur, 1));
+				_buffer.SetGlobalVector("_ColorFactor", new Vector4(color.r, color.g, color.b, 1));
 
 				// Blit without effect.
 				if (!mat)
@@ -226,7 +245,7 @@ namespace Coffee.UIExtensions
 					// Iterate the operation.
 					if(1 < m_Iterations)
 					{
-						_buffer.SetGlobalVector("_EffectFactor", new Vector4(toneLevel, 0, blur, 0));
+						_buffer.SetGlobalVector("_EffectFactor", new Vector4(toneLevel, m_ColorFactor, blur, 0));
 						_buffer.GetTemporaryRT(s_EffectId2, w, h, 0, m_FilterMode);
 						for (int i = 1; i < m_Iterations; i++)
 						{

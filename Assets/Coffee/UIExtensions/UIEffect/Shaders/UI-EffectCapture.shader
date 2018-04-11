@@ -68,8 +68,8 @@ Shader "UI/Hidden/UI-EffectCapture"
 			fixed4 frag(v2f IN) : SV_Target
 			{
 				fixed effectFactor = _EffectFactor.x;
+				half4 colorFactor = fixed4(_ColorFactor.rgb, _EffectFactor.y);
 				fixed blurFactor = _EffectFactor.z;
-				fixed colorFactor = _ColorFactor;
 				
 				#if PIXEL
 				IN.texcoord = round(IN.texcoord * IN.extraFactor.xy) / IN.extraFactor.xy;
