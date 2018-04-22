@@ -150,7 +150,7 @@ namespace Coffee.UIExtensions
 		{
 			if (_uiEffect && _uiEffect.isActiveAndEnabled)
 			{
-				_factor = new Vector2(_PackToFloat(tone, 0, blur, 0), _PackToFloat(color.r, color.g, color.b, 1));
+				_factor = new Vector2(_PackToFloat(tone, 1, blur, 0), 0);
 			}
 		}
 
