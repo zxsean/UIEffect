@@ -38,7 +38,7 @@ namespace Coffee.UIExtensions
 			changed |= EditorGUI.EndChangeCheck();
 
 			// When tone is enable, show parameters.
-			if (spToneMode.intValue != (int)ToneMode.None)
+			if (spToneMode.intValue != (int)EffectMode.None)
 			{
 				EditorGUI.indentLevel++;
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_ToneLevel"));
@@ -85,7 +85,7 @@ namespace Coffee.UIExtensions
 			else if (changed || !serializedObject.isEditingMultipleObjects)
 			{
 				spMaterial.objectReferenceValue = UIEffect.GetOrGenerateMaterialVariant(Shader.Find(shaderName),
-					(ToneMode)spToneMode.intValue,
+					(EffectMode)spToneMode.intValue,
 					(ColorMode)spColorMode.intValue,
 					(BlurMode)spBlurMode.intValue
 				);

@@ -15,7 +15,7 @@ namespace Coffee.UIExtensions
     /// <summary>
     /// Tone effect mode.
     /// </summary>
-    public enum ToneMode
+    public enum EffectMode
     {
         None = 0,
         Grayscale,
@@ -63,7 +63,7 @@ namespace Coffee.UIExtensions
         [FormerlySerializedAs("m_Blur")]
         [SerializeField][Range(0, 1)] private float blurFactor = 0.25f;
         [FormerlySerializedAs("m_ToneMode")]
-        [SerializeField] private ToneMode effectMode;
+        [SerializeField] private EffectMode effectMode;
         [FormerlySerializedAs("m_ColorMode")]
         [SerializeField] private ColorMode colorMode;
         [FormerlySerializedAs("m_BlurMode")]
@@ -123,7 +123,7 @@ namespace Coffee.UIExtensions
         /// <summary>
         /// Gets effect mode.
         /// </summary>
-        public ToneMode EffectMode
+        public EffectMode EffectMode
         {
             get
             {
@@ -179,33 +179,8 @@ namespace Coffee.UIExtensions
 
         #if UNITY_EDITOR
 
-        //		public void OnBeforeSerialize()
-        //		{
-        //		}
 
-//        public void OnAfterDeserialize()
-//        {
-//			var obj = this;
-//			EditorApplication.delayCall += () =>
-//			{
-//				if (Application.isPlaying || !obj)
-//					return;
-//
-//				var mat = (0 == toneMode) && (0 == colorMode) && (0 == blurMode)
-//						? null
-//						: GetOrGenerateMaterialVariant(Shader.Find(shaderName), toneMode, colorMode, blurMode);
-//
-//				if(EffectMaterial == mat && graphic.material == mat)
-//					return;
-//					
-//				graphic.material = effectMaterial = mat;
-//				EditorUtility.SetDirty(this);
-//				EditorUtility.SetDirty(graphic);
-//				EditorApplication.delayCall +=AssetDatabase.SaveAssets;
-//			};
-//        }
-
-        public static Material GetMaterial(Shader shader, ToneMode tone, ColorMode color, BlurMode blur)
+        public static Material GetMaterial(Shader shader, EffectMode tone, ColorMode color, BlurMode blur)
         {
             string variantName = GetVariantName(shader, tone, color, blur);
             return AssetDatabase.FindAssets("t:Material " + Path.GetFileName(shader.name))
@@ -216,7 +191,7 @@ namespace Coffee.UIExtensions
         }
 
 
-        public static Material GetOrGenerateMaterialVariant(Shader shader, ToneMode tone, ColorMode color, BlurMode blur)
+        public static Material GetOrGenerateMaterialVariant(Shader shader, EffectMode tone, ColorMode color, BlurMode blur)
         {
             if (!shader)
                 return null;
@@ -270,7 +245,7 @@ namespace Coffee.UIExtensions
             ?? ("Assets/UIEffect/Materials/" + name + ".mat");
         }
 
-        public static string GetVariantName(Shader shader, ToneMode tone, ColorMode color, BlurMode blur)
+        public static string GetVariantName(Shader shader, EffectMode tone, ColorMode color, BlurMode blur)
         {
             return
 #if UIEFFECT_SEPARATE
@@ -283,41 +258,5 @@ namespace Coffee.UIExtensions
             + (0 < blur ? "-" + blur : "");
         }
 #endif
-
-        //		//################################
-        //		// Private Members.
-        //		//################################
-        //		static readonly List<UIVertex> s_Verts = new List<UIVertex>();
-        //
-        //		/// <summary>
-        //		/// Mark the UIEffect as dirty.
-        //		/// </summary>
-        //		void _SetDirty()
-        //		{
-        //			if(graphic)
-        //				graphic.SetVerticesDirty();
-        //		}
-        //
-        //		/// <summary>
-        //		/// Pack 4 low-precision [0-1] floats values to a float.
-        //		/// Each value [0-1] has 64 steps(6 bits).
-        //		/// </summary>
-        //		static float _PackToFloat(float x, float y, float z, float w)
-        //		{
-        //			const int PRECISION = (1 << 6) - 1;
-        //			return (Mathf.FloorToInt(w * PRECISION) << 18)
-        //			+ (Mathf.FloorToInt(z * PRECISION) << 12)
-        //			+ (Mathf.FloorToInt(y * PRECISION) << 6)
-        //			+ Mathf.FloorToInt(x * PRECISION);
-        //		}
-        //
-        //		/// <summary>
-        //		/// Pack 4 low-precision [0-1] floats values to a float.
-        //		/// Each value [0-1] has 64 steps(6 bits).
-        //		/// </summary>
-        //		static float _PackToFloat(Vector4 factor)
-        //		{
-        //			return _PackToFloat(Mathf.Clamp01(factor.x), Mathf.Clamp01(factor.y), Mathf.Clamp01(factor.z), Mathf.Clamp01(factor.w));
-        //		}
     }
 }
