@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 namespace Coffee.UIExtensions
 {
@@ -12,9 +13,9 @@ namespace Coffee.UIExtensions
     [DisallowMultipleComponent]
     public abstract class UIEffectBase : BaseMeshEffect, ISerializationCallbackReceiver
     {
-        protected static readonly List<UIVertex> TempVertex = new List<UIVertex>();
+        protected static Vector2 currentFactor = Vector2.zero;
 
-        [SerializeField] private Material effectMaterial;
+        [SerializeField] protected Material effectMaterial;
 
         /// <summary>
         /// Gets target graphic for effect.
@@ -50,7 +51,54 @@ namespace Coffee.UIExtensions
         /// </summary>
         public virtual void OnAfterDeserialize()
         {
-            this.effectMaterial = this.GetEffectMaterial();
+#if UNITY_EDITOR
+            var effect = this;
+            EditorApplication.delayCall += () =>
+            {
+                if (Application.isPlaying || !effect || !effect.TargetGraphic)
+                {
+                    return;
+                }
+                
+                var targetGraphic = effect.TargetGraphic;
+                var mat = effect.GetEffectMaterial();
+                if (effect.EffectMaterial == mat && targetGraphic.material == mat)
+                {
+                    return;
+                }
+                     
+                effect.TargetGraphic.material = effect.effectMaterial = mat;
+                EditorUtility.SetDirty(effect);
+                EditorUtility.SetDirty(graphic);
+                //EditorApplication.delayCall += AssetDatabase.SaveAssets;
+            };
+#endif
+        }
+
+        /// <summary>
+        /// Modifies the mesh.
+        /// </summary>
+        /// <param name="vh">Current VertexHelper.</param>
+        public override void ModifyMesh(VertexHelper vh)
+        {
+            if (!this.isActiveAndEnabled)
+            {
+                return;
+            }
+
+            // OnPreModifyMesh.
+            Vector2 factor = Vector2.zero;
+            UIVertex vt = UIVertex.simpleVert;
+            this.OnPreModifyMesh();
+            for (int i = 0; i < vh.currentVertCount; i++)
+            {
+                vh.PopulateUIVertex(ref vt, i);
+                this.OnPreModifyVertex(vt);
+
+                // Set prameters to vertex.
+                vt.uv1 = currentFactor;
+                vh.SetUIVertex(vt, i);
+            }
         }
 
         /// <summary>
@@ -64,6 +112,11 @@ namespace Coffee.UIExtensions
         /// <param name="w">Fourth [0-1] value.</param>
         protected static float PackToFloat(float x, float y, float z, float w)
         {
+            if (x + y + z + w <= 0)
+            {
+                return 0f;
+            }
+
             const int PRECISION = (1 << 6) - 1;
             return (Mathf.FloorToInt(w * PRECISION) << 18)
             + (Mathf.FloorToInt(z * PRECISION) << 12)
@@ -95,18 +148,33 @@ namespace Coffee.UIExtensions
         /// <returns>The material.</returns>
         protected virtual Material GetEffectMaterial()
         {
-            return null;
+            return this.EffectMaterial;
         }
 
         /// <summary>
         /// Mark the UIEffect as dirty.
         /// </summary>
-        protected void SetDirty()
+        protected void SetGraphicDirty()
         {
             if (this.TargetGraphic)
             {
                 this.TargetGraphic.SetVerticesDirty();
             }
+        }
+
+        /// <summary>
+        /// Raises the pre modify mesh event.
+        /// </summary>
+        protected virtual void OnPreModifyMesh()
+        {
+        }
+
+        /// <summary>
+        /// Raises the pre modify vertex event.
+        /// </summary>
+        /// <param name="vert">Current vertex.</param>
+        protected virtual void OnPreModifyVertex(UIVertex vert)
+        {
         }
     }
 }

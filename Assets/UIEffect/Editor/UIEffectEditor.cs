@@ -38,7 +38,7 @@ namespace Coffee.UIExtensions
 			changed |= EditorGUI.EndChangeCheck();
 
 			// When tone is enable, show parameters.
-			if (spToneMode.intValue != (int)UIEffect.ToneMode.None)
+			if (spToneMode.intValue != (int)ToneMode.None)
 			{
 				EditorGUI.indentLevel++;
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_ToneLevel"));
@@ -54,7 +54,7 @@ namespace Coffee.UIExtensions
 			changed |= EditorGUI.EndChangeCheck();
 
 			// When color is enable, show parameters.
-			if (spColorMode.intValue != (int)UIEffect.ColorMode.None)
+			if (spColorMode.intValue != (int)ColorMode.None)
 			{
 				EditorGUI.indentLevel++;
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_ColorFactor"));
@@ -70,7 +70,7 @@ namespace Coffee.UIExtensions
 			changed |= EditorGUI.EndChangeCheck();
 
 			// When blur is enable, show parameters.
-			if (spBlurMode.intValue != (int)UIEffect.BlurMode.None)
+			if (spBlurMode.intValue != (int)BlurMode.None)
 			{
 				EditorGUI.indentLevel++;
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_Blur"));
@@ -85,9 +85,9 @@ namespace Coffee.UIExtensions
 			else if (changed || !serializedObject.isEditingMultipleObjects)
 			{
 				spMaterial.objectReferenceValue = UIEffect.GetOrGenerateMaterialVariant(Shader.Find(shaderName),
-					(UIEffect.ToneMode)spToneMode.intValue,
-					(UIEffect.ColorMode)spColorMode.intValue,
-					(UIEffect.BlurMode)spBlurMode.intValue
+					(ToneMode)spToneMode.intValue,
+					(ColorMode)spColorMode.intValue,
+					(BlurMode)spBlurMode.intValue
 				);
 			}
 		}
@@ -105,6 +105,8 @@ namespace Coffee.UIExtensions
 
 		void OnEnable()
 		{
+            return;
+
 			_spEffectColor = serializedObject.FindProperty("m_EffectColor");
 
 			_spCustomEffect = serializedObject.FindProperty("m_CustomEffect");
@@ -121,6 +123,9 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public override void OnInspectorGUI()
 		{
+            base.OnInspectorGUI();
+            return;
+
 			serializedObject.Update();
 
 			// Custom effect.

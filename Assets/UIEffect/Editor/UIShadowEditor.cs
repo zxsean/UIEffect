@@ -45,7 +45,7 @@ namespace Coffee.UIExtensions
 			if (element.FindPropertyRelative("style").intValue == (int)UIShadow.ShadowStyle.None)
 				return 16;
 			
-			return (uiEffect && uiEffect.blurMode != UIEffect.BlurMode.None ? 84 : 64) + (EditorGUIUtility.wideMode ? 0 : 18);
+            return (uiEffect && uiEffect.BlurMode != BlurMode.None ? 84 : 64) + (EditorGUIUtility.wideMode ? 0 : 18);
 		}
 
 		/// <summary>
@@ -69,7 +69,7 @@ namespace Coffee.UIExtensions
 			r.y += EditorGUIUtility.wideMode ? r.height : r.height * 2;
 			EditorGUI.PropertyField(r, sp.FindPropertyRelative("useGraphicAlpha"));
 
-			if (uiEffect && uiEffect.blurMode != UIEffect.BlurMode.None)
+            if (uiEffect && uiEffect.BlurMode != BlurMode.None)
 			{
 				r.y += r.height;
 				EditorGUI.PropertyField(r, sp.FindPropertyRelative("blur"));
@@ -98,7 +98,7 @@ namespace Coffee.UIExtensions
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_EffectColor"));
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_UseGraphicAlpha"));
 
-				if (uiEffect && uiEffect.blurMode != UIEffect.BlurMode.None)
+                if (uiEffect && uiEffect.BlurMode != BlurMode.None)
 				{
 					EditorGUILayout.PropertyField(serializedObject.FindProperty("m_Blur"));
 				}

@@ -9,10 +9,6 @@ using UnityEditor;
 
 namespace Coffee.UIExtensions
 {
-	using BlurMode = UIEffect.BlurMode;
-	using ColorMode = UIEffect.ColorMode;
-	using ToneMode = UIEffect.ToneMode;
-
 	/// <summary>
 	/// UIEffectCapturedImage
 	/// </summary>

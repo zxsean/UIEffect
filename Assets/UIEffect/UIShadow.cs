@@ -117,7 +117,7 @@ namespace Coffee.UIExtensions
 				var inputVertCount = s_Verts.Count;
 				var start = 0;
 				var end = inputVertCount;
-				var toneLevel = _uiEffect && _uiEffect.isActiveAndEnabled ? _uiEffect.toneLevel : 0;
+				var toneLevel = _uiEffect && _uiEffect.isActiveAndEnabled ? _uiEffect.EffectFactor : 0;
 
 				// Additional Shadows.
 				for (int i = additionalShadows.Count - 1; 0 <= i; i--)
