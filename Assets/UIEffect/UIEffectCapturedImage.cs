@@ -42,8 +42,8 @@ namespace Coffee.UIExtensions
 		[SerializeField][Range(0, 1)] float m_ToneLevel = 1;
 		[SerializeField][Range(0, 1)] float m_Blur = 0;
 		[SerializeField] EffectMode m_ToneMode;
-		[SerializeField] ColorMode m_ColorMode;
-		[SerializeField] BlurMode m_BlurMode;
+		[SerializeField] ColorEffectMode m_ColorMode;
+		[SerializeField] BlurEffectMode m_BlurMode;
 		[SerializeField] Color m_EffectColor = Color.white;
 		[SerializeField] DesamplingRate m_DesamplingRate;
 		[SerializeField] DesamplingRate m_ReductionRate;
@@ -74,12 +74,12 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Color effect mode.
 		/// </summary>
-		public ColorMode colorMode { get { return m_ColorMode; } set { m_ColorMode = value; } }
+		public ColorEffectMode colorMode { get { return m_ColorMode; } set { m_ColorMode = value; } }
 
 		/// <summary>
 		/// Blur effect mode.
 		/// </summary>
-		public BlurMode blurMode { get { return m_BlurMode; } set { m_BlurMode = value; } }
+		public BlurEffectMode blurMode { get { return m_BlurMode; } set { m_BlurMode = value; } }
 
 		/// <summary>
 		/// Color for the color effect.

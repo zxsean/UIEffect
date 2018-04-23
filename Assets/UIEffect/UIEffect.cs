@@ -30,7 +30,7 @@ namespace Coffee.UIExtensions
     /// <summary>
     /// Color effect mode.
     /// </summary>
-    public enum ColorMode
+    public enum ColorEffectMode
     {
         None = 0,
         Set,
@@ -41,7 +41,7 @@ namespace Coffee.UIExtensions
     /// <summary>
     /// Blur effect mode.
     /// </summary>
-    public enum BlurMode
+    public enum BlurEffectMode
     {
         None = 0,
         Fast,
@@ -54,20 +54,20 @@ namespace Coffee.UIExtensions
     /// </summary>
     public class UIEffect : UIEffectBase
     {
-        public const string shaderName = "UI/Hidden/UI-Effect";
+        public const string ShaderName = "UI/Hidden/UI-Effect";
 
         [FormerlySerializedAs("m_ToneLevel")]
         [SerializeField][Range(0, 1)] private float effectFactor = 1;
         [FormerlySerializedAs("m_ColorFactor")]
-        [SerializeField][Range(0, 1)] private float colorFactor = 1;
+        [SerializeField][Range(0, 1)] private float colorEffectFactor = 1;
         [FormerlySerializedAs("m_Blur")]
-        [SerializeField][Range(0, 1)] private float blurFactor = 0.25f;
+        [SerializeField][Range(0, 1)] private float blurEffectFactor = 0.25f;
         [FormerlySerializedAs("m_ToneMode")]
         [SerializeField] private EffectMode effectMode;
         [FormerlySerializedAs("m_ColorMode")]
-        [SerializeField] private ColorMode colorMode;
+        [SerializeField] private ColorEffectMode colorEffectMode;
         [FormerlySerializedAs("m_BlurMode")]
-        [SerializeField] private BlurMode blurMode;
+        [SerializeField] private BlurEffectMode blurEffectMode;
 
         /// <summary>
         /// Gets or sets effect factor between 0 to 1.
@@ -89,16 +89,16 @@ namespace Coffee.UIExtensions
         /// <summary>
         /// Gets or sets color effect factor between 0 to 1.
         /// </summary>
-        public float ColorFactor
+        public float ColorEffectFactor
         {
             get
             {
-                return this.colorFactor;
+                return this.colorEffectFactor;
             }
 
             set
             {
-                this.colorFactor = Mathf.Clamp01(value);
+                this.colorEffectFactor = Mathf.Clamp01(value);
                 this.SetGraphicDirty();
             }
         }
@@ -106,16 +106,16 @@ namespace Coffee.UIExtensions
         /// <summary>
         /// Gets or sets how far is the blurring from the graphic.
         /// </summary>
-        public float BlurFactor
+        public float BlurEffectFactor
         {
             get
             {
-                return this.blurFactor;
+                return this.blurEffectFactor;
             }
 
             set
             {
-                this.blurFactor = Mathf.Clamp01(value);
+                this.blurEffectFactor = Mathf.Clamp01(value);
                 this.SetGraphicDirty();
             }
         }
@@ -134,22 +134,22 @@ namespace Coffee.UIExtensions
         /// <summary>
         /// Gets color effect mode.
         /// </summary>
-        public ColorMode ColorMode
+        public ColorEffectMode ColorEffectMode
         {
             get
             {
-                return this.colorMode;
+                return this.colorEffectMode;
             }
         }
 
         /// <summary>
         /// Gets blur effect mode.
         /// </summary>
-        public BlurMode BlurMode
+        public BlurEffectMode BlurEffectMode
         {
             get
             {
-                return this.blurMode;
+                return this.blurEffectMode;
             }
         }
 
@@ -158,7 +158,7 @@ namespace Coffee.UIExtensions
         /// </summary>
         protected override void OnPreModifyMesh()
         {
-            var x = PackToFloat(this.effectFactor, this.ColorFactor, this.BlurFactor, 0);
+            var x = PackToFloat(this.effectFactor, this.ColorEffectFactor, this.BlurEffectFactor, 0);
             currentFactor.Set(x, 0);
         }
 
@@ -169,9 +169,9 @@ namespace Coffee.UIExtensions
         protected override Material GetEffectMaterial()
         {
             #if UNITY_EDITOR
-            return (this.EffectMode == 0) && (this.colorMode == 0) && (this.blurMode == 0)
+            return (this.EffectMode == 0) && (this.colorEffectMode == 0) && (this.blurEffectMode == 0)
                 ? null
-                    : UIEffect.GetOrGenerateMaterialVariant(Shader.Find(shaderName), this.EffectMode, this.colorMode, this.blurMode);
+                : UIEffect.GetOrGenerateMaterialVariant(Shader.Find(ShaderName), this.EffectMode, this.colorEffectMode, this.blurEffectMode);
             #else
             return base.GetEffectMaterial();
             #endif
@@ -180,7 +180,7 @@ namespace Coffee.UIExtensions
         #if UNITY_EDITOR
 
 
-        public static Material GetMaterial(Shader shader, EffectMode tone, ColorMode color, BlurMode blur)
+        public static Material GetMaterial(Shader shader, EffectMode tone, ColorEffectMode color, BlurEffectMode blur)
         {
             string variantName = GetVariantName(shader, tone, color, blur);
             return AssetDatabase.FindAssets("t:Material " + Path.GetFileName(shader.name))
@@ -191,7 +191,7 @@ namespace Coffee.UIExtensions
         }
 
 
-        public static Material GetOrGenerateMaterialVariant(Shader shader, EffectMode tone, ColorMode color, BlurMode blur)
+        public static Material GetOrGenerateMaterialVariant(Shader shader, EffectMode tone, ColorEffectMode color, BlurEffectMode blur)
         {
             if (!shader)
                 return null;
@@ -245,7 +245,7 @@ namespace Coffee.UIExtensions
             ?? ("Assets/UIEffect/Materials/" + name + ".mat");
         }
 
-        public static string GetVariantName(Shader shader, EffectMode tone, ColorMode color, BlurMode blur)
+        public static string GetVariantName(Shader shader, EffectMode tone, ColorEffectMode color, BlurEffectMode blur)
         {
             return
 #if UIEFFECT_SEPARATE
@@ -257,6 +257,6 @@ namespace Coffee.UIExtensions
             + (0 < color ? "-" + color : "")
             + (0 < blur ? "-" + blur : "");
         }
-#endif
+        #endif
     }
 }
