@@ -69,7 +69,6 @@ namespace Coffee.UIExtensions
 			var mat =  GetMaterial();
 			if (m_EffectMaterial != mat || targetGraphic.material != mat)
 			{
-				Debug.Log(this + " ChangeMaterial : " + mat,this);
 				targetGraphic.material = m_EffectMaterial = mat;
 				UnityEditor.EditorUtility.SetDirty(this);
 				UnityEditor.EditorUtility.SetDirty(targetGraphic);

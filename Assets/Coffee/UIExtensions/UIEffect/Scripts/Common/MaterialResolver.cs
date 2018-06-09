@@ -24,9 +24,6 @@ namespace Coffee.UIExtensions
 			if (mat) {
 				if(!mat.shaderKeywords.OrderBy(x=>x).SequenceEqual(keywords.OrderBy(x=>x)))
 				{
-					Debug.LogFormat("shaderKeywords is not SequenceEqual : " + mat);
-					Debug.LogFormat("mat: {0}", mat.shaderKeywords.OrderBy(x=>x).Aggregate((a,b)=>a+" "+b));
-					Debug.LogFormat("correct: {0}", keywords.OrderBy(x=>x).Aggregate((a,b)=>a+" "+b));
 					mat.shaderKeywords = keywords;
 					EditorUtility.SetDirty (mat);
 					if (!Application.isPlaying)
