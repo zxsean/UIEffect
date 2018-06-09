@@ -304,10 +304,9 @@ namespace Coffee.UIExtensions
 			}
 
 			var mat =  MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_ToneMode, m_ColorMode, m_BlurMode);
-			if (m_EffectMaterial != mat || material != mat)
+			if (m_EffectMaterial != mat)
 			{
-				Debug.Log(this + " ChangeMaterial : " + mat,this);
-				material = m_EffectMaterial = mat;
+				m_EffectMaterial = mat;
 				UnityEditor.EditorUtility.SetDirty(this);
 			}
 		}
