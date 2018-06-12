@@ -33,7 +33,7 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		protected override void OnValidate ()
 		{
-			base.OnValidate ();
+			SetDirty ();
 #if UNITY_EDITOR
 			UnityEditor.EditorApplication.delayCall += () => UpdateMaterial(false);
 #endif
@@ -108,7 +108,7 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Mark the UIEffect as dirty.
 		/// </summary>
-		protected void SetDirty()
+		protected virtual void SetDirty()
 		{
 			if (targetGraphic)
 			{

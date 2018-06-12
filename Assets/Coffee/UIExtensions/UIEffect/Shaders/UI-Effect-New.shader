@@ -1,4 +1,4 @@
-Shader "UI/Hidden/UI-Effect-Shiny"
+Shader "UI/Hidden/UI-Effect-New"
 {
 	Properties
 	{
@@ -55,13 +55,18 @@ Shader "UI/Hidden/UI-Effect-Shiny"
 			
 			#pragma multi_compile __ UNITY_UI_ALPHACLIP
 
+			#pragma shader_feature __ GRAYSCALE SEPIA NEGA PIXEL MONO CUTOFF HUE 
+			#pragma shader_feature __ ADD SUBTRACT FILL
+			#pragma shader_feature __ FASTBLUR MEDIUMBLUR DETAILBLUR
+
 			#include "UnityCG.cginc"
 			#include "UnityUI.cginc"
+			#include "UI-Effect.cginc"
 
 			struct appdata_t
 			{
 				float4 vertex   : POSITION;
-				float4 color	: COLOR;
+				float4 color    : COLOR;
 				float2 texcoord : TEXCOORD0;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 
@@ -71,14 +76,16 @@ Shader "UI/Hidden/UI-Effect-Shiny"
 			struct v2f
 			{
 				float4 vertex   : SV_POSITION;
-				fixed4 color	: COLOR;
+				fixed4 color    : COLOR;
 				float2 texcoord  : TEXCOORD0;
 				float4 worldPosition : TEXCOORD1;
 				UNITY_VERTEX_OUTPUT_STEREO
 				
-				half2 param : TEXCOORD2;
-//				half4 effectFactor : TEXCOORD2;
-//				half2 effectFactor2 : TEXCOORD3;
+				#if defined (UI_COLOR)
+				fixed4 colorFactor : COLOR1;
+				#endif
+
+				half param : TEXCOORD2;
 			};
 			
 			fixed4 _Color;
@@ -87,26 +94,6 @@ Shader "UI/Hidden/UI-Effect-Shiny"
 			sampler2D _MainTex;
 			float4 _MainTex_TexelSize;
 			sampler2D _ParametizedTexture;
-			float4 _ParametizedTexture_TexelSize;
-
-			fixed4 UnpackToVec4(float value)
-			{
-				const int PACKER_STEP = 64;
-				const int PRECISION = PACKER_STEP - 1;
-				fixed4 color;
-
-				color.r = (value % PACKER_STEP) / PRECISION;
-				value = floor(value / PACKER_STEP);
-
-				color.g = (value % PACKER_STEP) / PRECISION;
-				value = floor(value / PACKER_STEP);
-
-				color.b = (value % PACKER_STEP) / PRECISION;
-				value = floor(value / PACKER_STEP);
-
-				color.a = (value % PACKER_STEP) / PRECISION;
-				return color;
-			}
 
 			half2 UnpackToVec2(float value)
 			{
@@ -127,60 +114,52 @@ Shader "UI/Hidden/UI-Effect-Shiny"
 				UNITY_SETUP_INSTANCE_ID(IN);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(OUT);
 				OUT.worldPosition = IN.vertex;
+				OUT.vertex = UnityObjectToClipPos(OUT.worldPosition);
 
-				OUT.vertex = UnityObjectToClipPos(IN.vertex);
-
-				OUT.texcoord = IN.texcoord;
-				
 				OUT.color = IN.color * _Color;
-				
-				OUT.texcoord = UnpackToVec2(IN.texcoord.x);
-				OUT.param = UnpackToVec2(IN.texcoord.y);
-				
 
-//				OUT.effectFactor = UnpackToVec4(IN.uv1.x);
-//				OUT.effectFactor2 = UnpackToVec2(IN.uv1.y);
+				OUT.texcoord = UnpackToVec2(IN.texcoord.x);
+				OUT.param = IN.texcoord.y;
+				
 				return OUT;
 			}
 
+
 			fixed4 frag(v2f IN) : SV_Target
 			{
-//			return tex2D(_ParametizedTexture, float2(0, IN.effectFactor.x));
 
-				half4 color = (tex2D(_MainTex, IN.texcoord) + _TextureSampleAdd);
-				fixed4 originAlpha = color.a;
-				color *= IN.color;
+				fixed4 param1 = tex2D(_ParametizedTexture, float2(0.25, IN.param));
+			
+				#if PIXEL
+				IN.texcoord = round(IN.texcoord * IN.extraFactor.xy) / IN.extraFactor.xy;
+				#endif
+
+				#if defined (UI_BLUR)
+				half4 color = (Tex2DBlurring(_MainTex, IN.texcoord, param1.y * _MainTex_TexelSize.xy * 2) + _TextureSampleAdd) * IN.color;
+				#else
+				half4 color = (tex2D(_MainTex, IN.texcoord) + _TextureSampleAdd) * IN.color;
+				#endif
 				color.a *= UnityGet2DClipping(IN.worldPosition.xy, _ClipRect);
 
-				#ifdef UNITY_UI_ALPHACLIP
+				#ifdef CUTOFF
+				clip (color.a - 1 + param1.x * 1.001);
+				#elif UNITY_UI_ALPHACLIP
 				clip (color.a - 0.001);
 				#endif
 
-//				half normalizedPos = IN.effectFactor.x;
-//				fixed softness = IN.effectFactor.y;
-//				fixed width = IN.effectFactor.z;
-//				fixed brightness = IN.effectFactor.w;
-//				half location = IN.effectFactor2.x * 2 - 0.5;
-//				half highlight = IN.effectFactor2.y;
+				#if MONO
+				color.rgb = IN.color.rgb;
+				color.a = color.a * tex2D(_MainTex, IN.texcoord).a + param1.x * 2 - 1;
+				#elif HUE
+				color.rgb = shift_hue(color.rgb, IN.extraFactor.x, IN.extraFactor.y);
+				#elif defined (UI_TONE) & !CUTOFF
+				color = ApplyToneEffect(color, param1.x);
+				#endif
 
-				fixed4 param1 = tex2D(_ParametizedTexture, float2(0.25, IN.param.x));
-				fixed4 param2 = tex2D(_ParametizedTexture, float2(0.75, IN.param.x));
+				#if defined (UI_COLOR)
+				color = ApplyColorEffect(color, IN.colorFactor) * IN.color;
+				#endif
 
-
-				half normalizedPos = IN.param.y;
-				half location = param1.x * 2 - 0.5;
-				fixed width = param1.y;
-				fixed softness = param1.z;
-				fixed brightness = param1.w;
-				half highlight = param2.x;
-
-				half pos = normalizedPos - location;
-
-				half normalized = 1 - saturate(abs(pos / width));
-				half shinePower = smoothstep(0, softness*2, normalized);
-				half3 reflectColor = lerp(1, color.rgb * 10, highlight);
-
-				color.rgb += originAlpha * (shinePower / 2) * brightness * reflectColor;
 				return color;
 			}
 		ENDCG

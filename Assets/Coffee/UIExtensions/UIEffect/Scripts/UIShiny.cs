@@ -18,12 +18,29 @@ namespace Coffee.UIExtensions
 	/// </summary>
 	[ExecuteInEditMode]
 	[DisallowMultipleComponent]
-	public class UIShiny : UIEffectBase
+	public class UIShiny : UIEffectBase, IParametizedTexture
 	{
+
+
 		//################################
 		// Constant or Static Members.
 		//################################
 		public const string shaderName = "UI/Hidden/UI-Effect-Shiny";
+
+		static ParametizedTexture ptex
+		{
+			get
+			{
+				if (_ptex == null)
+				{
+					_ptex = new ParametizedTexture(8, 8);
+
+				}
+				return _ptex;
+			}
+		}
+
+		static ParametizedTexture _ptex;
 
 
 		//################################
@@ -31,12 +48,12 @@ namespace Coffee.UIExtensions
 		//################################
 		[SerializeField] [Range(0, 1)] float m_Location = 0;
 		[SerializeField] [Range(0, 1)] float m_Width = 0.25f;
-		[SerializeField] [Range(-180, 180)] float m_Rotation;
 		[SerializeField][Range(0.01f, 1)] float m_Softness = 1f;
 		[FormerlySerializedAs("m_Alpha")]
 		[SerializeField][Range(0, 1)] float m_Brightness = 1f;
 		[SerializeField][Range(0, 1)] float m_Highlight = 1;
 		[SerializeField] protected EffectArea m_EffectArea;
+		[SerializeField] [Range(-180, 180)] float m_Rotation;
 		[Header("Play Effect")]
 		[SerializeField] bool m_Play = false;
 		[SerializeField] bool m_Loop = false;
@@ -48,10 +65,10 @@ namespace Coffee.UIExtensions
 		//################################
 		// Public Members.
 		//################################
-//		/// <summary>
-//		/// Graphic affected by the UIEffect.
-//		/// </summary>
-//		new public Graphic graphic { get { return base.graphic; } }
+		//		/// <summary>
+		//		/// Graphic affected by the UIEffect.
+		//		/// </summary>
+		//		new public Graphic graphic { get { return base.graphic; } }
 
 		/// <summary>
 		/// Location for shiny effect.
@@ -213,65 +230,88 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public AnimatorUpdateMode updateMode { get { return m_UpdateMode; } set { m_UpdateMode = value; } }
 
+		public int index { get; set; }
+
+		protected override void SetDirty()
+		{
+			ptex.SetData(this, 0, m_Location);
+			ptex.SetData(this, 1, m_Width);
+			ptex.SetData(this, 2, m_Softness);
+			ptex.SetData(this, 3, m_Brightness);
+			ptex.SetData(this, 4, m_Highlight);
+
+//			base.SetDirty();
+		}
+
 		/// <summary>
 		/// This function is called when the object becomes enabled and active.
 		/// </summary>
 		protected override void OnEnable()
 		{
+//			if (ptex == null)
+//			{
+//				ptex = new ParametizedTexture(8, 8);
+//			}
 			_time = 0;
 //			graphic.material = effectMaterial;
 			base.OnEnable();
+			ptex.Register(this);
+
+			if (m_EffectMaterial)
+			{
+				m_EffectMaterial.SetTexture("_ParametizedTexture", ptex.texture);
+			}
 		}
 
 
-//		/// <summary>
-//		/// This function is called when the behaviour becomes disabled () or inactive.
-//		/// </summary>
-//		protected override void OnDisable()
-//		{
-//			graphic.material = null;
-//			base.OnDisable();
-//		}
+		/// <summary>
+		/// This function is called when the behaviour becomes disabled () or inactive.
+		/// </summary>
+		protected override void OnDisable()
+		{
+			base.OnDisable();
+			ptex.Unregister(this);
+		}
 
-#if UNITY_EDITOR
+		#if UNITY_EDITOR
 		protected override Material GetMaterial()
 		{
 			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName));
 		}
 
-//		public void OnBeforeSerialize()
-//		{
-//		}
-//
-//		public void OnAfterDeserialize()
-//		{
-//			var obj = this;
-//			EditorApplication.delayCall += () =>
-//			{
-//				if (Application.isPlaying || !obj)
-//					return;
-//
-//				var mat = GetMaterial(shaderName);
-//				if (m_EffectMaterial == mat && graphic.material == mat)
-//					return;
-//
-//				graphic.material = m_EffectMaterial = mat;
-//				EditorUtility.SetDirty(this);
-//				EditorUtility.SetDirty(graphic);
-//				EditorApplication.delayCall += AssetDatabase.SaveAssets;
-//			};
-//		}
-//
-//		public static Material GetMaterial(string shaderName)
-//		{
-//			string name = Path.GetFileName(shaderName);
-//			return AssetDatabase.FindAssets("t:Material " + name)
-//				.Select(x => AssetDatabase.GUIDToAssetPath(x))
-//				.SelectMany(x => AssetDatabase.LoadAllAssetsAtPath(x))
-//				.OfType<Material>()
-//				.FirstOrDefault(x => x.name == name);
-//		}
-#endif
+		//		public void OnBeforeSerialize()
+		//		{
+		//		}
+		//
+		//		public void OnAfterDeserialize()
+		//		{
+		//			var obj = this;
+		//			EditorApplication.delayCall += () =>
+		//			{
+		//				if (Application.isPlaying || !obj)
+		//					return;
+		//
+		//				var mat = GetMaterial(shaderName);
+		//				if (m_EffectMaterial == mat && graphic.material == mat)
+		//					return;
+		//
+		//				graphic.material = m_EffectMaterial = mat;
+		//				EditorUtility.SetDirty(this);
+		//				EditorUtility.SetDirty(graphic);
+		//				EditorApplication.delayCall += AssetDatabase.SaveAssets;
+		//			};
+		//		}
+		//
+		//		public static Material GetMaterial(string shaderName)
+		//		{
+		//			string name = Path.GetFileName(shaderName);
+		//			return AssetDatabase.FindAssets("t:Material " + name)
+		//				.Select(x => AssetDatabase.GUIDToAssetPath(x))
+		//				.SelectMany(x => AssetDatabase.LoadAllAssetsAtPath(x))
+		//				.OfType<Material>()
+		//				.FirstOrDefault(x => x.name == name);
+		//		}
+		#endif
 
 		/// <summary>
 		/// Modifies the mesh.
@@ -313,6 +353,11 @@ namespace Coffee.UIExtensions
 				{
 					nomalizedPos = localMatrix * vertex.position;
 				}
+
+				vertex.uv0 = new Vector2(
+					Packer.ToFloat(vertex.uv0.x, vertex.uv0.y),
+					Packer.ToFloat(((float)index + 0.5f) / ptex.maxInstanceCount, Mathf.Clamp01(nomalizedPos.y))
+				);
 
 				vertex.uv1 = new Vector2(
 					Packer.ToFloat(Mathf.Clamp01(nomalizedPos.y), softness, width, brightness),
@@ -357,13 +402,18 @@ namespace Coffee.UIExtensions
 			}
 		}
 
-//		/// <summary>
-//		/// Mark the UIEffect as dirty.
-//		/// </summary>
-//		void _SetDirty()
-//		{
-//			if (graphic)
-//				graphic.SetVerticesDirty();
-//		}
+		void LateUpdate()
+		{
+			ptex.Upload();
+		}
+
+		//		/// <summary>
+		//		/// Mark the UIEffect as dirty.
+		//		/// </summary>
+		//		void _SetDirty()
+		//		{
+		//			if (graphic)
+		//				graphic.SetVerticesDirty();
+		//		}
 	}
 }
