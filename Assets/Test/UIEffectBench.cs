@@ -7,13 +7,13 @@ using Coffee.UIExtensions;
 public class UIEffectBench : MonoBehaviour
 {
 
-	[SerializeField] UIEffectNew classic;
-	[SerializeField] UIEffectNew uie;
+	[SerializeField] UIEffectClassic classic;
+	[SerializeField] UIEffect uie;
 	[SerializeField] UIEffectNew uieNew;
 
 	[SerializeField] Text display;
 
-	List<UIEffectNew> instances = new List<UIEffectNew>();
+	List<UIEffectBase> instances = new List<UIEffectBase>();
 
 	float _accum;
 	int _frames;
@@ -34,22 +34,25 @@ public class UIEffectBench : MonoBehaviour
 		{
 			float duration = i % 3 + 1f;
 			var val = Mathf.Repeat(Time.realtimeSinceStartup, duration) / duration;
-			//var uIEffect = o as UIEffect;
-			//if (uIEffect != null)
-			//{
-			//	uIEffect.toneLevel = val;
-			//}
-
-			//var uIEffectClassic = o as UIEffectClassic;
-			//if (uIEffectClassic != null)
-			//{
-			//	uIEffectClassic.toneLevel =val;
-			//}
-
-			//var uIEffectNew = o as UIEffectNew;
-			//if (uIEffectNew != null)
+			var uIEffect = o as UIEffect;
+			if (uIEffect != null)
 			{
-				o.toneLevel = val;
+				uIEffect.toneLevel = val;
+				continue;
+			}
+
+			var uIEffectClassic = o as UIEffectClassic;
+			if (uIEffectClassic != null)
+			{
+				uIEffectClassic.toneLevel =val;
+				continue;
+			}
+
+			var uIEffectNew = o as UIEffectNew;
+			if (uIEffectNew != null)
+			{
+				uIEffectNew.toneLevel = val;
+				continue;
 			}
 			i++;
 		}
