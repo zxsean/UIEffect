@@ -11,7 +11,7 @@ public class NewBehaviourScript : MonoBehaviour, ILateUpdatable {
 	public void OnLateUpdate()
 	{
 		count++;
-		Debug.Log("NewBehaviourScript.OnLateUpdate! " + count + ", " + UnityEditor.EditorApplication.timeSinceStartup);
+//		Debug.Log("NewBehaviourScript.OnLateUpdate! " + count + ", " + UnityEditor.EditorApplication.timeSinceStartup);
 
 //		if (0.5f < Random.value)
 //		{

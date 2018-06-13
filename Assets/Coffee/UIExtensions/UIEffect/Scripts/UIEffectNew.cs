@@ -134,8 +134,8 @@ namespace Coffee.UIExtensions
 		protected override void SetDirty()
 		{
 //			Debug.LogFormat("<color=green>UIEffectNew.SetDirty {0}, {1}</color>", UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
-			if (!EditorApplication.isPlaying)
-				return;
+//			if (!EditorApplication.isPlaying)
+//				return;
 			ptex.SetData(this, 0, m_ToneLevel);
 			ptex.SetData(this, 1, m_Blur);
 		}
@@ -145,9 +145,9 @@ namespace Coffee.UIExtensions
 			base.OnEnable();
 
 //			Debug.LogFormat("<color=green>UIEffectNew.OnEnable {0}, {1}</color>", UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
-			if (!EditorApplication.isPlaying )
+//			if (!EditorApplication.isPlaying )
 //			if (EditorApplication.isPlayingOrWillChangePlaymode)
-				return;
+//				return;
 
 			ptex.Register(this);
 
@@ -164,10 +164,10 @@ namespace Coffee.UIExtensions
 		{
 			base.OnDisable();
 
-			Debug.LogFormat("<color=green>UIEffectNew.OnDisable {0}, {1}</color>", UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+//			Debug.LogFormat("<color=green>UIEffectNew.OnDisable {0}, {1}</color>", UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
 //			if (!EditorApplication.isPlaying && EditorApplication.isPlayingOrWillChangePlaymode)
-			if (!EditorApplication.isPlaying)
-				return;
+//			if (!EditorApplication.isPlaying)
+//				return;
 			ptex.Unregister(this);
 //			UpdateDispatcher.Unregister(this);
 		}

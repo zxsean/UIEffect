@@ -130,7 +130,7 @@ namespace Coffee.UIExtensions
 				return;
 			}
 #endif
-			Debug.LogFormat("<color=green>UpdateDispatcher.Register {0}, {1}, {2}, {3}</color>", updatable, Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+//			Debug.LogFormat("<color=green>UpdateDispatcher.Register {0}, {1}, {2}, {3}</color>", updatable, Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
 
 			var inst = instance;
 
@@ -167,7 +167,7 @@ namespace Coffee.UIExtensions
 				return;
 			}
 #endif
-			Debug.LogFormat("<color=green>UpdateDispatcher.Unregister {0}, {1}, {2}, {3}, {4}, {5}</color>", updatable, Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode, _instance, !_instance);
+//			Debug.LogFormat("<color=green>UpdateDispatcher.Unregister {0}, {1}, {2}, {3}, {4}, {5}</color>", updatable, Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode, _instance, !_instance);
 
 			if (!_instance)
 				return;

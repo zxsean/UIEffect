@@ -36,7 +36,7 @@ namespace Coffee.UIExtensions
 
 		public ParametizedTexture (int channel, int maxInstance)
 		{
-			Debug.LogFormat("<color=red>ParametizedTexture is generated!</color> {0}, {1}, {2}", Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+//			Debug.LogFormat("<color=red>ParametizedTexture is generated!</color> {0}, {1}, {2}", Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
 
 			channelCount = ((channel - 1) / 4 + 1) * 4;
 			this.maxInstanceCount = ((maxInstance - 1) / 2 + 1) * 2;
