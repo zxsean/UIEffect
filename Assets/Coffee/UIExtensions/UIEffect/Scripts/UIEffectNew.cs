@@ -19,11 +19,13 @@ namespace Coffee.UIExtensions
 	[DisallowMultipleComponent]
 	public class UIEffectNew : UIEffectBase, IParametizedTexture
 	{
+
 		//################################
 		// Constant or Static Members.
 		//################################
 		public const string shaderName = "UI/Hidden/UI-Effect-New";
-		static ParametizedTexture ptex
+
+		public static ParametizedTexture ptex
 		{
 			get
 			{
@@ -37,7 +39,14 @@ namespace Coffee.UIExtensions
 		}
 
 		static ParametizedTexture _ptex;
+
 		public int index { get; set; }
+
+		[InitializeOnLoadMethod]
+		static void Clear()
+		{
+			_ptex = null;
+		}
 
 
 		//################################
@@ -58,17 +67,41 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Tone effect level between 0(no effect) and 1(complete effect).
 		/// </summary>
-		public float toneLevel{ get { return m_ToneLevel; } set { m_ToneLevel = Mathf.Clamp(value, 0, 1); ptex.SetData(this, 0, m_ToneLevel); } }
+		public float toneLevel
+		{
+			get { return m_ToneLevel; }
+			set
+			{
+				m_ToneLevel = Mathf.Clamp(value, 0, 1);
+				ptex.SetData(this, 0, m_ToneLevel);
+			}
+		}
 
 		/// <summary>
 		/// How far is the blurring from the graphic.
 		/// </summary>
-		public float blur { get { return m_Blur; } set { m_Blur = Mathf.Clamp(value, 0, 1); ptex.SetData(this, 1, m_Blur); } }
+		public float blur
+		{
+			get { return m_Blur; }
+			set
+			{
+				m_Blur = Mathf.Clamp(value, 0, 1);
+				ptex.SetData(this, 1, m_Blur);
+			}
+		}
 
 		/// <summary>
 		/// How far is the blurring shadow from the graphic.
 		/// </summary>
-		public float shadowBlur { get { return m_ShadowBlur; } set { m_ShadowBlur = Mathf.Clamp(value, 0, 1); SetDirty(); } }
+		public float shadowBlur
+		{
+			get { return m_ShadowBlur; }
+			set
+			{
+				m_ShadowBlur = Mathf.Clamp(value, 0, 1);
+				SetDirty();
+			}
+		}
 
 		/// <summary>
 		/// Tone effect mode.
@@ -88,10 +121,21 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Color for the color effect.
 		/// </summary>
-		public Color effectColor { get { return m_EffectColor; } set { m_EffectColor = value; SetDirty(); } }
+		public Color effectColor
+		{
+			get { return m_EffectColor; }
+			set
+			{
+				m_EffectColor = value;
+				SetDirty();
+			}
+		}
 
 		protected override void SetDirty()
 		{
+//			Debug.LogFormat("<color=green>UIEffectNew.SetDirty {0}, {1}</color>", UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+			if (!EditorApplication.isPlaying)
+				return;
 			ptex.SetData(this, 0, m_ToneLevel);
 			ptex.SetData(this, 1, m_Blur);
 		}
@@ -100,6 +144,11 @@ namespace Coffee.UIExtensions
 		{
 			base.OnEnable();
 
+//			Debug.LogFormat("<color=green>UIEffectNew.OnEnable {0}, {1}</color>", UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+			if (!EditorApplication.isPlaying )
+//			if (EditorApplication.isPlayingOrWillChangePlaymode)
+				return;
+
 			ptex.Register(this);
 
 			if (m_EffectMaterial)
@@ -107,12 +156,20 @@ namespace Coffee.UIExtensions
 				m_EffectMaterial.SetTexture("_ParametizedTexture", ptex.texture);
 			}
 			SetDirty();
+
+//			UpdateDispatcher.Register(this);
 		}
 
 		protected override void OnDisable()
 		{
 			base.OnDisable();
+
+			Debug.LogFormat("<color=green>UIEffectNew.OnDisable {0}, {1}</color>", UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+//			if (!EditorApplication.isPlaying && EditorApplication.isPlayingOrWillChangePlaymode)
+			if (!EditorApplication.isPlaying)
+				return;
 			ptex.Unregister(this);
+//			UpdateDispatcher.Unregister(this);
 		}
 
 		/// <summary>
@@ -151,21 +208,21 @@ namespace Coffee.UIExtensions
 			tempVerts.Clear();
 		}
 
-#if UNITY_EDITOR
+		#if UNITY_EDITOR
 		/// <summary>
 		/// Gets the material.
 		/// </summary>
 		/// <returns>The material.</returns>
-		protected override Material GetMaterial ()
+		protected override Material GetMaterial()
 		{
 			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_ToneMode, m_ColorMode, m_BlurMode);
 		}
-#endif
+		#endif
 
 		//################################
 		// Private Members.
 		//################################
-		void LateUpdate()
+		public void OnLateUpdate()
 		{
 			ptex.Upload();
 		}

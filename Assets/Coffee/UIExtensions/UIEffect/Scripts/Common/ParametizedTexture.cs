@@ -12,6 +12,15 @@ namespace Coffee.UIExtensions
 
 	public class ParametizedTexture
 	{
+		#region ILateUpdatable implementation
+
+		public void OnLateUpdate()
+		{
+			Upload();
+		}
+
+		#endregion
+
 		public Texture2D texture{ get; private set; }
 
 		public int channelCount{ get; private set; }
@@ -27,6 +36,8 @@ namespace Coffee.UIExtensions
 
 		public ParametizedTexture (int channel, int maxInstance)
 		{
+			Debug.LogFormat("<color=red>ParametizedTexture is generated!</color> {0}, {1}, {2}", Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+
 			channelCount = ((channel - 1) / 4 + 1) * 4;
 			this.maxInstanceCount = ((maxInstance - 1) / 2 + 1) * 2;
 			texture = new Texture2D (channelCount/4, maxInstanceCount, TextureFormat.RGBA32, false, false);
@@ -38,6 +49,8 @@ namespace Coffee.UIExtensions
 			for (int i = 0; i < maxInstanceCount; i++) {
 				stack.Push (i);
 			}
+
+//			UpdateDispatcher.Register(this);
 		}
 
 
@@ -80,13 +93,14 @@ namespace Coffee.UIExtensions
 	
 		public void Upload ()
 		{
-			if (needUpload) {
-				if (!texture)
-				{
-					texture = new Texture2D (channelCount/4, maxInstanceCount, TextureFormat.RGBA32, false, false);
-					texture.filterMode = FilterMode.Point;
-					texture.wrapMode = TextureWrapMode.Clamp;
-				}
+			if (needUpload && texture) {
+//				Debug.Log("Upload " + needUpload);
+//				if (!texture)
+//				{
+//					texture = new Texture2D (channelCount/4, maxInstanceCount, TextureFormat.RGBA32, false, false);
+//					texture.filterMode = FilterMode.Point;
+//					texture.wrapMode = TextureWrapMode.Clamp;
+//				}
 
 
 //				Debug.Log ("Upload!");

@@ -13,7 +13,7 @@ public class UIEffectBench : MonoBehaviour
 
 	[SerializeField] Text display;
 
-	List<GameObject> instances = new List<GameObject>();
+	List<MonoBehaviour> instances = new List<MonoBehaviour>();
 
 	float _accum;
 	int _frames;
@@ -29,6 +29,32 @@ public class UIEffectBench : MonoBehaviour
 
 	void Update()
 	{
+		int i = 0;
+		foreach (var o in instances)
+		{
+			float duration = i % 3 + 1f;
+			var val = Mathf.Repeat(Time.realtimeSinceStartup, duration) / duration;
+			var uIEffect = o as UIEffect;
+			if (uIEffect != null)
+			{
+				uIEffect.toneLevel = uIEffect.blur = val;
+			}
+
+			var uIEffectClassic = o as UIEffectClassic;
+			if (uIEffectClassic != null)
+			{
+				uIEffectClassic.toneLevel = uIEffectClassic.blur = val;
+			}
+
+			var uIEffectNew = o as UIEffectNew;
+			if (uIEffectNew != null)
+			{
+				uIEffectNew.toneLevel = uIEffectNew.blur = val;
+			}
+			i++;
+		}
+
+
 		_left -= Time.deltaTime;
 		_accum += Time.timeScale / Time.deltaTime;
 		_frames++;
@@ -40,6 +66,14 @@ public class UIEffectBench : MonoBehaviour
 		_left = 0.5f;
 		_accum = 0;
 		_frames = 0;
+
+
+
+	}
+
+	void LateUpdate()
+	{
+		UIEffectNew.ptex.Upload();
 	}
 
 	public void AddClassic(int num)
@@ -47,13 +81,16 @@ public class UIEffectBench : MonoBehaviour
 		for (int i = 0; i < num; i++)
 		{
 			var inst = Instantiate(classic, transform);
-			StartCoroutine(
-				co(inst.gameObject, x =>
-					{
-						inst.toneLevel = x;
-						inst.blur = x;
-					})
-			);
+
+			inst.gameObject.SetActive(true);
+			instances.Add(inst);
+
+			var rt = inst.transform as RectTransform;
+			var anchorX = Random.value;
+			var anchorY = Random.value;
+
+			rt.anchorMax = rt.anchorMin = new Vector2(anchorX, anchorY);
+			rt.anchoredPosition3D = Vector3.zero;
 		}
 	}
 
@@ -62,13 +99,16 @@ public class UIEffectBench : MonoBehaviour
 		for (int i = 0; i < num; i++)
 		{
 			var inst = Instantiate(uieNew, transform);
-			StartCoroutine(
-				co(inst.gameObject, x =>
-					{
-						inst.toneLevel = x;
-						inst.blur = x;
-					})
-			);
+
+			inst.gameObject.SetActive(true);
+			instances.Add(inst);
+
+			var rt = inst.transform as RectTransform;
+			var anchorX = Random.value;
+			var anchorY = Random.value;
+
+			rt.anchorMax = rt.anchorMin = new Vector2(anchorX, anchorY);
+			rt.anchoredPosition3D = Vector3.zero;
 		}
 	}
 
@@ -77,42 +117,47 @@ public class UIEffectBench : MonoBehaviour
 		for (int i = 0; i < num; i++)
 		{
 			var inst = Instantiate(uie, transform);
-			StartCoroutine(
-				co(inst.gameObject, x =>
-					{
-						inst.toneLevel = x;
-						inst.blur = x;
-					})
-			);
+
+			inst.gameObject.SetActive(true);
+			instances.Add(inst);
+
+			var rt = inst.transform as RectTransform;
+			var anchorX = Random.value;
+			var anchorY = Random.value;
+
+			rt.anchorMax = rt.anchorMin = new Vector2(anchorX, anchorY);
+			rt.anchoredPosition3D = Vector3.zero;
 		}
 	}
 
-	IEnumerator co(GameObject go, System.Action<float> action)
-	{
-		go.SetActive(true);
-		instances.Add(go);
-
-		var rt = go.transform as RectTransform;
-		var anchorX = Random.value;
-		var anchorY = Random.value;
-
-		rt.anchorMax = rt.anchorMin = new Vector2(anchorX, anchorY);
-		rt.anchoredPosition3D = Vector3.zero;
-
-		float duration = Random.Range(1f, 2f);
-
-		while (true)
-		{
-			action(Mathf.Repeat(Time.realtimeSinceStartup, duration) / duration);
-			yield return null;
-		}
-	}
+//	IEnumerator co(GameObject go, System.Action<float> action)
+//	{
+//		go.SetActive(true);
+//		instances.Add(go);
+//
+//		var rt = go.transform as RectTransform;
+//		var anchorX = Random.value;
+//		var anchorY = Random.value;
+//
+//		rt.anchorMax = rt.anchorMin = new Vector2(anchorX, anchorY);
+//		rt.anchoredPosition3D = Vector3.zero;
+//
+////		float duration = Random.Range(1f, 2f);
+//
+//		while (true)
+//		{
+//			
+//			
+////			action(Mathf.Repeat(Time.realtimeSinceStartup, duration) / duration);
+//			yield return null;
+//		}
+//	}
 
 	public void Clear()
 	{
-		instances.ForEach(Object.Destroy);
+		instances.ForEach(x=>Object.Destroy(x.gameObject));
 		instances.Clear();
-		StopAllCoroutines();
+//		StopAllCoroutines();
 		Resources.UnloadUnusedAssets();
 	}
 }
