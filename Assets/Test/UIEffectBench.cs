@@ -7,13 +7,13 @@ using Coffee.UIExtensions;
 public class UIEffectBench : MonoBehaviour
 {
 
-	[SerializeField] UIEffectClassic classic;
-	[SerializeField] UIEffect uie;
+	[SerializeField] UIEffectNew classic;
+	[SerializeField] UIEffectNew uie;
 	[SerializeField] UIEffectNew uieNew;
 
 	[SerializeField] Text display;
 
-	List<MonoBehaviour> instances = new List<MonoBehaviour>();
+	List<UIEffectNew> instances = new List<UIEffectNew>();
 
 	float _accum;
 	int _frames;
@@ -34,22 +34,22 @@ public class UIEffectBench : MonoBehaviour
 		{
 			float duration = i % 3 + 1f;
 			var val = Mathf.Repeat(Time.realtimeSinceStartup, duration) / duration;
-			var uIEffect = o as UIEffect;
-			if (uIEffect != null)
-			{
-				uIEffect.toneLevel = uIEffect.blur = val;
-			}
+			//var uIEffect = o as UIEffect;
+			//if (uIEffect != null)
+			//{
+			//	uIEffect.toneLevel = val;
+			//}
 
-			var uIEffectClassic = o as UIEffectClassic;
-			if (uIEffectClassic != null)
-			{
-				uIEffectClassic.toneLevel = uIEffectClassic.blur = val;
-			}
+			//var uIEffectClassic = o as UIEffectClassic;
+			//if (uIEffectClassic != null)
+			//{
+			//	uIEffectClassic.toneLevel =val;
+			//}
 
-			var uIEffectNew = o as UIEffectNew;
-			if (uIEffectNew != null)
+			//var uIEffectNew = o as UIEffectNew;
+			//if (uIEffectNew != null)
 			{
-				uIEffectNew.toneLevel = uIEffectNew.blur = val;
+				o.toneLevel = val;
 			}
 			i++;
 		}
@@ -71,10 +71,6 @@ public class UIEffectBench : MonoBehaviour
 
 	}
 
-	void LateUpdate()
-	{
-		//UIEffectNew.ptex.Upload();
-	}
 
 	public void AddClassic(int num)
 	{

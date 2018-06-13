@@ -70,7 +70,7 @@ Shader "UI/Hidden/UI-Effect-New"
 				float2 texcoord : TEXCOORD0;
 				UNITY_VERTEX_INPUT_INSTANCE_ID
 
-				float2 uv1 : TEXCOORD1;
+				//float2 uv1 : TEXCOORD1;
 			};
 
 			struct v2f
@@ -107,6 +107,40 @@ Shader "UI/Hidden/UI-Effect-New"
 				color.y = (value % PACKER_STEP) / PRECISION;
 				return color;
 			}
+            
+float4 Tex2DBlurringXXX (sampler2D tex, half2 uv, float bound)
+{             
+
+                #if FASTBLUR  
+                int KERNEL_SIZE = 3;
+                #elif MEDIUMBLUR
+                int KERNEL_SIZE = 5;
+                #elif DETAILBLUR
+                int KERNEL_SIZE = 7;
+                #else
+                int KERNEL_SIZE = 1;
+                #endif  
+    float4 o = 0;
+    float sum = 0;
+    float2 uvOffset;
+    int size = KERNEL_SIZE/2;
+    float weight = 1.0 / (KERNEL_SIZE * KERNEL_SIZE);
+    
+    for(int x = -size; x <= size; x++)
+    {
+        for(int y = -size; y <= size; y++)
+        {
+            uvOffset = uv;
+            uvOffset.x += x * _MainTex_TexelSize.x * bound;
+            uvOffset.y += y * _MainTex_TexelSize.y * bound;
+            //weight = gauss(x, y, _Sigma);
+            o += tex2D(tex, uvOffset) * weight;
+            //sum += weight;
+        }
+    }
+    //o *= (1.0f / sum);
+    return o;
+}
 
 			v2f vert(appdata_t IN)
 			{
@@ -127,7 +161,6 @@ Shader "UI/Hidden/UI-Effect-New"
 
 			fixed4 frag(v2f IN) : SV_Target
 			{
-
 				fixed4 param1 = tex2D(_ParametizedTexture, float2(0.25, IN.param));
 			
 				#if PIXEL
@@ -135,7 +168,7 @@ Shader "UI/Hidden/UI-Effect-New"
 				#endif
 
 				#if defined (UI_BLUR)
-				half4 color = (Tex2DBlurring(_MainTex, IN.texcoord, param1.y * _MainTex_TexelSize.xy * 2) + _TextureSampleAdd) * IN.color;
+				half4 color = (Tex2DBlurringXXX(_MainTex, IN.texcoord, param1.y * 2) + _TextureSampleAdd) * IN.color;
 				#else
 				half4 color = (tex2D(_MainTex, IN.texcoord) + _TextureSampleAdd) * IN.color;
 				#endif
