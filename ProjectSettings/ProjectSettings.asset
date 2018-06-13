@@ -389,7 +389,7 @@ PlayerSettings:
   platformArchitecture:
     iOS: 2
   scriptingBackend:
-    Android: 1
+    Android: 0
     WebGL: 1
     WebPlayer: 0
     iOS: 1

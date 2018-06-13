@@ -73,7 +73,7 @@ public class UIEffectBench : MonoBehaviour
 
 	void LateUpdate()
 	{
-		UIEffectNew.ptex.Upload();
+		//UIEffectNew.ptex.Upload();
 	}
 
 	public void AddClassic(int num)

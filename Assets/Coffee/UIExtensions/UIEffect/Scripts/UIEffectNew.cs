@@ -25,20 +25,20 @@ namespace Coffee.UIExtensions
 		//################################
 		public const string shaderName = "UI/Hidden/UI-Effect-New";
 
-		public static ParametizedTexture ptex
-		{
-			get
-			{
-				if (_ptex == null)
-				{
-					_ptex = new ParametizedTexture(4, 1024);
-
-				}
-				return _ptex;
-			}
-		}
-
-		static ParametizedTexture _ptex;
+		public static ParametizedTexture ptex = new ParametizedTexture(4, 1024);
+//		{
+//			get
+//			{
+//				if (_ptex == null)
+//				{
+//					_ptex = new ParametizedTexture(4, 1024);
+//
+//				}
+//				return _ptex;
+//			}
+//		}
+//
+//		static ParametizedTexture _ptex;
 
 		public int index { get; set; }
 
@@ -149,6 +149,7 @@ namespace Coffee.UIExtensions
 //			if (EditorApplication.isPlayingOrWillChangePlaymode)
 //				return;
 
+//			ptex.Initialize();
 			ptex.Register(this);
 
 			if (m_EffectMaterial)
@@ -222,9 +223,9 @@ namespace Coffee.UIExtensions
 		//################################
 		// Private Members.
 		//################################
-		public void OnLateUpdate()
-		{
-			ptex.Upload();
-		}
+//		public void OnLateUpdate()
+//		{
+//			ptex.Upload();
+//		}
 	}
 }

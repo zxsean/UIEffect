@@ -124,7 +124,7 @@ namespace Coffee.UIExtensions
 				return;
 
 #if UNITY_EDITOR
-			if (!UnityEditor.EditorApplication.isPlaying)
+			if (!UnityEditor.EditorApplication.isPlaying && !UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
 			{
 				EditorUpdateDispatcher.Register(updatable);
 				return;
@@ -161,7 +161,7 @@ namespace Coffee.UIExtensions
 				return;
 
 #if UNITY_EDITOR
-			if (!UnityEditor.EditorApplication.isPlaying)
+			if (!UnityEditor.EditorApplication.isPlaying && !UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
 			{
 				EditorUpdateDispatcher.Unregister(updatable);
 				return;
@@ -236,7 +236,7 @@ namespace Coffee.UIExtensions
 
 		EditorUpdateDispatcher()
 		{
-			Debug.LogFormat("<color=red>EditorUpdateDispatcher is generated!</color> {0}, {1}, {2}", Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+//			Debug.LogFormat("<color=red>EditorUpdateDispatcher is generated!</color> {0}, {1}, {2}", Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
 			UnityEditor.EditorApplication.update += () => Update(OnUpdate);
 			UnityEditor.EditorApplication.update += () => Update(OnFixedUpdate);
 			UnityEditor.EditorApplication.update += () => Update(OnLateUpdate);
@@ -251,11 +251,11 @@ namespace Coffee.UIExtensions
 
 		public static void Register(object updatable)
 		{
-			if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
-			{
-				return;
-			}
-			Debug.LogFormat("<color=cyan>EditorUpdateDispatcher.Register {0}, {1}, {2}, {3}</color>", updatable, Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+//			if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
+//			{
+//				return;
+//			}
+//			Debug.LogFormat("<color=cyan>EditorUpdateDispatcher.Register {0}, {1}, {2}, {3}</color>", updatable, Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
 
 			var inst = instance;
 			if (updatable is IUpdatable)
@@ -272,7 +272,7 @@ namespace Coffee.UIExtensions
 			{
 				return;
 			}
-			Debug.LogFormat("<color=cyan>EditorUpdateDispatcher.Unregister {0}, {1}, {2}, {3}</color>", updatable, Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+//			Debug.LogFormat("<color=cyan>EditorUpdateDispatcher.Unregister {0}, {1}, {2}, {3}</color>", updatable, Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
 			var inst = _instance;
 			if (updatable is IUpdatable)
 				inst.OnUpdate -= (updatable as IUpdatable).OnUpdate;

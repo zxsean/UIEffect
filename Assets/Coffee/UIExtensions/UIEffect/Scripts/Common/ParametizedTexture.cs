@@ -10,7 +10,7 @@ namespace Coffee.UIExtensions
 	}
 
 
-	public class ParametizedTexture
+	public class ParametizedTexture : ILateUpdatable
 	{
 		#region ILateUpdatable implementation
 
@@ -36,13 +36,13 @@ namespace Coffee.UIExtensions
 
 		public ParametizedTexture (int channel, int maxInstance)
 		{
-//			Debug.LogFormat("<color=red>ParametizedTexture is generated!</color> {0}, {1}, {2}", Application.isPlaying, UnityEditor.EditorApplication.isPlaying, UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode);
+//			Debug.LogFormat("<color=red>@@@ ParametizedTexture is generated!</color>");
 
 			channelCount = ((channel - 1) / 4 + 1) * 4;
 			this.maxInstanceCount = ((maxInstance - 1) / 2 + 1) * 2;
-			texture = new Texture2D (channelCount/4, maxInstanceCount, TextureFormat.RGBA32, false, false);
-			texture.filterMode = FilterMode.Point;
-			texture.wrapMode = TextureWrapMode.Clamp;
+//			texture = new Texture2D (channelCount/4, maxInstanceCount, TextureFormat.RGBA32, false, false);
+//			texture.filterMode = FilterMode.Point;
+//			texture.wrapMode = TextureWrapMode.Clamp;
 			data = new byte[channelCount * maxInstanceCount];
 
 			stack = new Stack<int> (maxInstanceCount);
@@ -53,17 +53,42 @@ namespace Coffee.UIExtensions
 //			UpdateDispatcher.Register(this);
 		}
 
+//		~ParametizedTexture()
+//		{
+////			Debug.Log("@@@ Delete ParametizedTexture");
+//		}
+
+		void Initialize ()
+		{
+#if UNITY_EDITOR
+			if (!UnityEditor.EditorApplication.isPlaying && UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
+			{
+				return;
+			}
+#endif
+
+			if (!texture)
+			{
+//				Debug.LogFormat("<color=red>@@@ ParametizedTexture is initialized!</color>");
+				texture = new Texture2D (channelCount/4, maxInstanceCount, TextureFormat.RGBA32, false, false);
+				texture.filterMode = FilterMode.Point;
+				texture.wrapMode = TextureWrapMode.Clamp;
+
+				UpdateDispatcher.Register(this);
+			}
+		}
 
 
 		public void Register (IParametizedTexture target)
 		{
+			Initialize();
 			target.index = stack.Pop ();
-			Debug.LogFormat("<color=green>Register {0} : {1}</color>", target, target.index);
+			Debug.LogFormat("<color=green>@@@ Register {0} : {1}</color>", target, target.index);
 		}
 
 		public void Unregister (IParametizedTexture target)
 		{
-			Debug.LogFormat("<color=red>Unregister {0} : {1}</color>", target, target.index);
+			Debug.LogFormat("<color=red>@@@ Unregister {0} : {1}</color>", target, target.index);
 			if (0 <= target.index) {
 				stack.Push (target.index);
 				target.index = -1;
@@ -89,21 +114,10 @@ namespace Coffee.UIExtensions
 				needUpload = true;
 			}
 		}
-
 	
 		public void Upload ()
 		{
 			if (needUpload && texture) {
-//				Debug.Log("Upload " + needUpload);
-//				if (!texture)
-//				{
-//					texture = new Texture2D (channelCount/4, maxInstanceCount, TextureFormat.RGBA32, false, false);
-//					texture.filterMode = FilterMode.Point;
-//					texture.wrapMode = TextureWrapMode.Clamp;
-//				}
-
-
-//				Debug.Log ("Upload!");
 				needUpload = false;
 				texture.LoadRawTextureData (data);
 				texture.Apply (false, false);
