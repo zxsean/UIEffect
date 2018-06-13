@@ -42,11 +42,11 @@ namespace Coffee.UIExtensions
 
 		public int index { get; set; }
 
-		[InitializeOnLoadMethod]
-		static void Clear()
-		{
-			_ptex = null;
-		}
+//		[InitializeOnLoadMethod]
+//		static void Clear()
+//		{
+//			_ptex = null;
+//		}
 
 
 		//################################
