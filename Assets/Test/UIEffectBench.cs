@@ -32,29 +32,26 @@ public class UIEffectBench : MonoBehaviour
 		int i = 0;
 		foreach (var o in instances)
 		{
+			i++;
 			float duration = i % 3 + 1f;
 			var val = Mathf.Repeat(Time.realtimeSinceStartup, duration) / duration;
 			var uIEffect = o as UIEffect;
 			if (uIEffect != null)
 			{
-				uIEffect.toneLevel = val;
-				continue;
+				uIEffect.toneLevel = uIEffect.blur = val;
 			}
 
 			var uIEffectClassic = o as UIEffectClassic;
 			if (uIEffectClassic != null)
 			{
-				uIEffectClassic.toneLevel =val;
-				continue;
+				uIEffectClassic.toneLevel =uIEffectClassic.blur = val;
 			}
 
 			var uIEffectNew = o as UIEffectNew;
 			if (uIEffectNew != null)
 			{
-				uIEffectNew.toneLevel = val;
-				continue;
+				uIEffectNew.toneLevel = uIEffectNew.blur = val;
 			}
-			i++;
 		}
 
 
