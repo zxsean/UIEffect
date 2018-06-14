@@ -214,6 +214,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21857184430936670, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -877,6 +878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -1148,6 +1150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -1368,6 +1371,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -1407,7 +1411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1754,6 +1758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -1967,6 +1972,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -2117,6 +2123,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -2265,6 +2272,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21563344409783084, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 0.75
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -3169,6 +3177,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -3347,6 +3356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -4141,6 +4151,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21732181610132420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.53
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 0
@@ -4384,14 +4395,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b2ed11d675446c5a49da1ea296d490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectMaterial: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
+  m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
   m_ToneMode: 0
-  m_ColorMode: 3
+  m_ColorMode: 1
   m_BlurMode: 0
   m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 1, y: -1}
@@ -4424,9 +4436,9 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
+  m_Material: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5198,6 +5210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -5341,6 +5354,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21600722614953990, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -5458,6 +5472,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 0.75
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -5497,7 +5512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5589,6 +5604,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21122981926976530, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -5698,6 +5714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -5920,6 +5937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -6117,6 +6135,7 @@ GameObject:
   - component: {fileID: 221297113}
   - component: {fileID: 221297112}
   - component: {fileID: 221297111}
+  - component: {fileID: 221297116}
   m_Layer: 5
   m_Name: Soft shadow
   m_TagString: Untagged
@@ -6175,9 +6194,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21039963853110620, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 0
   m_Blur: 0
   m_ShadowBlur: 1
-  m_ShadowStyle: 4
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 3
@@ -6235,6 +6255,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 221297109}
+--- !u!114 &221297116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221297109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 4
+  m_AdditionalShadows: []
 --- !u!1 &223637563
 GameObject:
   m_ObjectHideFlags: 0
@@ -6284,6 +6321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -6413,6 +6451,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21563344409783084, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -6633,6 +6672,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21970657036975932, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0.5
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -6859,6 +6899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -7064,6 +7105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -7259,6 +7301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -7848,6 +7891,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0.5
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -8181,6 +8225,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21185002339311568, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -8784,6 +8829,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -8915,6 +8961,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21970657036975932, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.7
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -9121,6 +9168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -9586,6 +9634,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21732181610132420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.563
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -9723,6 +9772,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21271924954905420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -10622,6 +10672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -11242,6 +11293,7 @@ GameObject:
   - component: {fileID: 379439431}
   - component: {fileID: 379439430}
   - component: {fileID: 379439429}
+  - component: {fileID: 379439434}
   m_Layer: 5
   m_Name: Multi
   m_TagString: Untagged
@@ -11300,9 +11352,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21905403339881664, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 0
   m_Blur: 0
   m_ShadowBlur: 0
-  m_ShadowStyle: 2
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 2
@@ -11310,12 +11363,7 @@ MonoBehaviour:
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
   m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows:
-  - shadowBlur: 1
-    shadowMode: 2
-    shadowColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5019608}
-    effectDistance: {x: 5, y: -5}
-    useGraphicAlpha: 1
+  m_AdditionalShadows: []
   m_CustomEffect: 0
   m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &379439431
@@ -11365,6 +11413,33 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 379439427}
+--- !u!114 &379439434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379439427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 0
+  m_Blur: 0.25
+  m_Style: 2
+  m_AdditionalShadows:
+  - blur: 0.25
+    style: 2
+    effectColor: {r: 1, g: 0.33823532, b: 0.33823532, a: 1}
+    effectDistance: {x: 4, y: -4}
+    useGraphicAlpha: 1
+  - blur: 0.25
+    style: 2
+    effectColor: {r: 0.32352942, g: 0.46815413, b: 1, a: 1}
+    effectDistance: {x: 6, y: -6}
+    useGraphicAlpha: 1
 --- !u!1 &380776048
 GameObject:
   m_ObjectHideFlags: 0
@@ -11436,6 +11511,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -11559,6 +11635,7 @@ MonoBehaviour:
     width: 1
     height: 1
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 1
   m_ToneMode: 2
   m_ColorMode: 0
@@ -11698,6 +11775,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0.25
   m_ShadowStyle: 0
@@ -11758,6 +11836,7 @@ GameObject:
   - component: {fileID: 387037330}
   - component: {fileID: 387037329}
   - component: {fileID: 387037328}
+  - component: {fileID: 387037333}
   m_Layer: 5
   m_Name: DeadEnd
   m_TagString: Untagged
@@ -11816,9 +11895,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21405390060167114, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 0
   m_Blur: 0.5
   m_ShadowBlur: 0
-  m_ShadowStyle: 3
+  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 1
   m_BlurMode: 0
@@ -11876,6 +11956,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 387037326}
+--- !u!114 &387037333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 387037326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: 1}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 3
+  m_AdditionalShadows: []
 --- !u!1 &392232823
 GameObject:
   m_ObjectHideFlags: 0
@@ -12605,6 +12702,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21122981926976530, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.9
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -12714,6 +12812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -12969,6 +13068,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21185002339311568, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -13646,6 +13746,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21122981926976530, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.95
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -13874,6 +13975,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21122981926976530, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.85
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -14458,6 +14560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -14864,6 +14967,7 @@ MonoBehaviour:
     width: 1
     height: 1
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 1
   m_ToneMode: 1
   m_ColorMode: 0
@@ -14946,6 +15050,7 @@ GameObject:
   - component: {fileID: 521941303}
   - component: {fileID: 521941302}
   - component: {fileID: 521941301}
+  - component: {fileID: 521941305}
   - component: {fileID: 521941300}
   m_Layer: 5
   m_Name: Multi
@@ -15005,9 +15110,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21905403339881664, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 0
   m_Blur: 0
   m_ShadowBlur: 0
-  m_ShadowStyle: 1
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 2
@@ -15017,7 +15123,7 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
   m_AdditionalShadows:
   - shadowBlur: 1
-    shadowMode: 1
+    shadowMode: 0
     shadowColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5019608}
     effectDistance: {x: 5, y: -5}
     useGraphicAlpha: 1
@@ -15070,6 +15176,33 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 521941298}
+--- !u!114 &521941305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 521941298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 0
+  m_Blur: 0.25
+  m_Style: 1
+  m_AdditionalShadows:
+  - blur: 0.25
+    style: 1
+    effectColor: {r: 1, g: 0.33823532, b: 0.33823532, a: 1}
+    effectDistance: {x: 4, y: -4}
+    useGraphicAlpha: 1
+  - blur: 0.25
+    style: 1
+    effectColor: {r: 0.32352942, g: 0.46815413, b: 1, a: 1}
+    effectDistance: {x: 6, y: -6}
+    useGraphicAlpha: 1
 --- !u!1 &528700128
 GameObject:
   m_ObjectHideFlags: 0
@@ -15219,6 +15352,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21563344409783084, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.5
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -15425,6 +15559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -15531,6 +15666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -15757,6 +15893,7 @@ GameObject:
   - component: {fileID: 547320603}
   - component: {fileID: 547320602}
   - component: {fileID: 547320601}
+  - component: {fileID: 547320606}
   m_Layer: 5
   m_Name: Soft outline
   m_TagString: Untagged
@@ -15815,9 +15952,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21039963853110620, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 0
   m_Blur: 0
   m_ShadowBlur: 1
-  m_ShadowStyle: 3
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 3
@@ -15875,6 +16013,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 547320599}
+--- !u!114 &547320606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 547320599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 3
+  m_AdditionalShadows: []
 --- !u!1 &548356346
 GameObject:
   m_ObjectHideFlags: 0
@@ -16352,6 +16507,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21271924954905420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -16597,6 +16753,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21122981926976530, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -16729,6 +16886,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21563344409783084, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.5
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -16855,6 +17013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -16961,6 +17120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -17067,6 +17227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -17790,6 +17951,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -17829,7 +17991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -18086,6 +18248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -18214,6 +18377,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21857184430936670, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -18892,6 +19056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -19314,6 +19479,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21271924954905420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -19475,6 +19641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -19812,6 +19979,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21932619879041906, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -20004,6 +20172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -20074,6 +20243,7 @@ GameObject:
   - component: {fileID: 679593383}
   - component: {fileID: 679593382}
   - component: {fileID: 679593381}
+  - component: {fileID: 679593386}
   m_Layer: 5
   m_Name: Normal
   m_TagString: Untagged
@@ -20131,9 +20301,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0
-  m_ShadowStyle: 4
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
@@ -20190,6 +20361,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 679593379}
+--- !u!114 &679593386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 679593379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 4
+  m_AdditionalShadows: []
 --- !u!1 &681773343
 GameObject:
   m_ObjectHideFlags: 0
@@ -20318,6 +20506,7 @@ GameObject:
   - component: {fileID: 683549512}
   - component: {fileID: 683549511}
   - component: {fileID: 683549510}
+  - component: {fileID: 683549514}
   - component: {fileID: 683549509}
   m_Layer: 5
   m_Name: Soft shadow
@@ -20374,15 +20563,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b2ed11d675446c5a49da1ea296d490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectMaterial: {fileID: 21905403339881664, guid: aee96bc531e6eba468ec405e536f515f,
+  m_EffectMaterial: {fileID: 21039963853110620, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 0
   m_Blur: 0
   m_ShadowBlur: 1
-  m_ShadowStyle: 1
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
-  m_BlurMode: 2
+  m_BlurMode: 3
   m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 1}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
@@ -20414,7 +20604,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21905403339881664, guid: aee96bc531e6eba468ec405e536f515f,
+  m_Material: {fileID: 21039963853110620, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -20437,6 +20627,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 683549507}
+--- !u!114 &683549514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 683549507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 1
+  m_AdditionalShadows: []
 --- !u!1 &687527115
 GameObject:
   m_ObjectHideFlags: 0
@@ -20624,6 +20831,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21122981926976530, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.95
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -20981,6 +21189,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21600722614953990, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -21100,6 +21309,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21857184430936670, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -21855,6 +22065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -21963,6 +22174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -22069,6 +22281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -22342,6 +22555,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21271924954905420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -22562,6 +22776,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21185002339311568, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -23009,6 +23224,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -23140,6 +23356,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0.25
   m_ShadowStyle: 0
@@ -23289,6 +23506,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -23328,7 +23546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -23612,6 +23830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -23755,6 +23974,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21600722614953990, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -24061,6 +24281,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -24404,6 +24625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -24655,6 +24877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -24838,6 +25061,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21857184430936670, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -24986,6 +25210,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 0.25
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -25025,7 +25250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -25527,6 +25752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -25948,6 +26174,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21405390060167114, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -26340,6 +26567,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0.25
   m_ShadowStyle: 0
@@ -26436,6 +26664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -27104,6 +27333,7 @@ GameObject:
   - component: {fileID: 924573930}
   - component: {fileID: 924573929}
   - component: {fileID: 924573928}
+  - component: {fileID: 924573933}
   m_Layer: 5
   m_Name: Colored
   m_TagString: Untagged
@@ -27162,9 +27392,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 0
   m_Blur: 0.5
   m_ShadowBlur: 0
-  m_ShadowStyle: 4
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
@@ -27222,6 +27453,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924573926}
+--- !u!114 &924573933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 924573926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 4
+  m_AdditionalShadows: []
 --- !u!1 &929598881
 GameObject:
   m_ObjectHideFlags: 0
@@ -27366,6 +27614,7 @@ GameObject:
   - component: {fileID: 934988745}
   - component: {fileID: 934988744}
   - component: {fileID: 934988743}
+  - component: {fileID: 934988748}
   m_Layer: 5
   m_Name: Multi
   m_TagString: Untagged
@@ -27424,9 +27673,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21905403339881664, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 0
   m_Blur: 0
   m_ShadowBlur: 0
-  m_ShadowStyle: 3
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 2
@@ -27434,12 +27684,7 @@ MonoBehaviour:
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
   m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows:
-  - shadowBlur: 1
-    shadowMode: 3
-    shadowColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5019608}
-    effectDistance: {x: 5, y: -5}
-    useGraphicAlpha: 1
+  m_AdditionalShadows: []
   m_CustomEffect: 0
   m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &934988745
@@ -27489,6 +27734,33 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 934988741}
+--- !u!114 &934988748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 934988741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 0
+  m_Blur: 0.25
+  m_Style: 3
+  m_AdditionalShadows:
+  - blur: 0.25
+    style: 3
+    effectColor: {r: 1, g: 0.33823532, b: 0.33823532, a: 1}
+    effectDistance: {x: 4, y: -4}
+    useGraphicAlpha: 1
+  - blur: 0.25
+    style: 3
+    effectColor: {r: 0.32352942, g: 0.46815413, b: 1, a: 1}
+    effectDistance: {x: 6, y: -6}
+    useGraphicAlpha: 1
 --- !u!1 &941792596
 GameObject:
   m_ObjectHideFlags: 0
@@ -27676,6 +27948,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -27923,6 +28196,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -28014,6 +28288,7 @@ GameObject:
   - component: {fileID: 950303574}
   - component: {fileID: 950303573}
   - component: {fileID: 950303572}
+  - component: {fileID: 950303577}
   m_Layer: 5
   m_Name: Colored
   m_TagString: Untagged
@@ -28072,9 +28347,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 0
   m_Blur: 0.5
   m_ShadowBlur: 0
-  m_ShadowStyle: 3
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
@@ -28132,6 +28408,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 950303570}
+--- !u!114 &950303577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950303570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 3
+  m_AdditionalShadows: []
 --- !u!1 &951718029
 GameObject:
   m_ObjectHideFlags: 0
@@ -28616,6 +28909,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -28931,6 +29225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -29059,6 +29354,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -29386,6 +29682,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -29425,7 +29722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -29798,6 +30095,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21185002339311568, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -30672,6 +30970,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21027069994720160, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -30803,6 +31102,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21857184430936670, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -30915,6 +31215,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21709795224992298, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.65
+  m_ColorFactor: 1
   m_Blur: 0.75
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -31174,6 +31475,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21600722614953990, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -31663,6 +31965,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21857184430936670, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -32018,6 +32321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -32319,6 +32623,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21932619879041906, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -32454,6 +32759,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -33070,6 +33376,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 0.25
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -33109,7 +33416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -33201,6 +33508,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21563344409783084, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.5
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -33909,6 +34217,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 0.75
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -33948,7 +34257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -34040,6 +34349,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21778934727406118, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -34397,6 +34707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -34894,6 +35205,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21732181610132420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.4
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -35042,6 +35354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -35267,6 +35580,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21970657036975932, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -35392,6 +35706,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21732181610132420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.53
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 0
@@ -35510,6 +35825,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -35636,6 +35952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -35934,7 +36251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 249.03}
+  m_AnchoredPosition: {x: 0, y: 249.02979}
   m_SizeDelta: {x: 0, y: 8340}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1242400824
@@ -36115,6 +36432,7 @@ GameObject:
   - component: {fileID: 1250125685}
   - component: {fileID: 1250125684}
   - component: {fileID: 1250125683}
+  - component: {fileID: 1250125688}
   m_Layer: 5
   m_Name: Normal
   m_TagString: Untagged
@@ -36172,9 +36490,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0
-  m_ShadowStyle: 3
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
@@ -36231,6 +36550,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1250125681}
+--- !u!114 &1250125688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1250125681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 3
+  m_AdditionalShadows: []
 --- !u!1 &1254096893
 GameObject:
   m_ObjectHideFlags: 0
@@ -36377,6 +36713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -36505,6 +36842,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21970657036975932, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 0.75
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -36891,6 +37229,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21932619879041906, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -37123,6 +37462,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21857184430936670, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -37406,6 +37746,7 @@ GameObject:
   - component: {fileID: 1292352884}
   - component: {fileID: 1292352883}
   - component: {fileID: 1292352882}
+  - component: {fileID: 1292352887}
   m_Layer: 5
   m_Name: Normal
   m_TagString: Untagged
@@ -37463,9 +37804,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0
-  m_ShadowStyle: 2
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
@@ -37522,6 +37864,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1292352880}
+--- !u!114 &1292352887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1292352880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 2
+  m_AdditionalShadows: []
 --- !u!1 &1294763461
 GameObject:
   m_ObjectHideFlags: 0
@@ -37988,6 +38347,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21970657036975932, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -38061,6 +38421,7 @@ GameObject:
   - component: {fileID: 1315832860}
   - component: {fileID: 1315832859}
   - component: {fileID: 1315832858}
+  - component: {fileID: 1315832863}
   m_Layer: 5
   m_Name: Normal
   m_TagString: Untagged
@@ -38118,9 +38479,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0
-  m_ShadowStyle: 1
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
@@ -38177,6 +38539,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1315832856}
+--- !u!114 &1315832863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1315832856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 1
+  m_AdditionalShadows: []
 --- !u!1 &1317453366
 GameObject:
   m_ObjectHideFlags: 0
@@ -38471,6 +38850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -38745,6 +39125,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21970657036975932, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.7
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -39692,6 +40073,7 @@ GameObject:
   - component: {fileID: 1408993763}
   - component: {fileID: 1408993762}
   - component: {fileID: 1408993761}
+  - component: {fileID: 1408993766}
   m_Layer: 5
   m_Name: Colored
   m_TagString: Untagged
@@ -39750,9 +40132,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 0
   m_Blur: 0.5
   m_ShadowBlur: 0
-  m_ShadowStyle: 2
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
@@ -39810,6 +40193,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1408993759}
+--- !u!114 &1408993766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408993759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 2
+  m_AdditionalShadows: []
 --- !u!1 &1411681285
 GameObject:
   m_ObjectHideFlags: 0
@@ -40006,6 +40406,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21185002339311568, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -40336,6 +40737,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21932619879041906, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 0
@@ -40641,6 +41043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -40844,6 +41247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -40972,6 +41376,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 0.5
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -41011,7 +41416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -41418,6 +41823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -41546,6 +41952,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21122981926976530, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.9
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -41989,6 +42396,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 0.75
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -42028,7 +42436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21481346700311234, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -42062,6 +42470,7 @@ GameObject:
   - component: {fileID: 1502206872}
   - component: {fileID: 1502206871}
   - component: {fileID: 1502206870}
+  - component: {fileID: 1502206875}
   m_Layer: 5
   m_Name: Multi
   m_TagString: Untagged
@@ -42120,9 +42529,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21905403339881664, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 0
   m_Blur: 0
   m_ShadowBlur: 0
-  m_ShadowStyle: 4
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 2
@@ -42130,12 +42540,7 @@ MonoBehaviour:
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
   m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows:
-  - shadowBlur: 1
-    shadowMode: 4
-    shadowColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5019608}
-    effectDistance: {x: 5, y: -5}
-    useGraphicAlpha: 1
+  m_AdditionalShadows: []
   m_CustomEffect: 0
   m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1502206872
@@ -42185,6 +42590,33 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1502206868}
+--- !u!114 &1502206875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1502206868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 0
+  m_Blur: 0.25
+  m_Style: 4
+  m_AdditionalShadows:
+  - blur: 0.25
+    style: 4
+    effectColor: {r: 1, g: 0.33823532, b: 0.33823532, a: 1}
+    effectDistance: {x: 4, y: -4}
+    useGraphicAlpha: 1
+  - blur: 0.25
+    style: 4
+    effectColor: {r: 0.32352942, g: 0.46815413, b: 1, a: 1}
+    effectDistance: {x: 6, y: -6}
+    useGraphicAlpha: 1
 --- !u!1 &1502282360
 GameObject:
   m_ObjectHideFlags: 0
@@ -42861,6 +43293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -42967,6 +43400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -43289,6 +43723,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21185002339311568, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -43517,6 +43952,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21271924954905420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -43811,7 +44247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -43825,13 +44261,14 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
-  m_ToneLevel: 1
-  m_Blur: 1
+  m_ToneLevel: 0.41
+  m_ColorFactor: 0.12
+  m_Blur: 0.49
   m_ToneMode: 1
   m_ColorMode: 0
   m_BlurMode: 3
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_DesamplingRate: 2
+  m_DesamplingRate: 1
   m_ReductionRate: 2
   m_FilterMode: 1
   m_EffectMaterial: {fileID: 21076377998740836, guid: 1a1a8e44196ca754a9a7b9cb80e17573,
@@ -43975,6 +44412,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 0.75
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -44173,6 +44611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -44538,6 +44977,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21857184430936670, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -44687,6 +45127,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -44726,7 +45167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -44796,6 +45237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -44902,6 +45344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -44972,6 +45415,7 @@ GameObject:
   - component: {fileID: 1593342324}
   - component: {fileID: 1593342323}
   - component: {fileID: 1593342322}
+  - component: {fileID: 1593342327}
   m_Layer: 5
   m_Name: Defocus
   m_TagString: Untagged
@@ -45030,9 +45474,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21039963853110620, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 0
   m_Blur: 1
   m_ShadowBlur: 0
-  m_ShadowStyle: 3
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 3
@@ -45090,6 +45535,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1593342320}
+--- !u!114 &1593342327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593342320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 1, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
+  m_Blur: 0
+  m_Style: 3
+  m_AdditionalShadows: []
 --- !u!1 &1599904784
 GameObject:
   m_ObjectHideFlags: 0
@@ -45656,6 +46118,7 @@ GameObject:
   - component: {fileID: 1630231198}
   - component: {fileID: 1630231197}
   - component: {fileID: 1630231196}
+  - component: {fileID: 1630231201}
   m_Layer: 5
   m_Name: Soft outline
   m_TagString: Untagged
@@ -45714,9 +46177,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21039963853110620, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 0
   m_Blur: 0
   m_ShadowBlur: 1
-  m_ShadowStyle: 2
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 3
@@ -45774,6 +46238,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1630231194}
+--- !u!114 &1630231201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1630231194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 2
+  m_AdditionalShadows: []
 --- !u!1 &1631173348
 GameObject:
   m_ObjectHideFlags: 0
@@ -46523,6 +47004,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21732181610132420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.53
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 0
@@ -46618,6 +47100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -46838,6 +47321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -46967,6 +47451,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21075981732791042, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -47115,6 +47600,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 0.5
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -47154,7 +47640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -47321,6 +47807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -47526,6 +48013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -47730,6 +48218,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21732181610132420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.4
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -47826,6 +48315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -48076,6 +48566,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21732181610132420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.4
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -48614,6 +49105,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21271924954905420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -49421,6 +49913,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21563344409783084, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -50100,6 +50593,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -50441,6 +50935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -50569,6 +51064,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21271924954905420, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -50886,6 +51382,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.25
+  m_ColorFactor: 0.25
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -50925,7 +51422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -51407,6 +51904,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21185002339311568, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -51831,6 +52329,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21857184430936670, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.75
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -51940,6 +52439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -52068,6 +52568,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21563344409783084, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0.5
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -52520,8 +53021,8 @@ GameObject:
   - component: {fileID: 1837354011}
   - component: {fileID: 1837354010}
   - component: {fileID: 1837354009}
-  - component: {fileID: 1837354008}
   - component: {fileID: 1837354013}
+  - component: {fileID: 1837354008}
   m_Layer: 5
   m_Name: Colored
   m_TagString: Untagged
@@ -52580,9 +53081,10 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21758506112687914, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 0
   m_Blur: 0.5
   m_ShadowBlur: 0
-  m_ShadowStyle: 1
+  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
@@ -52648,20 +53150,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1837354006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fb48d82dc0e94a2b9246d17d04f8748, type: 3}
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Direction: 0
-  m_Color1: {r: 1, g: 1, b: 1, a: 1}
-  m_Color2: {r: 1, g: 1, b: 1, a: 1}
-  m_Color3: {r: 1, g: 1, b: 1, a: 1}
-  m_Color4: {r: 1, g: 1, b: 1, a: 1}
-  m_Rotation: 0
-  m_Offset1: 0
-  m_Offset2: 0
-  m_GradientStyle: 0
-  m_ColorSpace: -1
-  m_IgnoreAspectRatio: 1
+  m_EffectColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 0.25
+  m_Style: 1
+  m_AdditionalShadows: []
 --- !u!1 &1842158191
 GameObject:
   m_ObjectHideFlags: 0
@@ -52751,6 +53248,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21970657036975932, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.7
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -52924,6 +53422,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -53267,6 +53766,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21563344409783084, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -53398,6 +53898,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 0.5
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -53437,7 +53938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 21786341683153736, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.29411763, b: 0.29411763, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -54572,6 +55073,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21970657036975932, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 1
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -55034,6 +55536,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21857184430936670, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -56030,6 +56533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -56267,6 +56771,7 @@ GameObject:
   - component: {fileID: 2023322568}
   - component: {fileID: 2023322567}
   - component: {fileID: 2023322566}
+  - component: {fileID: 2023322571}
   m_Layer: 5
   m_Name: Silhouette
   m_TagString: Untagged
@@ -56322,15 +56827,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b2ed11d675446c5a49da1ea296d490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectMaterial: {fileID: 21467518254157304, guid: aee96bc531e6eba468ec405e536f515f,
+  m_EffectMaterial: {fileID: 21709795224992298, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 1.41
-  m_ShadowStyle: 3
+  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 1
-  m_BlurMode: 2
+  m_BlurMode: 3
   m_ShadowColor: {r: 0, g: 1, b: 0, a: 0.2509804}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
@@ -56362,9 +56868,9 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 21467518254157304, guid: aee96bc531e6eba468ec405e536f515f,
+  m_Material: {fileID: 21709795224992298, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9632353, g: 0.36829588, b: 0.36829588, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -56385,6 +56891,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2023322564}
+--- !u!114 &2023322571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2023322564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 1, b: 0, a: 0.5}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
+  m_Blur: 1
+  m_Style: 3
+  m_AdditionalShadows: []
 --- !u!1 &2037265639
 GameObject:
   m_ObjectHideFlags: 0
@@ -57445,6 +57968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
@@ -57842,6 +58366,7 @@ MonoBehaviour:
   m_EffectMaterial: {fileID: 21932619879041906, guid: aee96bc531e6eba468ec405e536f515f,
     type: 2}
   m_ToneLevel: 0.5
+  m_ColorFactor: 1
   m_Blur: 0
   m_ShadowBlur: 0
   m_ShadowStyle: 0
@@ -58913,6 +59438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 2100000, guid: aee96bc531e6eba468ec405e536f515f, type: 2}
   m_ToneLevel: 1
+  m_ColorFactor: 1
   m_Blur: 0.25
   m_ShadowBlur: 0.25
   m_ShadowStyle: 2
