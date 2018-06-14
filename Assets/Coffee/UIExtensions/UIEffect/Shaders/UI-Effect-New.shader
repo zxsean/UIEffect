@@ -108,38 +108,27 @@ Shader "UI/Hidden/UI-Effect-New"
 				return color;
 			}
             
-float4 Tex2DBlurringXXX (sampler2D tex, half2 uv, float bound)
+fixed4 Tex2DBlurringXXX (sampler2D tex, half2 uv, half2 texSize)
 {             
-
-                #if FASTBLUR  
-                int KERNEL_SIZE = 3;
-                #elif MEDIUMBLUR
-                int KERNEL_SIZE = 5;
-                #elif DETAILBLUR
-                int KERNEL_SIZE = 7;
-                #else
-                int KERNEL_SIZE = 1;
-                #endif  
+    #if FASTBLUR  
+    const int KERNEL_SIZE = 3;
+    #elif MEDIUMBLUR
+    const int KERNEL_SIZE = 5;
+    #elif DETAILBLUR
+    const int KERNEL_SIZE = 7;
+    #else
+    const int KERNEL_SIZE = 1;
+    #endif
     float4 o = 0;
-    float sum = 0;
-    float2 uvOffset;
-    int size = KERNEL_SIZE/2;
-    float weight = 1.0 / (KERNEL_SIZE * KERNEL_SIZE);
     
-    for(int x = -size; x <= size; x++)
+    for(int x = -KERNEL_SIZE/2; x <= KERNEL_SIZE/2; x++)
     {
-        for(int y = -size; y <= size; y++)
+        for(int y = -KERNEL_SIZE/2; y <= KERNEL_SIZE/2; y++)
         {
-            uvOffset = uv;
-            uvOffset.x += x * _MainTex_TexelSize.x * bound;
-            uvOffset.y += y * _MainTex_TexelSize.y * bound;
-            //weight = gauss(x, y, _Sigma);
-            o += tex2D(tex, uvOffset) * weight;
-            //sum += weight;
+            o += tex2D(tex, uv + texSize * half2(x,y));
         }
     }
-    //o *= (1.0f / sum);
-    return o;
+    return o / (KERNEL_SIZE * KERNEL_SIZE);
 }
 
 			v2f vert(appdata_t IN)
@@ -162,31 +151,33 @@ float4 Tex2DBlurringXXX (sampler2D tex, half2 uv, float bound)
 			fixed4 frag(v2f IN) : SV_Target
 			{
 				fixed4 param1 = tex2D(_ParametizedTexture, float2(0.25, IN.param));
+                fixed effectFactor = param1.x;
+                fixed blurFactor = param1.y;
 			
 				#if PIXEL
 				IN.texcoord = round(IN.texcoord * IN.extraFactor.xy) / IN.extraFactor.xy;
 				#endif
 
 				#if defined (UI_BLUR)
-				half4 color = (Tex2DBlurringXXX(_MainTex, IN.texcoord, param1.y * 2) + _TextureSampleAdd) * IN.color;
+                half4 color = (Tex2DBlurringXXX(_MainTex, IN.texcoord, _MainTex_TexelSize * blurFactor * 2) + _TextureSampleAdd) * IN.color;
 				#else
 				half4 color = (tex2D(_MainTex, IN.texcoord) + _TextureSampleAdd) * IN.color;
 				#endif
 				color.a *= UnityGet2DClipping(IN.worldPosition.xy, _ClipRect);
 
 				#ifdef CUTOFF
-				clip (color.a - 1 + param1.x * 1.001);
+				clip (color.a - 1 + effectFactor * 1.001);
 				#elif UNITY_UI_ALPHACLIP
 				clip (color.a - 0.001);
 				#endif
 
 				#if MONO
 				color.rgb = IN.color.rgb;
-				color.a = color.a * tex2D(_MainTex, IN.texcoord).a + param1.x * 2 - 1;
+				color.a = color.a * tex2D(_MainTex, IN.texcoord).a + effectFactor * 2 - 1;
 				#elif HUE
 				color.rgb = shift_hue(color.rgb, IN.extraFactor.x, IN.extraFactor.y);
 				#elif defined (UI_TONE) & !CUTOFF
-				color = ApplyToneEffect(color, param1.x);
+				color = ApplyToneEffect(color, effectFactor);
 				#endif
 
 				#if defined (UI_COLOR)
