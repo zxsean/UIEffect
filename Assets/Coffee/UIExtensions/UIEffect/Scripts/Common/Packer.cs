@@ -27,14 +27,15 @@ public static class Packer
 	}
 
 	/// <summary>
-	/// Pack 3 low-precision [0-1] floats values to a float.
-	/// Each value [0-1] has 256 steps(8 bits).
+	/// Pack 1 middle-precision & 2 low-precision [0-1] floats values to a float.
+	/// z value [0-1] has 4096 steps(12 bits) and xy value [0-1] has 64 steps(6 bits).
 	/// </summary>
 	public static float ToFloat(float x, float y, float z)
 	{
+		const int MID_PRECISION = (1 << 12) - 1;
 		const int PRECISION = (1 << 8) - 1;
-		return (Mathf.FloorToInt(z * PRECISION) << 16)
-		+ (Mathf.FloorToInt(y * PRECISION) << 8)
+		return (Mathf.FloorToInt(z * MID_PRECISION) << 12)
+		+ (Mathf.FloorToInt(y * PRECISION) << 6)
 		+ Mathf.FloorToInt(x * PRECISION);
 	}
 
