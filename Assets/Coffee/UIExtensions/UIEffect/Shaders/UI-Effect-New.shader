@@ -120,12 +120,15 @@ fixed4 Tex2DBlurringXXX (sampler2D tex, half2 uv, half2 texSize)
     const int KERNEL_SIZE = 1;
     #endif
     float4 o = 0;
-    
+    half2 texcood;
     for(int x = -KERNEL_SIZE/2; x <= KERNEL_SIZE/2; x++)
     {
         for(int y = -KERNEL_SIZE/2; y <= KERNEL_SIZE/2; y++)
         {
-            o += tex2D(tex, uv + texSize * half2(x,y));
+            texcood = uv;
+            texcood.x += texSize.x * x;
+            texcood.y += texSize.y * y;
+            o += tex2D(tex, texcood);
         }
     }
     return o / (KERNEL_SIZE * KERNEL_SIZE);

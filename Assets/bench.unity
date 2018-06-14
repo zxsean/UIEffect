@@ -1930,8 +1930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fde226fa3302410ba411c64bb46ed5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  classic: {fileID: 909441611}
-  uie: {fileID: 1652822388}
+  classic: {fileID: 0}
+  uie: {fileID: 0}
   uieNew: {fileID: 1464646197}
   display: {fileID: 814415790}
 --- !u!1 &1286425516
@@ -2270,9 +2270,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 21627757762779678, guid: 030245ee20d8248c58b2012e8ad57387,
     type: 2}
-  m_ToneLevel: 0.364
+  m_ToneLevel: 1
   m_Blur: 1
-  m_ShadowBlur: 0
+  m_ShadowBlur: 0.173
   m_ToneMode: 1
   m_ColorMode: 0
   m_BlurMode: 3
