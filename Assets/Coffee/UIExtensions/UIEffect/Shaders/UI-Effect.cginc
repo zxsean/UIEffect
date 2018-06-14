@@ -1,8 +1,6 @@
 #ifndef UI_EFFECT_INCLUDED
 #define UI_EFFECT_INCLUDED
 
-#define PACKER_STEP 64
-
 #if GRAYSCALE | SEPIA | NEGA | PIXEL | MONO | CUTOFF | HUE
 #define UI_TONE
 #endif
@@ -17,7 +15,8 @@
 
 // Unpack float to low-precision [0-1] fixed4. 
 fixed4 UnpackToVec4(float value)
-{   
+{
+	const int PACKER_STEP = 64;
 	const int PRECISION = PACKER_STEP - 1;
 	fixed4 color;
 
@@ -31,6 +30,25 @@ fixed4 UnpackToVec4(float value)
     value = floor(value / PACKER_STEP);
 
     color.a = (value % PACKER_STEP) / PRECISION;
+    return color;
+}
+
+fixed4 UnpackToVec3(float value)
+{
+	const int PACKER_STEP = 64;
+	const int PRECISION = PACKER_STEP - 1;
+	fixed4 color;
+
+    color.r = (value % (PACKER_STEP * PACKER_STEP)) / (PACKER_STEP * PACKER_STEP - 1);
+    value = floor(value / (PACKER_STEP * PACKER_STEP));
+
+    color.g = (value % PACKER_STEP) / (PACKER_STEP - 1);
+    value = floor(value / PACKER_STEP);
+
+    color.b = (value % PACKER_STEP) / (PACKER_STEP - 1);
+    value = floor(value / PACKER_STEP);
+
+    color.a = (value % PACKER_STEP) / (PACKER_STEP - 1);
     return color;
 }
 
