@@ -33,8 +33,9 @@ sed -i -e "s/\"version\": \(.*\)/\"version\": \"${RELEASE_VERSION}\",/g" package
 UNITY_VER=`sed -e "s/m_EditorVersion: \(.*\)/\1/g" ProjectSettings/ProjectVersion.txt`
 UNITY_EDITOR="/Applications/Unity/Hub/Editor/${UNITY_VER}/Unity.app/Contents/MacOS/Unity"
 echo -e "\n>> Check unity editor... ${UNITY_VER} (${UNITY_EDITOR})"
-"$UNITY_EDITOR" -quit -batchmode -projectPath "`pwd`"
+"$UNITY_EDITOR" -quit -batchmode -projectPath "`pwd`" -buildOSX64Player "build.app"
 echo -e ">> OK"
+
 
 # generate change log
 CHANGELOG_GENERATOR_ARG=`grep -o -e ".*git\"$" package.json | sed -e "s/^.*\/\([^\/]*\)\/\([^\/]*\).git.*$/--user \1 --project \2/"`
