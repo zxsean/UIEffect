@@ -63,7 +63,7 @@ fixed4 Tex2DBlurring (sampler2D tex, half2 uv, half2 blur)
 	#elif MEDIUMBLUR
 	const int KERNEL_SIZE = 5;
 	#elif DETAILBLUR
-	const int KERNEL_SIZE = 7;
+	const int KERNEL_SIZE = 63;
 	#else
 	const int KERNEL_SIZE = 1;
 	#endif
@@ -127,7 +127,8 @@ half4 ApplyColorEffect(half4 color, half4 factor)
 	color.rgb = lerp(color.rgb, factor.rgb, factor.a);
 
 	#elif ADD
-	color.rgb += factor.rgb * factor.a;
+	color.rgb = max(max(color.r, color.g),color.b) + factor.rgb * factor.a * 5;
+	color.a *= 5;
 
 	#elif SUBTRACT
 	color.rgb -= factor.rgb * factor.a;
