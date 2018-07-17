@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-#if UNITY_EDITOR
-using System.IO;
-using System.Linq;
-using UnityEditor;
-#endif
-
 namespace Coffee.UIExtensions
 {
 	/// <summary>
@@ -66,17 +60,33 @@ namespace Coffee.UIExtensions
 		/// Graphic affected by the UIEffect.
 		/// </summary>
 		new public Graphic graphic { get { return base.graphic; } }
-		
+
 		/// <summary>
 		/// How far is the blurring shadow from the graphic.
 		/// </summary>
-		public float blur { get { return m_Blur; } set { m_Blur = Mathf.Clamp(value, 0, 2); _SetDirty(); } }
+		public float blur
+		{
+			get { return m_Blur; }
+			set
+			{
+				m_Blur = Mathf.Clamp(value, 0, 2);
+				_SetDirty();
+			}
+		}
 
 		/// <summary>
 		/// Shadow effect mode.
 		/// </summary>
-		public ShadowStyle style { get { return m_Style; } set { m_Style = value; _SetDirty(); } }
-		
+		public ShadowStyle style
+		{
+			get { return m_Style; }
+			set
+			{
+				m_Style = value;
+				_SetDirty();
+			}
+		}
+
 		/// <summary>
 		/// Additional Shadows.
 		/// </summary>
@@ -206,7 +216,7 @@ namespace Coffee.UIExtensions
 				vt.color = vertColor;
 
 				// Set UIEffect prameters to vertex.
-				if(_uiEffect)
+				if (_uiEffect)
 					vt.uv1 = _factor;
 				verts[i] = vt;
 			}
@@ -221,8 +231,10 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		void _SetDirty()
 		{
-			if(graphic)
+			if (graphic)
+			{
 				graphic.SetVerticesDirty();
+			}
 		}
 	}
 }

@@ -77,7 +77,7 @@ namespace Coffee.UIExtensions
 			EditorGUI.BeginChangeCheck();
 			QualityMode quality = qualityMode;
 			quality = (QualityMode)EditorGUILayout.EnumPopup("Quality Mode", quality);
-			if(EditorGUI.EndChangeCheck())
+			if (EditorGUI.EndChangeCheck())
 			{
 				_customAdvancedOption = (quality == QualityMode.Custom);
 				qualityMode = quality;
@@ -133,9 +133,9 @@ namespace Coffee.UIExtensions
 					return QualityMode.Custom;
 
 				int qualityValue = (_spDesamplingRate.intValue << 0)
-					+ (_spReductionRate.intValue << 4)
-					+ (_spFilterMode.intValue << 8)
-					+ (_spIterations.intValue << 10);
+				                   + (_spReductionRate.intValue << 4)
+				                   + (_spFilterMode.intValue << 8)
+				                   + (_spIterations.intValue << 10);
 
 				return System.Enum.IsDefined(typeof(QualityMode), qualityValue) ? (QualityMode)qualityValue : QualityMode.Custom;
 			}

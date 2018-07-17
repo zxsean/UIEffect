@@ -112,7 +112,7 @@ namespace Coffee.UIExtensions
 		/// Captured texture.
 		/// </summary>
 		public RenderTexture capturedTexture { get { return _rt; } }
-		
+
 		/// <summary>
 		/// Iterations.
 		/// </summary>
@@ -243,7 +243,7 @@ namespace Coffee.UIExtensions
 					_buffer.ReleaseTemporaryRT(s_CopyId);
 					
 					// Iterate the operation.
-					if(1 < m_Iterations)
+					if (1 < m_Iterations)
 					{
 						_buffer.SetGlobalVector("_EffectFactor", new Vector4(toneLevel, m_ColorFactor, blur, 0));
 						_buffer.GetTemporaryRT(s_EffectId2, w, h, 0, m_FilterMode);
@@ -305,9 +305,9 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Raises the validate event.
 		/// </summary>
-		protected override void OnValidate ()
+		protected override void OnValidate()
 		{
-			base.OnValidate ();
+			base.OnValidate();
 			UnityEditor.EditorApplication.delayCall += () => UpdateMaterial(false);
 		}
 
@@ -317,12 +317,12 @@ namespace Coffee.UIExtensions
 		/// <param name="ignoreInPlayMode">If set to <c>true</c> ignore in play mode.</param>
 		protected void UpdateMaterial(bool ignoreInPlayMode)
 		{
-			if(!this || ignoreInPlayMode && Application.isPlaying)
+			if (!this || ignoreInPlayMode && Application.isPlaying)
 			{
 				return;
 			}
 
-			var mat =  MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_ToneMode, m_ColorMode, m_BlurMode);
+			var mat = MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_ToneMode, m_ColorMode, m_BlurMode);
 			if (m_EffectMaterial != mat)
 			{
 				material = null;

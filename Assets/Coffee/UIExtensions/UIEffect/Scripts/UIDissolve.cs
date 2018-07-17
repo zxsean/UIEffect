@@ -196,7 +196,7 @@ namespace Coffee.UIExtensions
 				return;
 
 			// rect.
-			Rect rect = GetEffectArea(vh, m_EffectArea);
+			Rect rect = m_EffectArea.GetEffectArea(vh, graphic);
 
 			// Calculate vertex position.
 			UIVertex vertex = default(UIVertex);
@@ -208,8 +208,8 @@ namespace Coffee.UIExtensions
 
 				if (effectEachCharacter)
 				{
-					x = splitedCharacterPosition[i%4].x;
-					y = splitedCharacterPosition[i%4].y;
+					x = splitedCharacterPosition[i % 4].x;
+					y = splitedCharacterPosition[i % 4].y;
 				}
 				else
 				{

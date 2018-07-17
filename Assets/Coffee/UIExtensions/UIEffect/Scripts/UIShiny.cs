@@ -48,11 +48,6 @@ namespace Coffee.UIExtensions
 		//################################
 		// Public Members.
 		//################################
-//		/// <summary>
-//		/// Graphic affected by the UIEffect.
-//		/// </summary>
-//		new public Graphic graphic { get { return base.graphic; } }
-
 		/// <summary>
 		/// Location for shiny effect.
 		/// </summary>
@@ -219,58 +214,14 @@ namespace Coffee.UIExtensions
 		protected override void OnEnable()
 		{
 			_time = 0;
-//			graphic.material = effectMaterial;
 			base.OnEnable();
 		}
-
-
-//		/// <summary>
-//		/// This function is called when the behaviour becomes disabled () or inactive.
-//		/// </summary>
-//		protected override void OnDisable()
-//		{
-//			graphic.material = null;
-//			base.OnDisable();
-//		}
 
 #if UNITY_EDITOR
 		protected override Material GetMaterial()
 		{
 			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName));
 		}
-
-//		public void OnBeforeSerialize()
-//		{
-//		}
-//
-//		public void OnAfterDeserialize()
-//		{
-//			var obj = this;
-//			EditorApplication.delayCall += () =>
-//			{
-//				if (Application.isPlaying || !obj)
-//					return;
-//
-//				var mat = GetMaterial(shaderName);
-//				if (m_EffectMaterial == mat && graphic.material == mat)
-//					return;
-//
-//				graphic.material = m_EffectMaterial = mat;
-//				EditorUtility.SetDirty(this);
-//				EditorUtility.SetDirty(graphic);
-//				EditorApplication.delayCall += AssetDatabase.SaveAssets;
-//			};
-//		}
-//
-//		public static Material GetMaterial(string shaderName)
-//		{
-//			string name = Path.GetFileName(shaderName);
-//			return AssetDatabase.FindAssets("t:Material " + name)
-//				.Select(x => AssetDatabase.GUIDToAssetPath(x))
-//				.SelectMany(x => AssetDatabase.LoadAllAssetsAtPath(x))
-//				.OfType<Material>()
-//				.FirstOrDefault(x => x.name == name);
-//		}
 #endif
 
 		/// <summary>
@@ -282,7 +233,7 @@ namespace Coffee.UIExtensions
 				return;
 
 			// rect.
-			Rect rect = GetEffectArea(vh, m_EffectArea);
+			Rect rect = m_EffectArea.GetEffectArea(vh, graphic);
 
 			// rotation.
 			float rad = rotation * Mathf.Deg2Rad;
@@ -356,14 +307,5 @@ namespace Coffee.UIExtensions
 				_time = m_Loop ? -m_LoopDelay : 0;
 			}
 		}
-
-//		/// <summary>
-//		/// Mark the UIEffect as dirty.
-//		/// </summary>
-//		void _SetDirty()
-//		{
-//			if (graphic)
-//				graphic.SetVerticesDirty();
-//		}
 	}
 }

@@ -12,7 +12,7 @@ namespace Coffee.UIExtensions
 	[CanEditMultipleObjects]
 	public class UIEffectEditor : Editor
 	{
-		static readonly GUIContent contentEffectColor = new GUIContent ("Effect Color");
+		static readonly GUIContent contentEffectColor = new GUIContent("Effect Color");
 
 		//################################
 		// Constant or Static Members.
@@ -62,15 +62,17 @@ namespace Coffee.UIExtensions
 				EditorGUI.indentLevel++;
 
 				SerializedProperty spColor = serializedObject.FindProperty("m_Color");
-				if (spColor == null && serializedObject.targetObject is UIEffect) {
-					spColor = new SerializedObject (serializedObject.targetObjects.Select(x=>(x as UIEffect).targetGraphic).ToArray()).FindProperty("m_Color");
+				if (spColor == null && serializedObject.targetObject is UIEffect)
+				{
+					spColor = new SerializedObject(serializedObject.targetObjects.Select(x => (x as UIEffect).targetGraphic).ToArray()).FindProperty("m_Color");
 				}
 
-				EditorGUI.BeginChangeCheck ();
+				EditorGUI.BeginChangeCheck();
 				EditorGUI.showMixedValue = spColor.hasMultipleDifferentValues;
-				spColor.colorValue = EditorGUILayout.ColorField (contentEffectColor, spColor.colorValue, true, false, false, null);
-				if (EditorGUI.EndChangeCheck ()) {
-					spColor.serializedObject.ApplyModifiedProperties ();
+				spColor.colorValue = EditorGUILayout.ColorField(contentEffectColor, spColor.colorValue, true, false, false, null);
+				if (EditorGUI.EndChangeCheck())
+				{
+					spColor.serializedObject.ApplyModifiedProperties();
 				}
 
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_ColorFactor"));

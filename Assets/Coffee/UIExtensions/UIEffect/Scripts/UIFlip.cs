@@ -48,8 +48,6 @@ namespace Coffee.UIExtensions
 				vt.position = new Vector3(
 					m_Horizontal ? -pos.x : pos.x,
 					m_Veritical ? -pos.y : pos.y
-//					m_Horizontal ? (pos.x + (center.x - pos.x) * 2) : pos.x,
-//					m_Veritical ? (pos.y + (center.y - pos.y) * 2) : pos.y
 				);
 				vh.SetUIVertex(vt, i);
 			}

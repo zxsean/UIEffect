@@ -31,12 +31,28 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Custom effect factor 1.
 		/// </summary>
-		public Vector4 customFactor1 { get { return m_CustomFactor1; } set { m_CustomFactor1 = value; SetDirty(); } }
+		public Vector4 customFactor1
+		{
+			get { return m_CustomFactor1; }
+			set
+			{
+				m_CustomFactor1 = value;
+				SetDirty();
+			}
+		}
 
 		/// <summary>
 		/// Custom effect factor 2.
 		/// </summary>
-		public Vector4 customFactor2 { get { return m_CustomFactor2; } set { m_CustomFactor2 = value; SetDirty(); } }
+		public Vector4 customFactor2
+		{
+			get { return m_CustomFactor2; }
+			set
+			{
+				m_CustomFactor2 = value;
+				SetDirty();
+			}
+		}
 
 		/// <summary>
 		/// Modifies the mesh.
@@ -57,9 +73,9 @@ namespace Coffee.UIExtensions
 			{
 				// Pack some effect factors to 1 float.
 				Vector2 factor = new Vector2(
-					Packer.ToFloat(m_CustomFactor1),
-					Packer.ToFloat(m_CustomFactor2)
-				);
+					                 Packer.ToFloat(m_CustomFactor1),
+					                 Packer.ToFloat(m_CustomFactor2)
+				                 );
 
 				for (int i = 0; i < tempVerts.Count; i++)
 				{
