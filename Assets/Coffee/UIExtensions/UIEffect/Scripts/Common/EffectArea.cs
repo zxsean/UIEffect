@@ -15,7 +15,7 @@ namespace Coffee.UIExtensions
 
 	public static class EffectAreaExtensions
 	{
-		protected static readonly Rect rectForCharacter = new Rect(0, 0, 1, 1);
+		static readonly Rect rectForCharacter = new Rect(0, 0, 1, 1);
 
 		/// <summary>
 		/// Gets effect for area.
