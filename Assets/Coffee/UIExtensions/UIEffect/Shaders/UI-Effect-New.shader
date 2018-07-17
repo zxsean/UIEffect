@@ -89,19 +89,6 @@ Shader "UI/Hidden/UI-Effect-New"
 			float4 _MainTex_TexelSize;
 			sampler2D _ParametizedTexture;
 
-			half2 UnpackToVec2(float value)
-			{
-				const int PACKER_STEP = 4096;
-				const int PRECISION = PACKER_STEP - 1;
-				fixed4 color;
-
-				color.x = (value % PACKER_STEP) / PRECISION;
-				value = floor(value / PACKER_STEP);
-
-				color.y = (value % PACKER_STEP) / PRECISION;
-				return color;
-			}
-
 			v2f vert(appdata_t IN)
 			{
 				v2f OUT;
@@ -120,7 +107,7 @@ Shader "UI/Hidden/UI-Effect-New"
 
 			fixed4 frag(v2f IN) : SV_Target
 			{
-				fixed4 param1 = tex2D(_ParametizedTexture, float2(0.25, IN.param));
+				fixed4 param1 = tex2D(_ParametizedTexture, float2(0.5, IN.param));
                 fixed effectFactor = param1.x;
                 fixed colorFactor = param1.y;
                 fixed blurFactor = param1.z;

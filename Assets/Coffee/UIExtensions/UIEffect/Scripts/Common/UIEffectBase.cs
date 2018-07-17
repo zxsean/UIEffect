@@ -10,12 +10,11 @@ namespace Coffee.UIExtensions
 	[ExecuteInEditMode]
 	[RequireComponent(typeof(Graphic))]
 	[DisallowMultipleComponent]
-	public abstract class UIEffectBase : BaseMeshEffect
+	public abstract class UIEffectBase : BaseMeshEffect, IMaterialModifier
 #if UNITY_EDITOR
 		, ISerializationCallbackReceiver
 #endif
 	{
-		protected static readonly Rect rectForCharacter = new Rect(0, 0, 1, 1);
 		protected static readonly Vector2[] splitedCharacterPosition = { Vector2.up, Vector2.one, Vector2.right, Vector2.zero };
 		protected static readonly List<UIVertex> tempVerts = new List<UIVertex>();
 
@@ -31,6 +30,15 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public Material effectMaterial { get { return m_EffectMaterial; } }
 
+		public virtual Material GetModifiedMaterial(Material baseMaterial)
+		{
+			if (!isActiveAndEnabled)
+			{
+				return baseMaterial;
+			}
+			return m_EffectMaterial;
+		}
+
 #if UNITY_EDITOR
 		/// <summary>
 		/// Raises the validate event.
@@ -38,7 +46,6 @@ namespace Coffee.UIExtensions
 		protected override void OnValidate ()
 		{
 			base.OnValidate ();
-			SetDirty();
 			UnityEditor.EditorApplication.delayCall += () => UpdateMaterial(false);
 		}
 
@@ -69,11 +76,12 @@ namespace Coffee.UIExtensions
 			}
 
 			var mat =  GetMaterial();
-			if (m_EffectMaterial != mat || targetGraphic.material != mat)
+			if (m_EffectMaterial != mat)
 			{
-				targetGraphic.material = m_EffectMaterial = mat;
+				m_EffectMaterial = mat;
+				SetDirty();
+
 				UnityEditor.EditorUtility.SetDirty(this);
-				UnityEditor.EditorUtility.SetDirty(targetGraphic);
 			}
 		}
 
@@ -87,24 +95,26 @@ namespace Coffee.UIExtensions
 		}
 #endif
 
+
 		/// <summary>
 		/// This function is called when the object becomes enabled and active.
 		/// </summary>
 		protected override void OnEnable()
 		{
-			targetGraphic.material = m_EffectMaterial;
+//			targetGraphic.material = m_EffectMaterial;
 			base.OnEnable();
 			SetDirty();
 		}
 
-		/// <summary>
-		/// This function is called when the behaviour becomes disabled () or inactive.
-		/// </summary>
-		protected override void OnDisable()
-		{
-			targetGraphic.material = null;
-			base.OnDisable();
-		}
+//		/// <summary>
+//		/// This function is called when the behaviour becomes disabled () or inactive.
+//		/// </summary>
+//		protected override void OnDisable()
+//		{
+////			targetGraphic.material = null;
+//			base.OnDisable();
+//		}
+
 
 		/// <summary>
 		/// Mark the UIEffect as dirty.
@@ -117,34 +127,9 @@ namespace Coffee.UIExtensions
 			}
 		}
 
-		/// <summary>
-		/// Gets effect for area.
-		/// </summary>
-		protected Rect GetEffectArea(VertexHelper vh, EffectArea area)
+		protected override void OnDidApplyAnimationProperties()
 		{
-			switch(area)
-			{
-				case EffectArea.RectTransform: return graphic.rectTransform.rect;
-				case EffectArea.Character: return rectForCharacter;
-				case EffectArea.Fit:
-					{
-						// Fit to contents.
-						Rect rect = default(Rect);
-						UIVertex vertex = default(UIVertex);
-						rect.xMin = rect.yMin = float.MaxValue;
-						rect.xMax = rect.yMax = float.MinValue;
-						for (int i = 0; i < vh.currentVertCount; i++)
-						{
-							vh.PopulateUIVertex(ref vertex, i);
-							rect.xMin = Mathf.Min(rect.xMin, vertex.position.x);
-							rect.yMin = Mathf.Min(rect.yMin, vertex.position.y);
-							rect.xMax = Mathf.Max(rect.xMax, vertex.position.x);
-							rect.yMax = Mathf.Max(rect.yMax, vertex.position.y);
-						}
-						return rect;
-					}
-				default: return graphic.rectTransform.rect;
-			}
+			SetDirty();
 		}
 	}
 }

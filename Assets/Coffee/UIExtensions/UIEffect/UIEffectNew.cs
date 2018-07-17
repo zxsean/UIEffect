@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 #if UNITY_EDITOR
@@ -17,7 +18,7 @@ namespace Coffee.UIExtensions
 	[ExecuteInEditMode]
 	[RequireComponent(typeof(Graphic))]
 	[DisallowMultipleComponent]
-	public class UIEffectNew : UIEffectBase, IParametizedTexture
+	public class UIEffectNew : UIEffectBase, IMaterialModifier, IParametizedTexture
 	{
 
 		//################################
@@ -26,81 +27,76 @@ namespace Coffee.UIExtensions
 		public const string shaderName = "UI/Hidden/UI-Effect-New";
 
 		public static ParametizedTexture ptex = new ParametizedTexture(4, 1024);
-//		{
-//			get
-//			{
-//				if (_ptex == null)
-//				{
-//					_ptex = new ParametizedTexture(4, 1024);
-//
-//				}
-//				return _ptex;
-//			}
-//		}
-//
-//		static ParametizedTexture _ptex;
 
 		public int index { get; set; }
-
-//		[InitializeOnLoadMethod]
-//		static void Clear()
-//		{
-//			_ptex = null;
-//		}
 
 
 		//################################
 		// Serialize Members.
 		//################################
-		[SerializeField][Range(0, 1)] float m_ToneLevel = 1;
+		[FormerlySerializedAs("m_ToneLevel")]
+		[SerializeField][Range(0, 1)] float m_EffectFactor = 1;
 		[SerializeField][Range(0, 1)] float m_ColorFactor = 1;
-		[SerializeField][Range(0, 1)] float m_Blur = 0.25f;
-		[SerializeField][Range(0, 1)] float m_ShadowBlur = 0.25f;
+		[FormerlySerializedAs("m_Blur")]
+		[SerializeField][Range(0, 1)] float m_BlurFactor = 0.25f;
 		[SerializeField] ToneMode m_ToneMode;
 		[SerializeField] ColorMode m_ColorMode;
 		[SerializeField] BlurMode m_BlurMode;
-		[SerializeField] Color m_EffectColor = Color.white;
 
 		//################################
 		// Public Members.
 		//################################
 
 		/// <summary>
-		/// Tone effect level between 0(no effect) and 1(complete effect).
+		/// Tone effect factor between 0(no effect) and 1(complete effect).
 		/// </summary>
-		public float toneLevel
+		[System.Obsolete("Use effectFactor instead (UnityUpgradable) -> effectFactor")]
+		public float effectFactor
 		{
-			get { return m_ToneLevel; }
+			get { return m_EffectFactor; }
 			set
 			{
-				m_ToneLevel = Mathf.Clamp(value, 0, 1);
-				ptex.SetData(this, 0, m_ToneLevel);
+				value = Mathf.Clamp(value, 0, 1);
+				if (!Mathf.Approximately(m_EffectFactor, value))
+				{
+					m_EffectFactor = value;
+					SetDirty();
+				}
+			}
+		}
+
+		/// <summary>
+		/// Color effect factor between 0(no effect) and 1(complete effect).
+		/// </summary>
+		public float colorFactor
+		{
+			get { return m_ColorFactor; }
+			set
+			{
+				value = Mathf.Clamp(value, 0, 1);
+				if (!Mathf.Approximately(m_ColorFactor, value))
+				{
+					m_ColorFactor = value;
+					SetDirty();
+				}
 			}
 		}
 
 		/// <summary>
 		/// How far is the blurring from the graphic.
 		/// </summary>
-		public float blur
+		[System.Obsolete("Use blurFactor instead (UnityUpgradable) -> blurFactor")]
+		public float blurFactor
 		{
-			get { return m_Blur; }
+			get { return m_BlurFactor; }
 			set
 			{
-				m_Blur = Mathf.Clamp(value, 0, 1);
-				ptex.SetData(this, 1, m_Blur);
-			}
-		}
-
-		/// <summary>
-		/// How far is the blurring shadow from the graphic.
-		/// </summary>
-		public float shadowBlur
-		{
-			get { return m_ShadowBlur; }
-			set
-			{
-				m_ShadowBlur = Mathf.Clamp(value, 0, 1);
-				SetDirty();
+				value = Mathf.Clamp(value, 0, 1);
+				if (!Mathf.Approximately(m_BlurFactor, value))
+				{
+					m_BlurFactor = value;
+					SetDirty();
+				}
 			}
 		}
 
@@ -119,41 +115,21 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public BlurMode blurMode { get { return m_BlurMode; } }
 
-		/// <summary>
-		/// Color for the color effect.
-		/// </summary>
-		public Color effectColor
-		{
-			get { return m_EffectColor; }
-			set
-			{
-				m_EffectColor = value;
-				SetDirty();
-			}
-		}
-
-//		protected override void OnValidate()
-//		{
-//			base.OnValidate();
-//			SetDirty();
-//
-//		}
-
 		protected override void SetDirty()
 		{
 			if (m_EffectMaterial)
 			{
-				m_EffectMaterial.SetTexture("_ParametizedTexture", ptex.texture);
+				m_EffectMaterial.SetTexture(ParametizedTexture.PropertyId, ptex.texture);
 			}
-			ptex.SetData(this, 0, m_ToneLevel);
-			ptex.SetData(this, 1, m_ColorFactor);
-			ptex.SetData(this, 2, m_Blur);
+			ptex.SetData(this, 0, m_EffectFactor);	// param1.x : effect factor
+			ptex.SetData(this, 1, m_ColorFactor);	// param1.y : color factor
+			ptex.SetData(this, 2, m_BlurFactor);	// param1.z : blur factor
 		}
 
 		protected override void OnEnable()
 		{
-			base.OnEnable();
 			ptex.Register(this);
+			base.OnEnable();
 		}
 
 		protected override void OnDisable()
@@ -167,7 +143,7 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public override void ModifyMesh(VertexHelper vh)
 		{
-			if (!isActiveAndEnabled)
+			if (!isActiveAndEnabled || (m_ToneMode == ToneMode.None && m_ColorMode == ColorMode.Multiply && m_BlurMode == BlurMode.None))
 			{
 				return;
 			}
@@ -185,6 +161,15 @@ namespace Coffee.UIExtensions
 				);
 				vh.SetUIVertex(vt, i);
 			}
+		}
+
+		public override Material GetModifiedMaterial(Material baseMaterial)
+		{
+			if (!isActiveAndEnabled || (m_ToneMode == ToneMode.None && m_ColorMode == ColorMode.Multiply && m_BlurMode == BlurMode.None))
+			{
+				return baseMaterial;
+			}
+			return m_EffectMaterial;
 		}
 
 		#if UNITY_EDITOR

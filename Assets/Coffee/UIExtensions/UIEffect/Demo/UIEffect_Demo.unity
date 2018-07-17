@@ -216,18 +216,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 7
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &7825721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,23 +871,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &44001348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,23 +1129,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &58183647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,18 +1336,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 2
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 0.753, g: 0.2509804, b: 0.2509804, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &64317406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1709,6 +1663,103 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!1 &79100629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 79100630}
+  - component: {fileID: 79100633}
+  - component: {fileID: 79100632}
+  - component: {fileID: 79100631}
+  m_Layer: 5
+  m_Name: LABEL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &79100630
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 79100629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2029267957}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 40}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &79100631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 79100629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
+  m_Blur: 0.25
+  m_Style: 2
+  m_AdditionalShadows:
+  - blur: 0.25
+    style: 1
+    effectColor: {r: 0, g: 0, b: 0, a: 1}
+    effectDistance: {x: 3, y: -3}
+    useGraphicAlpha: 1
+--- !u!114 &79100632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 79100629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0.25
+--- !u!222 &79100633
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 79100629}
 --- !u!1 &79710088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,23 +1811,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &79710091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1974,18 +2011,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &84494222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2125,18 +2153,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &84921688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2274,18 +2293,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 0.75
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 1
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &95897110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2487,7 +2497,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 39
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2764,7 +2774,7 @@ RectTransform:
   - {fileID: 202151986}
   - {fileID: 971791494}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2950,7 +2960,7 @@ RectTransform:
   - {fileID: 1299851536}
   - {fileID: 1533600033}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3179,18 +3189,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 3
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 0.753, g: 0.2509804, b: 0.2509804, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &129689003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3282,7 +3283,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3358,23 +3359,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &140061610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3447,7 +3434,7 @@ RectTransform:
   - {fileID: 1006783756}
   - {fileID: 2109448120}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4153,18 +4140,9 @@ MonoBehaviour:
   m_ToneLevel: 0.53
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &161216580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4400,18 +4378,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 0.753, g: 0.2509804, b: 0.2509804, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &174393586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4806,7 +4775,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000631, y: 1.0000631, z: 1.0000631}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4905,7 +4874,7 @@ RectTransform:
   - {fileID: 1436281684}
   - {fileID: 1512125626}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5212,23 +5181,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &207264977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5356,18 +5311,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 5
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &213976153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5474,18 +5420,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 0.75
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.76862746}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &214921494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5606,18 +5543,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 4
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &216375909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5716,23 +5644,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &217918990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5939,23 +5853,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &218813878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6196,18 +6096,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 0
   m_Blur: 0
-  m_ShadowBlur: 1
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 3
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 1}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &221297113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6323,23 +6214,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &223637566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6453,18 +6330,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 1
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &225499944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6543,7 +6411,7 @@ RectTransform:
   - {fileID: 1079241783}
   - {fileID: 2097561736}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6674,18 +6542,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 2
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &229898342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6899,13 +6758,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EffectMaterial: {fileID: 21403493181202942, guid: c70dc67e2fc2e4b15b1dee14236af031,
     type: 2}
-  m_ToneLevel: 0.46
+  m_ToneLevel: 0
+  m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
   m_ToneMode: 3
   m_ColorMode: 0
   m_BlurMode: 0
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &240054475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7101,23 +6959,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &252331492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7297,23 +7141,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &258843494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7887,18 +7717,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &269029035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8122,7 +7943,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000007, y: 1.0000007, z: 1.0000007}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8221,18 +8042,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 2
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &274819960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8326,6 +8138,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1891299230}
   - {fileID: 200454301}
   - {fileID: 1184727325}
   - {fileID: 845069473}
@@ -8825,18 +8638,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &290860507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8957,18 +8761,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.7
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 2
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &291538930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9164,23 +8959,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &292689896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9630,18 +9411,9 @@ MonoBehaviour:
   m_ToneLevel: 0.563
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &322551287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9768,18 +9540,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 3
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &324158648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10668,23 +10431,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &352044131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10990,7 +10739,7 @@ RectTransform:
   - {fileID: 231989714}
   - {fileID: 372663983}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 36
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11348,18 +11097,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 0
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 2
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: -2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &379439431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11507,18 +11247,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &380776052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11771,18 +11502,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &386146709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11891,18 +11613,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 0
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 0, b: 0, a: 0.503}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &387037330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12698,18 +12411,9 @@ MonoBehaviour:
   m_ToneLevel: 0.9
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 4
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &423573606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12808,23 +12512,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &426909977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13064,18 +12754,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 2
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &432256206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13742,18 +13423,9 @@ MonoBehaviour:
   m_ToneLevel: 0.95
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 4
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &461011643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13971,18 +13643,9 @@ MonoBehaviour:
   m_ToneLevel: 0.85
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 4
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &464566441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14556,23 +14219,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &495710984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15106,23 +14755,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 0
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 2
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: -2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows:
-  - shadowBlur: 1
-    shadowMode: 0
-    shadowColor: {r: 0.41176474, g: 1, b: 0.41176474, a: 0.5019608}
-    effectDistance: {x: 5, y: -5}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &521941302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15348,18 +14983,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 1
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &536193734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15555,23 +15181,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &541861229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15662,23 +15274,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &542058994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15948,18 +15546,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 0
   m_Blur: 0
-  m_ShadowBlur: 1
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 3
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 0.5019608}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &547320603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16279,7 +15868,7 @@ RectTransform:
   m_LocalScale: {x: 0.9999706, y: 0.9999706, z: 0.9999706}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -16503,18 +16092,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 3
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &562290441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16749,18 +16329,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 4
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &566640802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16882,18 +16453,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 1
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &569081140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17009,23 +16571,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &570343044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17116,23 +16664,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &573947757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17223,23 +16757,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &580643172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17713,7 +17233,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -17947,18 +17467,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 3
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &594764144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18244,23 +17755,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &598314611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18373,18 +17870,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 7
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &600903087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18943,7 +18431,7 @@ RectTransform:
   - {fileID: 463804599}
   - {fileID: 335234018}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -19052,23 +18540,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &633771671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19475,18 +18949,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 3
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &657670789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19637,23 +19102,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &663851653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19724,7 +19175,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000429, y: 1.0000429, z: 1.0000429}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -19975,18 +19426,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &668605919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20168,23 +19610,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &678586341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20297,18 +19725,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 1}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &679593383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20562,18 +19981,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 0
   m_Blur: 0
-  m_ShadowBlur: 1
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 3
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 1}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &683549511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20827,18 +20237,9 @@ MonoBehaviour:
   m_ToneLevel: 0.95
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 4
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &688619460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21185,18 +20586,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 5
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &714788907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21305,18 +20697,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 7
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &716799563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21410,7 +20793,7 @@ RectTransform:
   m_LocalScale: {x: 0.99997103, y: 0.99997103, z: 0.99997103}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -22061,23 +21444,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &757283633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22170,23 +21539,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &758525297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22277,23 +21632,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &761530866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22551,18 +21892,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 3
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &766643022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22641,7 +21973,7 @@ RectTransform:
   - {fileID: 920692233}
   - {fileID: 1990445409}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -22772,18 +22104,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 2
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &768773799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22862,7 +22185,7 @@ RectTransform:
   - {fileID: 1600337875}
   - {fileID: 1234716064}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23220,18 +22543,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &812026175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23352,18 +22666,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &812354943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23502,18 +22807,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 2
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &813870497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23826,18 +23122,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &832092484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23970,18 +23257,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 5
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &832375674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24145,7 +23423,7 @@ RectTransform:
   - {fileID: 890409559}
   - {fileID: 269714091}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -24277,18 +23555,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 0.753, g: 0.2509804, b: 0.2509804, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &853894541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24621,23 +23890,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &865587243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24873,23 +24128,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &871650360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24958,7 +24199,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000327, y: 1.0000327, z: 1.0000327}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -25057,18 +24298,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 7
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &875434516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25206,18 +24438,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 0.25
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 2
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.2509804}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &876776574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25748,23 +24971,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &890349497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26170,18 +25379,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 0.753, g: 0.2509804, b: 0.2509804, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &908428393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26563,18 +25763,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &913664184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26660,23 +25851,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &915593852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27256,7 +26433,7 @@ RectTransform:
   - {fileID: 781371154}
   - {fileID: 1189479420}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -27388,18 +26565,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 0
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 1}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &924573930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27527,7 +26695,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000054, y: 1.0000054, z: 1.0000054}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -27669,18 +26837,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 0
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 2
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: -2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &934988745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27889,6 +27048,103 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 941792596}
+--- !u!1 &942016534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 942016535}
+  - component: {fileID: 942016538}
+  - component: {fileID: 942016537}
+  - component: {fileID: 942016536}
+  m_Layer: 5
+  m_Name: LABEL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &942016535
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942016534}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1405838526}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 40}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &942016536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942016534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
+  m_Blur: 0.25
+  m_Style: 2
+  m_AdditionalShadows:
+  - blur: 0.25
+    style: 1
+    effectColor: {r: 0, g: 0, b: 0, a: 1}
+    effectDistance: {x: 3, y: -3}
+    useGraphicAlpha: 1
+--- !u!114 &942016537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942016534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 1.0
+--- !u!222 &942016538
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 942016534}
 --- !u!1 &947094045
 GameObject:
   m_ObjectHideFlags: 0
@@ -27944,18 +27200,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &947094048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28097,7 +27344,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 50857158}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.109108016
+  m_Size: 0.11898289
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -28192,18 +27439,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &948642377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28343,18 +27581,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 0
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 0.5019608}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &950303574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28756,7 +27985,7 @@ RectTransform:
   - {fileID: 1473962002}
   - {fileID: 637998389}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -28905,18 +28134,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &970441794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29221,23 +28441,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &978015986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29350,18 +28556,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &981674279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29440,7 +28637,7 @@ RectTransform:
   - {fileID: 1679092646}
   - {fileID: 1297219626}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -29678,18 +28875,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &992310945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30091,18 +29279,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 2
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1000971493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30966,18 +30145,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 2
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 0.753, g: 0.2509804, b: 0.2509804, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1059935247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31098,18 +30268,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 7
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1065635267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31211,18 +30372,9 @@ MonoBehaviour:
   m_ToneLevel: 0.65
   m_ColorFactor: 1
   m_Blur: 0.75
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 1
   m_BlurMode: 3
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 0.24137926, g: 1, b: 0, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1067186260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31471,18 +30623,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 5
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1069733296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31547,7 +30690,7 @@ RectTransform:
   - {fileID: 1830688165}
   - {fileID: 1288257783}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -31636,7 +30779,7 @@ RectTransform:
   - {fileID: 1368039086}
   - {fileID: 1490314290}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -31961,18 +31104,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 7
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1089543087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32051,7 +31185,7 @@ RectTransform:
   - {fileID: 2078871437}
   - {fileID: 150573562}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -32317,23 +31451,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1110213443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32619,18 +31739,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1117353014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32755,18 +31866,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1123579952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33372,18 +32474,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 0.25
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 3
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.2509804}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1132158762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33431,6 +32524,103 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132158758}
+--- !u!1 &1139393895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1139393896}
+  - component: {fileID: 1139393899}
+  - component: {fileID: 1139393898}
+  - component: {fileID: 1139393897}
+  m_Layer: 5
+  m_Name: TITLE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1139393896
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1139393895}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1891299230}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 44}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1139393897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1139393895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
+  m_Blur: 0.25
+  m_Style: 2
+  m_AdditionalShadows:
+  - blur: 0.25
+    style: 1
+    effectColor: {r: 0, g: 0, b: 0, a: 1}
+    effectDistance: {x: 3, y: -3}
+    useGraphicAlpha: 1
+--- !u!114 &1139393898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1139393895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Tone - Grayscale
+--- !u!222 &1139393899
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1139393895}
 --- !u!1 &1141474812
 GameObject:
   m_ObjectHideFlags: 0
@@ -33504,18 +32694,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 1
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1141474816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34213,18 +33394,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 0.75
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 3
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.76862746}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1158153992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34345,18 +33517,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 3
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 0.753, g: 0.2509804, b: 0.2509804, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1164813431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34534,7 +33697,7 @@ RectTransform:
   - {fileID: 153877211}
   - {fileID: 1279891238}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -34703,23 +33866,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1189821987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35201,18 +34350,9 @@ MonoBehaviour:
   m_ToneLevel: 0.4
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1202041316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35350,23 +34490,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1206929002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35576,18 +34702,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 2
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1211005043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35702,18 +34819,9 @@ MonoBehaviour:
   m_ToneLevel: 0.53
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1219340942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35821,18 +34929,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 2
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 0.753, g: 0.2509804, b: 0.2509804, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1225571722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35948,23 +35047,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1231367601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36486,18 +35571,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 0.5019608}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1250125685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36709,23 +35785,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1256163094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36838,18 +35900,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 0.75
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 2
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1260557633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37225,18 +36278,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1273883068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37458,18 +36502,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 7
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1274348210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37609,7 +36644,7 @@ RectTransform:
   - {fileID: 909969087}
   - {fileID: 1847149037}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -37800,18 +36835,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 0.5019608}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1292352884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38343,18 +37369,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 2
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1309797084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38475,18 +37492,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 1}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1315832860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38675,7 +37683,7 @@ RectTransform:
   - {fileID: 1328372383}
   - {fileID: 1917915333}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -38846,23 +37854,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1338192482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39121,18 +38115,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.7
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 2
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1343094963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39413,6 +38398,103 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 1
+--- !u!1 &1361734366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1361734367}
+  - component: {fileID: 1361734370}
+  - component: {fileID: 1361734369}
+  - component: {fileID: 1361734368}
+  m_Layer: 5
+  m_Name: LABEL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1361734367
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1361734366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1506546379}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 40}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1361734368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1361734366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
+  m_Blur: 0.25
+  m_Style: 2
+  m_AdditionalShadows:
+  - blur: 0.25
+    style: 1
+    effectColor: {r: 0, g: 0, b: 0, a: 1}
+    effectDistance: {x: 3, y: -3}
+    useGraphicAlpha: 1
+--- !u!114 &1361734369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1361734366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0.5
+--- !u!222 &1361734370
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1361734366}
 --- !u!1 &1368039085
 GameObject:
   m_ObjectHideFlags: 0
@@ -39636,7 +38718,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000601, y: 1.0000601, z: 1.0000601}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -39860,6 +38942,129 @@ MonoBehaviour:
     effectColor: {r: 0, g: 0, b: 0, a: 1}
     effectDistance: {x: 3, y: -3}
     useGraphicAlpha: 1
+--- !u!1 &1405838525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1405838526}
+  - component: {fileID: 1405838531}
+  - component: {fileID: 1405838530}
+  - component: {fileID: 1405838529}
+  - component: {fileID: 1405838528}
+  - component: {fileID: 1405838527}
+  m_Layer: 5
+  m_Name: Image  100%
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1405838526
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1405838525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 942016535}
+  m_Father: {fileID: 2047529647}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 682.5, y: -110}
+  m_SizeDelta: {x: 112, y: 188}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1405838527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1405838525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: 1
+  m_FlexibleHeight: -1
+--- !u!114 &1405838528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1405838525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b2ed11d675446c5a49da1ea296d490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectMaterial: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
+    type: 2}
+  m_ToneLevel: 1
+  m_ColorFactor: 1
+  m_Blur: 0
+  m_ToneMode: 1
+  m_ColorMode: 0
+  m_BlurMode: 0
+--- !u!114 &1405838529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1405838525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 2
+  m_AspectRatio: 0.59574467
+--- !u!114 &1405838530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1405838525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
+    type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300012, guid: 975570a90d56c477582e12d440dc9931, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1405838531
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1405838525}
 --- !u!1 &1406154528
 GameObject:
   m_ObjectHideFlags: 0
@@ -40128,18 +39333,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 0
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 0.5019608}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1408993763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40402,18 +39598,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 2
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1413793748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40621,7 +39808,7 @@ RectTransform:
   - {fileID: 540979214}
   - {fileID: 1107154135}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -40733,18 +39920,9 @@ MonoBehaviour:
   m_ToneLevel: 0
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1426442822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41039,23 +40217,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1435075487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41243,23 +40407,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1437205383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41372,18 +40522,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 0.5
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 2
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.5019608}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1442348953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41819,23 +40960,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1475241400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41948,18 +41075,9 @@ MonoBehaviour:
   m_ToneLevel: 0.9
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 4
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1477783063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42392,18 +41510,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 0.75
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 2
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.76862746}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1492778543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42525,18 +41634,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 0
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 2
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: -2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1502206872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42797,6 +41897,129 @@ MonoBehaviour:
   m_PreferredHeight: 600
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
+--- !u!1 &1506066248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1506066249}
+  - component: {fileID: 1506066254}
+  - component: {fileID: 1506066253}
+  - component: {fileID: 1506066252}
+  - component: {fileID: 1506066251}
+  - component: {fileID: 1506066250}
+  m_Layer: 5
+  m_Name: Image  75%
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1506066249
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506066248}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1593853171}
+  m_Father: {fileID: 2047529647}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 487.5, y: -110}
+  m_SizeDelta: {x: 112, y: 188}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1506066250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506066248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: 1
+  m_FlexibleHeight: -1
+--- !u!114 &1506066251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506066248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b2ed11d675446c5a49da1ea296d490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectMaterial: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
+    type: 2}
+  m_ToneLevel: 0.75
+  m_ColorFactor: 1
+  m_Blur: 0
+  m_ToneMode: 1
+  m_ColorMode: 0
+  m_BlurMode: 0
+--- !u!114 &1506066252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506066248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 2
+  m_AspectRatio: 0.59574467
+--- !u!114 &1506066253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506066248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
+    type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300012, guid: 975570a90d56c477582e12d440dc9931, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1506066254
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506066248}
 --- !u!1 &1506090296
 GameObject:
   m_ObjectHideFlags: 0
@@ -42913,6 +42136,129 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1506090296}
+--- !u!1 &1506546378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1506546379}
+  - component: {fileID: 1506546384}
+  - component: {fileID: 1506546383}
+  - component: {fileID: 1506546382}
+  - component: {fileID: 1506546381}
+  - component: {fileID: 1506546380}
+  m_Layer: 5
+  m_Name: Image 50%
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1506546379
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506546378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1361734367}
+  m_Father: {fileID: 2047529647}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 292.5, y: -110}
+  m_SizeDelta: {x: 112, y: 188}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1506546380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506546378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: 1
+  m_FlexibleHeight: -1
+--- !u!114 &1506546381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506546378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b2ed11d675446c5a49da1ea296d490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectMaterial: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
+    type: 2}
+  m_ToneLevel: 0.5
+  m_ColorFactor: 1
+  m_Blur: 0
+  m_ToneMode: 1
+  m_ColorMode: 0
+  m_BlurMode: 0
+--- !u!114 &1506546382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506546378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 2
+  m_AspectRatio: 0.59574467
+--- !u!114 &1506546383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506546378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 21512057394810148, guid: aee96bc531e6eba468ec405e536f515f,
+    type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300012, guid: 975570a90d56c477582e12d440dc9931, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1506546384
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506546378}
 --- !u!1 &1510692608
 GameObject:
   m_ObjectHideFlags: 0
@@ -43289,23 +42635,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1515847095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43396,23 +42728,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1516383098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43719,18 +43037,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 2
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1526069335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43948,18 +43257,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 3
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1528458420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44408,18 +43708,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 0.75
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1539960339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44498,7 +43789,7 @@ RectTransform:
   - {fileID: 2137266271}
   - {fileID: 1425271615}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -44607,23 +43898,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1548105216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44973,18 +44250,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 7
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1564824904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45123,18 +44391,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 0.753, g: 0.2509804, b: 0.2509804, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1577050584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45233,23 +44492,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1579530701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45340,23 +44585,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1584934020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45470,18 +44701,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 0
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 3
-  m_ShadowColor: {r: 0, g: 1, b: 0, a: 1}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1593342324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45546,6 +44768,103 @@ MonoBehaviour:
   m_Blur: 0
   m_Style: 3
   m_AdditionalShadows: []
+--- !u!1 &1593853170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1593853171}
+  - component: {fileID: 1593853174}
+  - component: {fileID: 1593853173}
+  - component: {fileID: 1593853172}
+  m_Layer: 5
+  m_Name: LABEL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1593853171
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593853170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1506066249}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 40}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1593853172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593853170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0848bff101191904ead4bb831f7084db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
+  m_Blur: 0.25
+  m_Style: 2
+  m_AdditionalShadows:
+  - blur: 0.25
+    style: 1
+    effectColor: {r: 0, g: 0, b: 0, a: 1}
+    effectDistance: {x: 3, y: -3}
+    useGraphicAlpha: 1
+--- !u!114 &1593853173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593853170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0.75
+--- !u!222 &1593853174
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593853170}
 --- !u!1 &1599904784
 GameObject:
   m_ObjectHideFlags: 0
@@ -46173,18 +45492,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 0
   m_Blur: 0
-  m_ShadowBlur: 1
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 3
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 0.5019608}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1630231198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47000,18 +46310,9 @@ MonoBehaviour:
   m_ToneLevel: 0.53
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1652156965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47096,23 +46397,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1654797226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47317,23 +46604,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1661892180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47447,18 +46720,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 3
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1665007409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47596,18 +46860,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 0.5
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.5019608}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1672464528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47803,23 +47058,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1677531424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48009,23 +47250,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1691939509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48214,18 +47441,9 @@ MonoBehaviour:
   m_ToneLevel: 0.4
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1701932309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48311,23 +47529,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1702493995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48562,18 +47766,9 @@ MonoBehaviour:
   m_ToneLevel: 0.4
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1707705947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49101,18 +48296,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 3
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1720971683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49909,18 +49095,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 1
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1740647457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50406,7 +49583,7 @@ RectTransform:
   - {fileID: 410465979}
   - {fileID: 486321976}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -50589,18 +49766,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1785991815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50931,23 +50099,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1792937664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51060,18 +50214,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 3
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1793079430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51150,7 +50295,7 @@ RectTransform:
   - {fileID: 1355093936}
   - {fileID: 1411681286}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -51378,18 +50523,9 @@ MonoBehaviour:
   m_ToneLevel: 0.25
   m_ColorFactor: 0.25
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.2509804}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1801301787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51900,18 +51036,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 2
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1814068978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52325,18 +51452,9 @@ MonoBehaviour:
   m_ToneLevel: 0.75
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 7
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1818994748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52435,23 +51553,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1821678309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52564,18 +51668,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 1
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1821741794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52848,7 +51943,7 @@ RectTransform:
   - {fileID: 435612784}
   - {fileID: 75542492}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -53077,18 +52172,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 0
   m_Blur: 0.5
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 0.41176468, g: 1, b: 0.41176468, a: 1}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1837354010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53244,18 +52330,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.7
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 2
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1842158196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53418,18 +52495,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1854314332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53762,18 +52830,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 1
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1864440829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53894,18 +52953,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 0.5
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 3
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.5019608}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1876284850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54302,6 +53352,95 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1891299229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1891299230}
+  - component: {fileID: 1891299233}
+  - component: {fileID: 1891299232}
+  - component: {fileID: 1891299231}
+  m_Layer: 5
+  m_Name: Effect-Grayscale (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1891299230
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891299229}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0000515, y: 1.0000515, z: 1.0000515}
+  m_Children:
+  - {fileID: 1139393896}
+  - {fileID: 2047529647}
+  m_Father: {fileID: 281272270}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1891299231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891299229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.2509804}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1891299232
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891299229}
+--- !u!114 &1891299233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891299229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: 300
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
 --- !u!1 &1896952233
 GameObject:
   m_ObjectHideFlags: 0
@@ -55069,18 +54208,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 1
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 2
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1934755085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55532,18 +54662,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 7
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1966657313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56234,7 +55355,7 @@ RectTransform:
   - {fileID: 1208142900}
   - {fileID: 501237371}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 37
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -56420,7 +55541,7 @@ RectTransform:
   - {fileID: 1641524616}
   - {fileID: 1964105866}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -56529,23 +55650,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2008083321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56826,18 +55933,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 1.41
-  m_ShadowStyle: 0
   m_ToneMode: 1
   m_ColorMode: 1
   m_BlurMode: 3
-  m_ShadowColor: {r: 0, g: 1, b: 0, a: 0.2509804}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.947}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2023322568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56902,6 +56000,129 @@ MonoBehaviour:
   m_Blur: 1
   m_Style: 3
   m_AdditionalShadows: []
+--- !u!1 &2029267956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2029267957}
+  - component: {fileID: 2029267962}
+  - component: {fileID: 2029267961}
+  - component: {fileID: 2029267960}
+  - component: {fileID: 2029267959}
+  - component: {fileID: 2029267958}
+  m_Layer: 5
+  m_Name: Image 25%
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2029267957
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029267956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 79100630}
+  m_Father: {fileID: 2047529647}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 390, y: -110}
+  m_SizeDelta: {x: 0, y: 188}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2029267958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029267956}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cdbff4b712dc4e8786e297ffc223344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectMaterial: {fileID: 21502945526471222, guid: c70dc67e2fc2e4b15b1dee14236af031,
+    type: 2}
+  m_ToneLevel: 0
+  m_ColorFactor: 0
+  m_Blur: 0
+  m_ToneMode: 2
+  m_ColorMode: 2
+  m_BlurMode: 0
+--- !u!114 &2029267959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029267956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: 1
+  m_FlexibleHeight: -1
+--- !u!114 &2029267960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029267956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1254083943, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 2
+  m_AspectRatio: 0.59574467
+--- !u!114 &2029267961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029267956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 21502945526471222, guid: c70dc67e2fc2e4b15b1dee14236af031,
+    type: 2}
+  m_Color: {r: 0, g: 1, b: 0.7103448, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300012, guid: 975570a90d56c477582e12d440dc9931, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2029267962
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029267956}
 --- !u!1 &2037265639
 GameObject:
   m_ObjectHideFlags: 0
@@ -57067,6 +56288,66 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2045783656}
+--- !u!1 &2047529646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2047529647}
+  - component: {fileID: 2047529648}
+  m_Layer: 5
+  m_Name: Layout
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2047529647
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2047529646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2029267957}
+  - {fileID: 1506546379}
+  - {fileID: 1506066249}
+  - {fileID: 1405838526}
+  m_Father: {fileID: 1891299230}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 0, y: -50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2047529648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2047529646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -405508275, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 30
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
 --- !u!1 &2059974332
 GameObject:
   m_ObjectHideFlags: 0
@@ -57321,7 +56602,7 @@ RectTransform:
   - {fileID: 1117131205}
   - {fileID: 1349817153}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -57964,23 +57245,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2090964517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58362,18 +57629,9 @@ MonoBehaviour:
   m_ToneLevel: 0.5
   m_ColorFactor: 1
   m_Blur: 0
-  m_ShadowBlur: 0
-  m_ShadowStyle: 0
   m_ToneMode: 6
   m_ColorMode: 1
   m_BlurMode: 0
-  m_ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows: []
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2102631983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58935,7 +58193,7 @@ RectTransform:
   - {fileID: 329194871}
   - {fileID: 1658216850}
   m_Father: {fileID: 281272270}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -59434,23 +58692,9 @@ MonoBehaviour:
   m_ToneLevel: 1
   m_ColorFactor: 1
   m_Blur: 0.25
-  m_ShadowBlur: 0.25
-  m_ShadowStyle: 2
   m_ToneMode: 0
   m_ColorMode: 0
   m_BlurMode: 0
-  m_ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AdditionalShadows:
-  - shadowBlur: 0.25
-    shadowMode: 4
-    shadowColor: {r: 0, g: 0, b: 0, a: 1}
-    effectDistance: {x: 3, y: -3}
-    useGraphicAlpha: 1
-  m_CustomEffect: 0
-  m_CustomFactor: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &2129151069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59616,7 +58860,7 @@ RectTransform:
   m_LocalScale: {x: 0.99997437, y: 0.99997437, z: 0.99997437}
   m_Children: []
   m_Father: {fileID: 281272270}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

@@ -18,38 +18,48 @@ fixed4 UnpackToVec4(float value)
 {
 	const int PACKER_STEP = 64;
 	const int PRECISION = PACKER_STEP - 1;
-	fixed4 color;
+	fixed4 unpacked;
 
-    color.r = (value % PACKER_STEP) / PRECISION;
+    unpacked.x = (value % PACKER_STEP) / PRECISION;
     value = floor(value / PACKER_STEP);
 
-    color.g = (value % PACKER_STEP) / PRECISION;
+    unpacked.y = (value % PACKER_STEP) / PRECISION;
     value = floor(value / PACKER_STEP);
 
-    color.b = (value % PACKER_STEP) / PRECISION;
+    unpacked.z = (value % PACKER_STEP) / PRECISION;
     value = floor(value / PACKER_STEP);
 
-    color.a = (value % PACKER_STEP) / PRECISION;
-    return color;
+    unpacked.w = (value % PACKER_STEP) / PRECISION;
+    return unpacked;
 }
 
-fixed4 UnpackToVec3(float value)
+fixed3 UnpackToVec3(float value)
 {
-	const int PACKER_STEP = 64;
+	const int PACKER_STEP = 256;
 	const int PRECISION = PACKER_STEP - 1;
-	fixed4 color;
+	fixed3 unpacked;
 
-    color.r = (value % (PACKER_STEP * PACKER_STEP)) / (PACKER_STEP * PACKER_STEP - 1);
+    unpacked.x = (value % (PACKER_STEP * PACKER_STEP)) / (PACKER_STEP * PACKER_STEP - 1);
     value = floor(value / (PACKER_STEP * PACKER_STEP));
 
-    color.g = (value % PACKER_STEP) / (PACKER_STEP - 1);
+    unpacked.y = (value % PACKER_STEP) / (PACKER_STEP - 1);
     value = floor(value / PACKER_STEP);
 
-    color.b = (value % PACKER_STEP) / (PACKER_STEP - 1);
-    value = floor(value / PACKER_STEP);
+    unpacked.z = (value % PACKER_STEP) / (PACKER_STEP - 1);
+    return unpacked;
+}
 
-    color.a = (value % PACKER_STEP) / (PACKER_STEP - 1);
-    return color;
+half2 UnpackToVec2(float value)
+{
+	const int PACKER_STEP = 4096;
+	const int PRECISION = PACKER_STEP - 1;
+	fixed4 unpacked;
+
+	unpacked.x = (value % PACKER_STEP) / PRECISION;
+	value = floor(value / PACKER_STEP);
+
+	unpacked.y = (value % PACKER_STEP) / PRECISION;
+	return unpacked;
 }
 
 // Sample texture with blurring.
