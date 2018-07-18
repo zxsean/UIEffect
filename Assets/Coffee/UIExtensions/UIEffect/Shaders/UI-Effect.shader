@@ -50,7 +50,11 @@ Shader "UI/Hidden/UI-Effect"
 		CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
+			#if !defined(SHADER_API_D3D11_9X) && !defined(SHADER_API_D3D9)
 			#pragma target 2.0
+			#else
+			#pragma target 3.0
+			#endif
 			
 			#pragma multi_compile __ UNITY_UI_ALPHACLIP
 
@@ -82,7 +86,7 @@ Shader "UI/Hidden/UI-Effect"
 				
 				half4 effectFactor : TEXCOORD2;
 				#if HUE || PIXEL
-				half4 extraFactor : TEXCOORD3;
+				half2 extraFactor : TEXCOORD3;
 				#endif
 			};
 			
