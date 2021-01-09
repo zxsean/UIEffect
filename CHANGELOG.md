@@ -1,5 +1,206 @@
 # Changelog
 
+## [v3.2.0](https://github.com/mob-sakai/UIEffect/tree/v3.2.0) (2019-07-17)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v3.1.0...v3.2.0)
+
+**Breaking changes:**
+
+- UICapturedImage: Immediate capturing option is removed as it does not work on many platforms [\#161](https://github.com/mob-sakai/UIEffect/issues/161)
+
+**Implemented enhancements:**
+
+- Add demo for Unity 2018+ and TMPro 1.2+ [\#166](https://github.com/mob-sakai/UIEffect/issues/166)
+
+**Fixed bugs:**
+
+- UIDissolve's "Reverse Play" option works only in OnEnable [\#183](https://github.com/mob-sakai/UIEffect/issues/183)
+- CanvasGroup.alpha does not affect [\#180](https://github.com/mob-sakai/UIEffect/issues/180)
+- UIShiny effect remain on screen after calling Stop\(\) [\#165](https://github.com/mob-sakai/UIEffect/issues/165)
+- Material caching is not working properly [\#163](https://github.com/mob-sakai/UIEffect/issues/163)
+- Add a null check to TMPro sprite asset material checking [\#176](https://github.com/mob-sakai/UIEffect/pull/176) ([Oskiii](https://github.com/Oskiii))
+
+## [v3.1.0](https://github.com/mob-sakai/UIEffect/tree/v3.1.0) (2019-03-10)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v3.0.4...v3.1.0)
+
+## Support TextMeshPro!
+
+* All components are supported
+* Advanced blur is supported for Unity 2017.1+
+
+![](https://user-images.githubusercontent.com/12690315/53533025-8495d800-3b3c-11e9-9e94-320f3ec7ad74.png)
+
+For details to use, see [Usage with TextMeshPro](https://github.com/mob-sakai/UIEffect#usage-with-textmeshpro)
+
+**NOTE: Unity 5.x will not be supported in the near future**
+
+**Implemented enhancements:**
+
+- Support TextMeshPro [\#137](https://github.com/mob-sakai/UIEffect/issues/137)
+- add reverse animation option to UIDissolve [\#153](https://github.com/mob-sakai/UIEffect/pull/153) ([antpaw](https://github.com/antpaw))
+
+## [v3.0.4](https://github.com/mob-sakai/UIEffect/tree/v3.0.4) (2019-02-15)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v3.0.3...v3.0.4)
+
+**Implemented enhancements:**
+
+- add initial play animation delay option to UIShiny [\#147](https://github.com/mob-sakai/UIEffect/pull/147) ([antpaw](https://github.com/antpaw))
+
+**Fixed bugs:**
+
+- UIEffectCapturedImage.effectColor does not work as expected [\#148](https://github.com/mob-sakai/UIEffect/issues/148)
+- fix warnings [\#146](https://github.com/mob-sakai/UIEffect/pull/146) ([antpaw](https://github.com/antpaw))
+
+## [v3.0.3](https://github.com/mob-sakai/UIEffect/tree/v3.0.3) (2019-01-21)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v3.0.2...v3.0.3)
+
+**Fixed bugs:**
+
+- UIHsvModifier works only on gamma-space [\#145](https://github.com/mob-sakai/UIEffect/issues/145)
+
+## [v3.0.2](https://github.com/mob-sakai/UIEffect/tree/v3.0.2) (2019-01-15)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v3.0.1...v3.0.2)
+
+**Fixed bugs:**
+
+- UIEffect & UIHsvModifier & UITransitionEffect Strange action [\#144](https://github.com/mob-sakai/UIEffect/issues/144)
+
+## [v3.0.1](https://github.com/mob-sakai/UIEffect/tree/v3.0.1) (2018-11-07)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v3.0.0...v3.0.1)
+
+**Fixed bugs:**
+
+- Compile error in 2018.3 [\#139](https://github.com/mob-sakai/UIEffect/issues/139)
+
+## [v3.0.0](https://github.com/mob-sakai/UIEffect/tree/v3.0.0) (2018-10-09)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v2.8.3...v3.0.0)
+
+### New architecture: easier, faster and more beautiful.
+* Simple & easy-to-use
+* 20% faster
+* High precision parameter
+
+### Immediate capturing (UIEffectCapturedImage option)
+* Capture the previous frame immediately without any camera.
+* You no longer have to wait one frame to capture!
+* *NOTE: LWRP, WebGL and Unity 5.x for iOS/Mac are not supported.*
+
+### Advanced blur (UIEffect option)
+* Remove common artifacts in the blur effect for uGUI.  
+![](https://user-images.githubusercontent.com/12690315/42547121-80134788-84fb-11e8-97a0-048bba9634ea.png)
+* It is effective for small padding size atlases, including dynamic fonts!
+
+**Breaking changes:**
+
+- UIEffectCapturedImage: Remove 'TargetTexture' feature [\#136](https://github.com/mob-sakai/UIEffect/issues/136)
+- Remove 'additional shadow' in UIShadow component [\#110](https://github.com/mob-sakai/UIEffect/issues/110)
+- Remove 'custom effect' feature in UIEffect component [\#98](https://github.com/mob-sakai/UIEffect/issues/98)
+- Remove 'shadow effect' feature in UIEffect component [\#97](https://github.com/mob-sakai/UIEffect/issues/97)
+- Remove 'hue effect' in UIEffect component [\#91](https://github.com/mob-sakai/UIEffect/issues/91)
+- Remove 'cutoff' and 'mono' effect in UIEffect component [\#78](https://github.com/mob-sakai/UIEffect/issues/78)
+- New architecture: Shared texture for effect parameter [\#63](https://github.com/mob-sakai/UIEffect/issues/63)
+- Change: Change `ToneMode` to `EffectMode` [\#61](https://github.com/mob-sakai/UIEffect/issues/61)
+- Separate shadow effect to other component [\#52](https://github.com/mob-sakai/UIEffect/issues/52)
+- Use the graphic color as effect color, to reduce parameters [\#50](https://github.com/mob-sakai/UIEffect/issues/50)
+
+**Implemented enhancements:**
+
+- UITransitionEffect: "Pass ray on hidden" option [\#135](https://github.com/mob-sakai/UIEffect/issues/135)
+- Add component menu in editor [\#133](https://github.com/mob-sakai/UIEffect/issues/133)
+- UITransitionEffect: Add Show/Hide method [\#132](https://github.com/mob-sakai/UIEffect/issues/132)
+- UIEffectCapturedImage: Immediate capturing [\#130](https://github.com/mob-sakai/UIEffect/issues/130)
+- Improve blurring for atlas [\#95](https://github.com/mob-sakai/UIEffect/issues/95)
+- Use Canvas.willRenderCanvases event instead of Update method [\#87](https://github.com/mob-sakai/UIEffect/issues/87)
+
+**Closed issues:**
+
+- Add tooltip [\#92](https://github.com/mob-sakai/UIEffect/issues/92)
+- UIShiny: change parameter name `highlight` to `gloss` [\#93](https://github.com/mob-sakai/UIEffect/issues/93)
+
+## [v2.8.3](https://github.com/mob-sakai/UIEffect/tree/v2.8.3) (2018-09-29)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v2.8.2...v2.8.3)
+
+**Fixed bugs:**
+
+- UIEffectCapturedImage: Black screen with Unity 2018.1+ editor on Windows  [\#131](https://github.com/mob-sakai/UIEffect/issues/131)
+
+## [v2.8.2](https://github.com/mob-sakai/UIEffect/tree/v2.8.2) (2018-09-26)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v2.8.1...v2.8.2)
+
+**Fixed bugs:**
+
+- UICapturedEffectImage does not work with 'ScreenSpace - Overlay' in edit mode [\#128](https://github.com/mob-sakai/UIEffect/issues/128)
+- The UIEffectCapturedImage is upside down with 'ScreenSpace - Overlay' mode [\#127](https://github.com/mob-sakai/UIEffect/issues/127)
+- When "UI-Effect.mat" is created automatically, Unity hangs up. [\#126](https://github.com/mob-sakai/UIEffect/issues/126)
+- UICapturedEffectImage does not work with Lightweight Render Pipeline LWRP [\#125](https://github.com/mob-sakai/UIEffect/issues/125)
+
+## [v2.8.1](https://github.com/mob-sakai/UIEffect/tree/v2.8.1) (2018-08-17)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v2.8.0...v2.8.1)
+
+**Fixed bugs:**
+
+- \(Demo\) "Transition capture & dissolve" is incorrect [\#119](https://github.com/mob-sakai/UIEffect/issues/119)
+
+## [v2.8.0](https://github.com/mob-sakai/UIEffect/tree/v2.8.0) (2018-08-14)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v2.7.1...v2.8.0)
+
+* Create a screen transition!  
+![8 -08-2018 19-29-38](https://user-images.githubusercontent.com/12690315/43832265-dbdecc98-9b41-11e8-8ab5-9f49420a6a16.gif)
+
+* Some updates make UIEffectCapturedImage easier to use!
+
+
+**Implemented enhancements:**
+
+- UIEffectCapturedImage: Supports 'ScreenSpace - Overlay' [\#115](https://github.com/mob-sakai/UIEffect/issues/115)
+- UIEffectCapturedImage: Keep aspect ratio [\#114](https://github.com/mob-sakai/UIEffect/issues/114)
+- UIEffectCapturedImage: 'Capture on enable' option [\#113](https://github.com/mob-sakai/UIEffect/issues/113)
+- UITransitionEffect: Change transition texture [\#111](https://github.com/mob-sakai/UIEffect/issues/111)
+
+**Closed issues:**
+
+- UIEffectCapturedImage: change parameter name `keepCanvasSize` to `fitToScreen` [\#116](https://github.com/mob-sakai/UIEffect/issues/116)
+
+## [v2.7.1](https://github.com/mob-sakai/UIEffect/tree/v2.7.1) (2018-08-06)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v2.7.0...v2.7.1)
+
+**Fixed bugs:**
+
+- In v2.7.0, UIEffectCapturedImage is flipped vertically on Windows [\#112](https://github.com/mob-sakai/UIEffect/issues/112)
+
+## [v2.7.0](https://github.com/mob-sakai/UIEffect/tree/v2.7.0) (2018-07-26)
+
+[Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v2.6.2...v2.7.0)
+
+UIHsvModifier: Modify hue, saturation, and value as you like!  
+![](https://user-images.githubusercontent.com/12690315/43200006-d6e2bf54-904e-11e8-9f22-0c0f9ce5912f.gif)  
+
+* Note: `Hue` mode in UIEffect component will be obsolete in the near future. Please use UIHsvModifier component instead.
+* Note: `Cutoff` and `Mono` mode in UIEffect component will be obsolete in the near future. Please use UITransitionEffect component instead.
+
+**Implemented enhancements:**
+
+- UIEffectCapturedImage: Support target RenderTexture to use external component [\#108](https://github.com/mob-sakai/UIEffect/issues/108)
+- Transition effect as other component [\#105](https://github.com/mob-sakai/UIEffect/issues/105)
+- Use multi-pass blurring to capture screenshot [\#96](https://github.com/mob-sakai/UIEffect/issues/96)
+- Feature: HSV modifier [\#44](https://github.com/mob-sakai/UIEffect/issues/44)
+
+**Fixed bugs:**
+
+- UIEffectCapturedImage: ColorMode is not working [\#109](https://github.com/mob-sakai/UIEffect/issues/109)
+- UIDissolve is not maskable [\#101](https://github.com/mob-sakai/UIEffect/issues/101)
+
 ## [v2.6.2](https://github.com/mob-sakai/UIEffect/tree/v2.6.2) (2018-07-18)
 
 [Full Changelog](https://github.com/mob-sakai/UIEffect/compare/v2.6.1...v2.6.2)
@@ -294,4 +495,4 @@ New components has been available!
 
 
 
-\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*

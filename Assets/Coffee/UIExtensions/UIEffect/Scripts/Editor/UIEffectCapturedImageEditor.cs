@@ -3,7 +3,7 @@ using UnityEditor.UI;
 using UnityEngine;
 using DesamplingRate = Coffee.UIExtensions.UIEffectCapturedImage.DesamplingRate;
 
-namespace Coffee.UIExtensions
+namespace Coffee.UIExtensions.Editors
 {
 	/// <summary>
 	/// UIEffectCapturedImage editor.
@@ -18,9 +18,9 @@ namespace Coffee.UIExtensions
 
 		public enum QualityMode : int
 		{
-			Fast = (DesamplingRate.x2 << 0) + (DesamplingRate.x2 << 4) + (FilterMode.Bilinear << 8) + (1 << 10),
-			Medium = (DesamplingRate.x1 << 0) + (DesamplingRate.x1 << 4) + (FilterMode.Bilinear << 8) + (1 << 10),
-			Detail = (DesamplingRate.None << 0) + (DesamplingRate.x1 << 4) + (FilterMode.Bilinear << 8) + (1 << 10),
+			Fast = (DesamplingRate.x2 << 0) + (DesamplingRate.x2 << 4) + (FilterMode.Bilinear << 8) + (2 << 10),
+			Medium = (DesamplingRate.x1 << 0) + (DesamplingRate.x1 << 4) + (FilterMode.Bilinear << 8) + (3 << 10),
+			Detail = (DesamplingRate.None << 0) + (DesamplingRate.x1 << 4) + (FilterMode.Bilinear << 8) + (5 << 10),
 			Custom = -1,
 		}
 
@@ -40,9 +40,11 @@ namespace Coffee.UIExtensions
 			_spDesamplingRate = serializedObject.FindProperty("m_DesamplingRate");
 			_spReductionRate = serializedObject.FindProperty("m_ReductionRate");
 			_spFilterMode = serializedObject.FindProperty("m_FilterMode");
-			_spIterations = serializedObject.FindProperty("m_Iterations");
-			_spKeepSizeToRootCanvas = serializedObject.FindProperty("m_KeepCanvasSize");
-			
+			_spIterations = serializedObject.FindProperty("m_BlurIterations");
+			_spKeepSizeToRootCanvas = serializedObject.FindProperty("m_FitToScreen");
+			_spBlurMode = serializedObject.FindProperty("m_BlurMode");
+			_spCaptureOnEnable = serializedObject.FindProperty("m_CaptureOnEnable");
+
 
 			_customAdvancedOption = (qualityMode == QualityMode.Custom);
 		}
@@ -52,6 +54,7 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public override void OnInspectorGUI()
 		{
+			var graphic = (target as UIEffectCapturedImage);
 			serializedObject.Update();
 
 			//================
@@ -66,7 +69,7 @@ namespace Coffee.UIExtensions
 			//================
 			GUILayout.Space(10);
 			EditorGUILayout.LabelField("Capture Effect", EditorStyles.boldLabel);
-			UIEffectEditor.DrawEffectProperties(UIEffectCapturedImage.shaderName, serializedObject);
+			UIEffectEditor.DrawEffectProperties(serializedObject, "m_EffectColor");
 
 			//================
 			// Advanced option.
@@ -74,10 +77,13 @@ namespace Coffee.UIExtensions
 			GUILayout.Space(10);
 			EditorGUILayout.LabelField("Advanced Option", EditorStyles.boldLabel);
 
+			EditorGUILayout.PropertyField(_spCaptureOnEnable);// CaptureOnEnable.
+			EditorGUILayout.PropertyField(_spKeepSizeToRootCanvas);// Keep Graphic Size To RootCanvas.
+
 			EditorGUI.BeginChangeCheck();
 			QualityMode quality = qualityMode;
 			quality = (QualityMode)EditorGUILayout.EnumPopup("Quality Mode", quality);
-			if(EditorGUI.EndChangeCheck())
+			if (EditorGUI.EndChangeCheck())
 			{
 				_customAdvancedOption = (quality == QualityMode.Custom);
 				qualityMode = quality;
@@ -86,12 +92,18 @@ namespace Coffee.UIExtensions
 			// When qualityMode is `Custom`, show advanced option.
 			if (_customAdvancedOption)
 			{
-				DrawDesamplingRate(_spDesamplingRate);// Desampling rate.
+				if (_spBlurMode.intValue != 0)
+				{
+					EditorGUILayout.PropertyField(_spIterations);// Iterations.
+				}
 				DrawDesamplingRate(_spReductionRate);// Reduction rate.
+
+				EditorGUILayout.Space();
+				EditorGUILayout.LabelField("Result Texture Setting", EditorStyles.boldLabel);
+
 				EditorGUILayout.PropertyField(_spFilterMode);// Filter Mode.
-				EditorGUILayout.PropertyField(_spIterations);// Iterations.
+				DrawDesamplingRate(_spDesamplingRate);// Desampling rate.
 			}
-			EditorGUILayout.PropertyField(_spKeepSizeToRootCanvas);// Iterations.
 
 			serializedObject.ApplyModifiedProperties();
 
@@ -101,11 +113,16 @@ namespace Coffee.UIExtensions
 				GUILayout.Label("Debug");
 
 				if (GUILayout.Button("Capture", "ButtonLeft"))
-					UpdateTexture(true);
+				{
+					graphic.Release();
+					EditorApplication.delayCall += graphic.Capture;
+				}
 
 				EditorGUI.BeginDisabledGroup(!(target as UIEffectCapturedImage).capturedTexture);
 				if (GUILayout.Button("Release", "ButtonRight"))
-					UpdateTexture(false);
+				{
+					graphic.Release();
+				}
 				EditorGUI.EndDisabledGroup();
 			}
 		}
@@ -122,8 +139,10 @@ namespace Coffee.UIExtensions
 		SerializedProperty _spDesamplingRate;
 		SerializedProperty _spReductionRate;
 		SerializedProperty _spFilterMode;
+		SerializedProperty _spBlurMode;
 		SerializedProperty _spIterations;
 		SerializedProperty _spKeepSizeToRootCanvas;
+		SerializedProperty _spCaptureOnEnable;
 
 		QualityMode qualityMode
 		{
@@ -133,9 +152,9 @@ namespace Coffee.UIExtensions
 					return QualityMode.Custom;
 
 				int qualityValue = (_spDesamplingRate.intValue << 0)
-					+ (_spReductionRate.intValue << 4)
-					+ (_spFilterMode.intValue << 8)
-					+ (_spIterations.intValue << 10);
+				                   + (_spReductionRate.intValue << 4)
+				                   + (_spFilterMode.intValue << 8)
+				                   + (_spIterations.intValue << 10);
 
 				return System.Enum.IsDefined(typeof(QualityMode), qualityValue) ? (QualityMode)qualityValue : QualityMode.Custom;
 			}
@@ -164,21 +183,6 @@ namespace Coffee.UIExtensions
 				(target as UIEffectCapturedImage).GetDesamplingSize((UIEffectCapturedImage.DesamplingRate)sp.intValue, out w, out h);
 				GUILayout.Label(string.Format("{0}x{1}", w, h), EditorStyles.miniLabel);
 			}
-		}
-
-		/// <summary>
-		/// Updates the texture.
-		/// </summary>
-		void UpdateTexture(bool capture)
-		{
-			var current = target as UIEffectCapturedImage;
-			bool enable = current.enabled;
-			current.enabled = false;
-			current.Release();
-			if (capture)
-				current.Capture();
-			
-			EditorApplication.delayCall += () => current.enabled = enable;
 		}
 	}
 }

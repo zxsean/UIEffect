@@ -1,25 +1,150 @@
 ﻿using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
+using System.Linq;
+using System;
 
-namespace Coffee.UIExtensions
+namespace Coffee.UIExtensions.Editors
 {
 	/// <summary>
 	/// UIEffect editor.
 	/// </summary>
 	[CustomEditor(typeof(UIEffect))]
 	[CanEditMultipleObjects]
-	public class UIEffectEditor : Editor
+	public class UIEffectEditor : BaseMeshEffectEditor
 	{
+		static readonly GUIContent contentEffectColor = new GUIContent ("Effect Color");
+
+
 		//################################
-		// Constant or Static Members.
+		// Public/Protected Members.
 		//################################
+
 		/// <summary>
 		/// Draw effect properties.
 		/// </summary>
-		public static void DrawEffectProperties(string shaderName, SerializedObject serializedObject)
+		public static void DrawEffectProperties(SerializedObject serializedObject, string colorProperty = "m_Color")
 		{
-			bool changed = false;
+			//================
+			// Effect material.
+			//================
+			var spMaterial = serializedObject.FindProperty("m_EffectMaterial");
+			EditorGUI.BeginDisabledGroup(true);
+			EditorGUILayout.PropertyField(spMaterial);
+			EditorGUI.EndDisabledGroup();
+
+			//================
+			// Effect setting.
+			//================
+			var spToneMode = serializedObject.FindProperty("m_EffectMode");
+			EditorGUILayout.PropertyField(spToneMode);
+
+			// When tone is enable, show parameters.
+			if (spToneMode.intValue != (int)EffectMode.None)
+			{
+				EditorGUI.indentLevel++;
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_EffectFactor"));
+				EditorGUI.indentLevel--;
+			}
+
+			//================
+			// Color setting.
+			//================
+			var spColorMode = serializedObject.FindProperty("m_ColorMode");
+			EditorGUILayout.PropertyField(spColorMode);
+
+			// When color is enable, show parameters.
+			//if (spColorMode.intValue != (int)ColorMode.Multiply)
+			{
+				EditorGUI.indentLevel++;
+
+				SerializedProperty spColor = serializedObject.FindProperty(colorProperty);
+				if (spColor == null && serializedObject.targetObject is UIEffect) {
+					spColor = new SerializedObject (serializedObject.targetObjects.Select(x=>(x as UIEffect).targetGraphic).ToArray()).FindProperty(colorProperty);
+				}
+
+				EditorGUI.BeginChangeCheck ();
+				EditorGUI.showMixedValue = spColor.hasMultipleDifferentValues;
+#if UNITY_2018_1_OR_NEWER
+				spColor.colorValue = EditorGUILayout.ColorField (contentEffectColor, spColor.colorValue, true, false, false);
+#else
+				spColor.colorValue = EditorGUILayout.ColorField (contentEffectColor, spColor.colorValue, true, false, false, null);
+#endif
+				if (EditorGUI.EndChangeCheck ()) {
+					spColor.serializedObject.ApplyModifiedProperties ();
+				}
+
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_ColorFactor"));
+				EditorGUI.indentLevel--;
+			}
+
+			//================
+			// Blur setting.
+			//================
+			var spBlurMode = serializedObject.FindProperty("m_BlurMode");
+			EditorGUILayout.PropertyField(spBlurMode);
+
+			// When blur is enable, show parameters.
+			if (spBlurMode.intValue != (int)BlurMode.None)
+			{
+				EditorGUI.indentLevel++;
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_BlurFactor"));
+
+				var spAdvancedBlur = serializedObject.FindProperty("m_AdvancedBlur");
+				if (spAdvancedBlur != null)
+				{
+					EditorGUILayout.PropertyField(spAdvancedBlur);
+				}
+				EditorGUI.indentLevel--;
+			}
+		}
+
+		int GetEnum<T>(Material mat)
+		{
+			Type type = typeof(T);
+			string[] names = System.Enum.GetNames (type);
+			int[] values = System.Enum.GetValues (type) as int[];
+
+			int mode = 0;
+			for(int i=0;i<names.Length;i++)
+			{
+				if (mat.IsKeywordEnabled (names [i].ToUpper()))
+					mode = values [i];
+			}
+			return mode;
+		}
+
+
+		/// <summary>
+		/// Implement this function to make a custom inspector.
+		/// </summary>
+		public override void OnInspectorGUI()
+		{
+			foreach (var d in targets.Cast<UIEffect> ())
+			{
+				var mat = d.material;
+				if (d.isTMPro && mat)
+				{
+					var so = new SerializedObject (d);
+					EffectMode eMode = (EffectMode)GetEnum<EffectMode> (mat);
+					ColorMode cMode = (ColorMode)GetEnum<ColorMode> (mat);
+					BlurMode bMode = (BlurMode)GetEnum<BlurMode> (mat);
+					bool aBlur = mat.IsKeywordEnabled("EX");
+					if (d.effectMode != eMode || d.colorMode != cMode || d.blurMode != bMode || so.FindProperty ("m_AdvancedBlur").boolValue != aBlur)
+					{
+						so.FindProperty ("m_EffectMode").intValue = (int)eMode;
+						so.FindProperty ("m_ColorMode").intValue = (int)cMode;
+						so.FindProperty ("m_BlurMode").intValue = (int)bMode;
+						so.FindProperty ("m_AdvancedBlur").boolValue = aBlur;
+						so.ApplyModifiedProperties ();
+					}
+				}
+			}
+
+
+			serializedObject.Update();
+			bool isAnyTMPro = targets.Cast<UIEffect>().Any(x => x.isTMPro);
+			var c = target as UIEffect;
 
 			//================
 			// Effect material.
@@ -30,18 +155,17 @@ namespace Coffee.UIExtensions
 			EditorGUI.EndDisabledGroup();
 
 			//================
-			// Tone setting.
+			// Effect setting.
 			//================
-			var spToneMode = serializedObject.FindProperty("m_ToneMode");
-			EditorGUI.BeginChangeCheck();
-			EditorGUILayout.PropertyField(spToneMode);
-			changed |= EditorGUI.EndChangeCheck();
+			var spToneMode = serializedObject.FindProperty("m_EffectMode");
+			using (new EditorGUI.DisabledGroupScope(isAnyTMPro))
+				EditorGUILayout.PropertyField(spToneMode);
 
 			// When tone is enable, show parameters.
-			if (spToneMode.intValue != (int)ToneMode.None)
+			if (spToneMode.intValue != (int)EffectMode.None)
 			{
 				EditorGUI.indentLevel++;
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_ToneLevel"));
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_EffectFactor"));
 				EditorGUI.indentLevel--;
 			}
 
@@ -49,15 +173,31 @@ namespace Coffee.UIExtensions
 			// Color setting.
 			//================
 			var spColorMode = serializedObject.FindProperty("m_ColorMode");
-			EditorGUI.BeginChangeCheck();
-			EditorGUILayout.PropertyField(spColorMode);
-			changed |= EditorGUI.EndChangeCheck();
+			using (new EditorGUI.DisabledGroupScope(isAnyTMPro))
+				EditorGUILayout.PropertyField(spColorMode);
 
 			// When color is enable, show parameters.
-			if (spColorMode.intValue != (int)ColorMode.Multiply)
+			//if (spColorMode.intValue != (int)ColorMode.Multiply)
 			{
 				EditorGUI.indentLevel++;
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_EffectColor"));
+
+				SerializedProperty spColor = serializedObject.FindProperty("m_Color");
+				if (spColor == null && serializedObject.targetObject is UIEffect) {
+					spColor = new SerializedObject (serializedObject.targetObjects.Select(x=>(x as UIEffect).targetGraphic).ToArray()).FindProperty(!isAnyTMPro ? "m_Color" : "m_fontColor");
+				}
+
+				EditorGUI.BeginChangeCheck ();
+				EditorGUI.showMixedValue = spColor.hasMultipleDifferentValues;
+				#if UNITY_2018_1_OR_NEWER
+				spColor.colorValue = EditorGUILayout.ColorField (contentEffectColor, spColor.colorValue, true, false, false);
+				#else
+				spColor.colorValue = EditorGUILayout.ColorField (contentEffectColor, spColor.colorValue, true, false, false, null);
+				#endif
+				if (EditorGUI.EndChangeCheck ()) {
+					spColor.serializedObject.ApplyModifiedProperties ();
+				}
+
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_ColorFactor"));
 				EditorGUI.indentLevel--;
 			}
 
@@ -65,187 +205,49 @@ namespace Coffee.UIExtensions
 			// Blur setting.
 			//================
 			var spBlurMode = serializedObject.FindProperty("m_BlurMode");
-			EditorGUI.BeginChangeCheck();
-			EditorGUILayout.PropertyField(spBlurMode);
-			changed |= EditorGUI.EndChangeCheck();
+			using (new EditorGUI.DisabledGroupScope(isAnyTMPro))
+				EditorGUILayout.PropertyField(spBlurMode);
 
 			// When blur is enable, show parameters.
 			if (spBlurMode.intValue != (int)BlurMode.None)
 			{
 				EditorGUI.indentLevel++;
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_Blur"));
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_BlurFactor"));
+
+				var spAdvancedBlur = serializedObject.FindProperty("m_AdvancedBlur");
+				using (new EditorGUI.DisabledGroupScope(isAnyTMPro))
+					EditorGUILayout.PropertyField(spAdvancedBlur);
 				EditorGUI.indentLevel--;
 			}
 
-//			// Set effect material.
-//			if (!serializedObject.isEditingMultipleObjects && spToneMode.intValue == 0 && spColorMode.intValue == 0 && spBlurMode.intValue == 0)
-//			{
-//				spMaterial.objectReferenceValue = null;
-//			}
-//			else if (changed || !serializedObject.isEditingMultipleObjects)
-//			{
-//				spMaterial.objectReferenceValue = UIEffect.GetOrGenerateMaterialVariant(Shader.Find(shaderName),
-//					(UIEffect.ToneMode)spToneMode.intValue,
-//					(UIEffect.ColorMode)spColorMode.intValue,
-//					(UIEffect.BlurMode)spBlurMode.intValue
-//				);
-//			}
+			serializedObject.ApplyModifiedProperties();
+
+			c.ShowTMProWarning (_shader, _mobileShader, _spriteShader, mat => {});
+			ShowCanvasChannelsWarning ();
+
+			ShowMaterialEditors (c.materials, 1, c.materials.Length - 1);
+
+			serializedObject.ApplyModifiedProperties();
+		}
+
+		/// <summary>
+		/// This function is called when the object becomes enabled and active.
+		/// </summary>
+		protected override void OnEnable()
+		{
+			base.OnEnable ();
+
+			_shader = Shader.Find ("TextMeshPro/Distance Field (UIEffect)");
+			_mobileShader = Shader.Find ("TextMeshPro/Mobile/Distance Field (UIEffect)");
+			_spriteShader = Shader.Find ("TextMeshPro/Sprite (UIEffect)");
 		}
 
 		//################################
 		// Private Members.
 		//################################
-		ReorderableList _roAdditionalShadows;
-		SerializedProperty _spAdditionalShadows;
-		SerializedProperty _spBlurMode;
-		SerializedProperty _spCustomEffect;
-		SerializedProperty _spEffectMaterial;
-		SerializedProperty _spEffectColor;
-		SerializedProperty _spCustomFactorX;
-		SerializedProperty _spCustomFactorY;
-		SerializedProperty _spCustomFactorZ;
-		SerializedProperty _spCustomFactorW;
+		Shader _shader;
+		Shader _mobileShader;
+		Shader _spriteShader;
 
-		void OnEnable()
-		{
-			_spAdditionalShadows = serializedObject.FindProperty("m_AdditionalShadows");
-			_spBlurMode = serializedObject.FindProperty("m_BlurMode");
-			_spEffectColor = serializedObject.FindProperty("m_EffectColor");
-
-			_spCustomEffect = serializedObject.FindProperty("m_CustomEffect");
-			_spEffectMaterial = serializedObject.FindProperty("m_EffectMaterial");
-			var spFactor = serializedObject.FindProperty("m_CustomFactor");
-			_spCustomFactorX = spFactor.FindPropertyRelative("x");
-			_spCustomFactorY = spFactor.FindPropertyRelative("y");
-			_spCustomFactorZ = spFactor.FindPropertyRelative("z");
-			_spCustomFactorW = spFactor.FindPropertyRelative("w");
-
-			_roAdditionalShadows = new ReorderableList(serializedObject, _spAdditionalShadows, true, true, true, true);
-			_roAdditionalShadows.drawElementCallback = DrawElementCallback;
-			_roAdditionalShadows.drawHeaderCallback = (rect) => EditorGUI.LabelField(rect, "Additional Shadows");
-			_roAdditionalShadows.onAddCallback = OnAddCallback;
-			_roAdditionalShadows.elementHeightCallback = ElementHeightCallback;
-
-		}
-
-		void OnAddCallback(ReorderableList ro)
-		{
-			_spAdditionalShadows.InsertArrayElementAtIndex(ro.count);
-			var element = _spAdditionalShadows.GetArrayElementAtIndex(ro.count - 1);
-			element.FindPropertyRelative("shadowMode").intValue = (int)ShadowStyle.Shadow;
-			element.FindPropertyRelative("shadowColor").colorValue = Color.black;
-			element.FindPropertyRelative("effectDistance").vector2Value = new Vector2(1f, -1f);
-			element.FindPropertyRelative("useGraphicAlpha").boolValue = true;
-			element.FindPropertyRelative("shadowBlur").floatValue = 0.25f;
-		}
-
-		float ElementHeightCallback(int index)
-		{
-			var element = _spAdditionalShadows.GetArrayElementAtIndex(index);
-			if (element.FindPropertyRelative("shadowMode").intValue == (int)ShadowStyle.None)
-				return 16;
-
-			return (_spBlurMode.intValue == (int)BlurMode.None ? 66 : 84) + (EditorGUIUtility.wideMode ? 0 : 18);
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		void DrawElementCallback(Rect rect, int index, bool isActive, bool isFocused)
-		{
-			var sp = _roAdditionalShadows.serializedProperty.GetArrayElementAtIndex(index);
-
-			Rect r = new Rect(rect);
-			r.height = EditorGUIUtility.singleLineHeight;
-			var spMode = sp.FindPropertyRelative("shadowMode");
-			EditorGUI.PropertyField(r, spMode);
-			if (spMode.intValue == (int)ShadowStyle.None)
-				return;
-
-			r.y += r.height;
-			EditorGUI.PropertyField(r, sp.FindPropertyRelative("shadowColor"));
-			r.y += r.height;
-			EditorGUI.PropertyField(r, sp.FindPropertyRelative("effectDistance"));
-			r.y += EditorGUIUtility.wideMode ? r.height : r.height * 2;
-			EditorGUI.PropertyField(r, sp.FindPropertyRelative("useGraphicAlpha"));
-
-			if (_spBlurMode.intValue != (int)BlurMode.None)
-			{
-				r.y += r.height;
-				EditorGUI.PropertyField(r, sp.FindPropertyRelative("shadowBlur"));
-			}
-		}
-
-		/// <summary>
-		/// Implement this function to make a custom inspector.
-		/// </summary>
-		public override void OnInspectorGUI()
-		{
-			serializedObject.Update();
-
-			// Custom effect.
-			EditorGUILayout.PropertyField(_spCustomEffect);
-			if(_spCustomEffect.boolValue)
-			{
-				EditorGUILayout.PropertyField(_spEffectMaterial);
-
-				EditorGUI.indentLevel++;
-				EditorGUILayout.Slider(_spCustomFactorX, 0, 1, new GUIContent("Effect Factor X"));
-				EditorGUILayout.Slider(_spCustomFactorY, 0, 1, new GUIContent("Effect Factor Y"));
-				EditorGUILayout.Slider(_spCustomFactorZ, 0, 1, new GUIContent("Effect Factor Z"));
-				EditorGUILayout.Slider(_spCustomFactorW, 0, 1, new GUIContent("Effect Factor W"));
-				EditorGUILayout.PropertyField(_spEffectColor);
-				EditorGUI.indentLevel--; 
-			}
-			else
-			{
-				DrawEffectProperties(UIEffect.shaderName, serializedObject);
-			}
-
-			//================
-			// Shadow setting.
-			//================
-			var spShadowMode = serializedObject.FindProperty("m_ShadowStyle");
-			EditorGUILayout.PropertyField(spShadowMode);
-
-			// When shadow is enable, show parameters.
-			if (spShadowMode.intValue != (int)ShadowStyle.None)
-			{
-				EditorGUI.indentLevel++;
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_EffectDistance"));
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_ShadowColor"));
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_UseGraphicAlpha"));
-
-				if (_spBlurMode.intValue != (int)BlurMode.None)
-				{
-					EditorGUILayout.PropertyField(serializedObject.FindProperty("m_ShadowBlur"));
-				}
-				EditorGUI.indentLevel--;
-			}
-
-			//================
-			// Additional shadow setting.
-			//================
-			_roAdditionalShadows.DoLayoutList();
-
-			serializedObject.ApplyModifiedProperties();
-
-#if UNITY_5_6_OR_NEWER
-			var graphic = (target as UIEffectBase).targetGraphic;
-			if(graphic)
-			{
-				var canvas = graphic.canvas;
-				if( canvas && 0 == (canvas.additionalShaderChannels & AdditionalCanvasShaderChannels.TexCoord1))
-				{
-					using (new GUILayout.HorizontalScope())
-					{
-						EditorGUILayout.HelpBox("[Unity5.6+] Enable TexCoord1 of Canvas.additionalShaderChannels to use UIEffect.", MessageType.Warning);
-						if (GUILayout.Button("Fix"))
-							canvas.additionalShaderChannels |= AdditionalCanvasShaderChannels.TexCoord1;
-					}
-				}
-			}
-#endif
-		}
 	}
 }
